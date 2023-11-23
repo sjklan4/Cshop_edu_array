@@ -8,4 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Arrayop
-build_property.ProjectDir = C:\c#\Cshop_arraySTR\Arrayop\
+build_property.ProjectDir = C:\Cshop\Cshop_array\arrayOP\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "arrayOP/1.0.0": {
+      "Arrayop/1.0.0": {
         "runtime": {
-          "arrayOP.dll": {}
+          "Arrayop.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "arrayOP/1.0.0": {
+    "Arrayop/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

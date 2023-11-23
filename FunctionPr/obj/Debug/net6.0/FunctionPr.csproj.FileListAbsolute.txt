@@ -1,0 +1,15 @@
+C:\Cshop\Cshop_array\FunctionPr\bin\Debug\net6.0\FunctionPr.exe
+C:\Cshop\Cshop_array\FunctionPr\bin\Debug\net6.0\FunctionPr.deps.json
+C:\Cshop\Cshop_array\FunctionPr\bin\Debug\net6.0\FunctionPr.runtimeconfig.json
+C:\Cshop\Cshop_array\FunctionPr\bin\Debug\net6.0\FunctionPr.dll
+C:\Cshop\Cshop_array\FunctionPr\bin\Debug\net6.0\FunctionPr.pdb
+C:\Cshop\Cshop_array\FunctionPr\obj\Debug\net6.0\FunctionPr.GeneratedMSBuildEditorConfig.editorconfig
+C:\Cshop\Cshop_array\FunctionPr\obj\Debug\net6.0\FunctionPr.AssemblyInfoInputs.cache
+C:\Cshop\Cshop_array\FunctionPr\obj\Debug\net6.0\FunctionPr.AssemblyInfo.cs
+C:\Cshop\Cshop_array\FunctionPr\obj\Debug\net6.0\FunctionPr.csproj.CoreCompileInputs.cache
+C:\Cshop\Cshop_array\FunctionPr\obj\Debug\net6.0\FunctionPr.sourcelink.json
+C:\Cshop\Cshop_array\FunctionPr\obj\Debug\net6.0\FunctionPr.dll
+C:\Cshop\Cshop_array\FunctionPr\obj\Debug\net6.0\refint\FunctionPr.dll
+C:\Cshop\Cshop_array\FunctionPr\obj\Debug\net6.0\FunctionPr.pdb
+C:\Cshop\Cshop_array\FunctionPr\obj\Debug\net6.0\FunctionPr.genruntimeconfig.cache
+C:\Cshop\Cshop_array\FunctionPr\obj\Debug\net6.0\ref\FunctionPr.dll
