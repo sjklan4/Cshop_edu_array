@@ -1,0 +1,14 @@
+C:\c#\Cshop_arraySTR\functionOP\bin\Debug\net6.0\functionOP.exe
+C:\c#\Cshop_arraySTR\functionOP\bin\Debug\net6.0\functionOP.deps.json
+C:\c#\Cshop_arraySTR\functionOP\bin\Debug\net6.0\functionOP.runtimeconfig.json
+C:\c#\Cshop_arraySTR\functionOP\bin\Debug\net6.0\functionOP.dll
+C:\c#\Cshop_arraySTR\functionOP\bin\Debug\net6.0\functionOP.pdb
+C:\c#\Cshop_arraySTR\functionOP\obj\Debug\net6.0\functionOP.GeneratedMSBuildEditorConfig.editorconfig
+C:\c#\Cshop_arraySTR\functionOP\obj\Debug\net6.0\functionOP.AssemblyInfoInputs.cache
+C:\c#\Cshop_arraySTR\functionOP\obj\Debug\net6.0\functionOP.AssemblyInfo.cs
+C:\c#\Cshop_arraySTR\functionOP\obj\Debug\net6.0\functionOP.csproj.CoreCompileInputs.cache
+C:\c#\Cshop_arraySTR\functionOP\obj\Debug\net6.0\functionOP.dll
+C:\c#\Cshop_arraySTR\functionOP\obj\Debug\net6.0\refint\functionOP.dll
+C:\c#\Cshop_arraySTR\functionOP\obj\Debug\net6.0\functionOP.pdb
+C:\c#\Cshop_arraySTR\functionOP\obj\Debug\net6.0\functionOP.genruntimeconfig.cache
+C:\c#\Cshop_arraySTR\functionOP\obj\Debug\net6.0\ref\functionOP.dll
