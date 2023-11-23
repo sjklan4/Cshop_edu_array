@@ -1,0 +1,14 @@
+C:\c#\Cshop_arraySTR\arraypratice\arraypratice\bin\Debug\net6.0\arraypratice.exe
+C:\c#\Cshop_arraySTR\arraypratice\arraypratice\bin\Debug\net6.0\arraypratice.deps.json
+C:\c#\Cshop_arraySTR\arraypratice\arraypratice\bin\Debug\net6.0\arraypratice.runtimeconfig.json
+C:\c#\Cshop_arraySTR\arraypratice\arraypratice\bin\Debug\net6.0\arraypratice.dll
+C:\c#\Cshop_arraySTR\arraypratice\arraypratice\bin\Debug\net6.0\arraypratice.pdb
+C:\c#\Cshop_arraySTR\arraypratice\arraypratice\obj\Debug\net6.0\arraypratice.GeneratedMSBuildEditorConfig.editorconfig
+C:\c#\Cshop_arraySTR\arraypratice\arraypratice\obj\Debug\net6.0\arraypratice.AssemblyInfoInputs.cache
+C:\c#\Cshop_arraySTR\arraypratice\arraypratice\obj\Debug\net6.0\arraypratice.AssemblyInfo.cs
+C:\c#\Cshop_arraySTR\arraypratice\arraypratice\obj\Debug\net6.0\arraypratice.csproj.CoreCompileInputs.cache
+C:\c#\Cshop_arraySTR\arraypratice\arraypratice\obj\Debug\net6.0\arraypratice.dll
+C:\c#\Cshop_arraySTR\arraypratice\arraypratice\obj\Debug\net6.0\refint\arraypratice.dll
+C:\c#\Cshop_arraySTR\arraypratice\arraypratice\obj\Debug\net6.0\arraypratice.pdb
+C:\c#\Cshop_arraySTR\arraypratice\arraypratice\obj\Debug\net6.0\arraypratice.genruntimeconfig.cache
+C:\c#\Cshop_arraySTR\arraypratice\arraypratice\obj\Debug\net6.0\ref\arraypratice.dll

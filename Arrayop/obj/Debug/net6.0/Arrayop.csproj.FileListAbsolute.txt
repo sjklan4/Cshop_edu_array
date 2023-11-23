@@ -1,0 +1,14 @@
+C:\c#\Cshop_arraySTR\Arrayop\bin\Debug\net6.0\Arrayop.exe
+C:\c#\Cshop_arraySTR\Arrayop\bin\Debug\net6.0\Arrayop.deps.json
+C:\c#\Cshop_arraySTR\Arrayop\bin\Debug\net6.0\Arrayop.runtimeconfig.json
+C:\c#\Cshop_arraySTR\Arrayop\bin\Debug\net6.0\Arrayop.dll
+C:\c#\Cshop_arraySTR\Arrayop\bin\Debug\net6.0\Arrayop.pdb
+C:\c#\Cshop_arraySTR\Arrayop\obj\Debug\net6.0\Arrayop.GeneratedMSBuildEditorConfig.editorconfig
+C:\c#\Cshop_arraySTR\Arrayop\obj\Debug\net6.0\Arrayop.AssemblyInfoInputs.cache
+C:\c#\Cshop_arraySTR\Arrayop\obj\Debug\net6.0\Arrayop.AssemblyInfo.cs
+C:\c#\Cshop_arraySTR\Arrayop\obj\Debug\net6.0\Arrayop.csproj.CoreCompileInputs.cache
+C:\c#\Cshop_arraySTR\Arrayop\obj\Debug\net6.0\Arrayop.dll
+C:\c#\Cshop_arraySTR\Arrayop\obj\Debug\net6.0\refint\Arrayop.dll
+C:\c#\Cshop_arraySTR\Arrayop\obj\Debug\net6.0\Arrayop.pdb
+C:\c#\Cshop_arraySTR\Arrayop\obj\Debug\net6.0\Arrayop.genruntimeconfig.cache
+C:\c#\Cshop_arraySTR\Arrayop\obj\Debug\net6.0\ref\Arrayop.dll
