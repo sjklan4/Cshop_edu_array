@@ -1,0 +1,15 @@
+C:\Cshop\Cshop_array\arrayOP\bin\Debug\net6.0\arrayOP.exe
+C:\Cshop\Cshop_array\arrayOP\bin\Debug\net6.0\arrayOP.deps.json
+C:\Cshop\Cshop_array\arrayOP\bin\Debug\net6.0\arrayOP.runtimeconfig.json
+C:\Cshop\Cshop_array\arrayOP\bin\Debug\net6.0\arrayOP.dll
+C:\Cshop\Cshop_array\arrayOP\bin\Debug\net6.0\arrayOP.pdb
+C:\Cshop\Cshop_array\arrayOP\obj\Debug\net6.0\arrayOP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Cshop\Cshop_array\arrayOP\obj\Debug\net6.0\arrayOP.AssemblyInfoInputs.cache
+C:\Cshop\Cshop_array\arrayOP\obj\Debug\net6.0\arrayOP.AssemblyInfo.cs
+C:\Cshop\Cshop_array\arrayOP\obj\Debug\net6.0\arrayOP.csproj.CoreCompileInputs.cache
+C:\Cshop\Cshop_array\arrayOP\obj\Debug\net6.0\arrayOP.sourcelink.json
+C:\Cshop\Cshop_array\arrayOP\obj\Debug\net6.0\arrayOP.dll
+C:\Cshop\Cshop_array\arrayOP\obj\Debug\net6.0\refint\arrayOP.dll
+C:\Cshop\Cshop_array\arrayOP\obj\Debug\net6.0\arrayOP.pdb
+C:\Cshop\Cshop_array\arrayOP\obj\Debug\net6.0\arrayOP.genruntimeconfig.cache
+C:\Cshop\Cshop_array\arrayOP\obj\Debug\net6.0\ref\arrayOP.dll
