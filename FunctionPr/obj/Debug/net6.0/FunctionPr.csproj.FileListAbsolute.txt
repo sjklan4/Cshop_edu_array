@@ -13,3 +13,17 @@ C:\Cshop\Cshop_array\FunctionPr\obj\Debug\net6.0\refint\FunctionPr.dll
 C:\Cshop\Cshop_array\FunctionPr\obj\Debug\net6.0\FunctionPr.pdb
 C:\Cshop\Cshop_array\FunctionPr\obj\Debug\net6.0\FunctionPr.genruntimeconfig.cache
 C:\Cshop\Cshop_array\FunctionPr\obj\Debug\net6.0\ref\FunctionPr.dll
+C:\c#\Cshop_arraySTR\FunctionPr\bin\Debug\net6.0\FunctionPr.exe
+C:\c#\Cshop_arraySTR\FunctionPr\bin\Debug\net6.0\FunctionPr.deps.json
+C:\c#\Cshop_arraySTR\FunctionPr\bin\Debug\net6.0\FunctionPr.runtimeconfig.json
+C:\c#\Cshop_arraySTR\FunctionPr\bin\Debug\net6.0\FunctionPr.dll
+C:\c#\Cshop_arraySTR\FunctionPr\bin\Debug\net6.0\FunctionPr.pdb
+C:\c#\Cshop_arraySTR\FunctionPr\obj\Debug\net6.0\FunctionPr.GeneratedMSBuildEditorConfig.editorconfig
+C:\c#\Cshop_arraySTR\FunctionPr\obj\Debug\net6.0\FunctionPr.AssemblyInfoInputs.cache
+C:\c#\Cshop_arraySTR\FunctionPr\obj\Debug\net6.0\FunctionPr.AssemblyInfo.cs
+C:\c#\Cshop_arraySTR\FunctionPr\obj\Debug\net6.0\FunctionPr.csproj.CoreCompileInputs.cache
+C:\c#\Cshop_arraySTR\FunctionPr\obj\Debug\net6.0\FunctionPr.dll
+C:\c#\Cshop_arraySTR\FunctionPr\obj\Debug\net6.0\refint\FunctionPr.dll
+C:\c#\Cshop_arraySTR\FunctionPr\obj\Debug\net6.0\FunctionPr.pdb
+C:\c#\Cshop_arraySTR\FunctionPr\obj\Debug\net6.0\FunctionPr.genruntimeconfig.cache
+C:\c#\Cshop_arraySTR\FunctionPr\obj\Debug\net6.0\ref\FunctionPr.dll

@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Cshop\\Cshop_array\\functionOP\\functionOP.csproj": {}
+    "C:\\c#\\Cshop_arraySTR\\functionOP\\functionOP.csproj": {}
   },
   "projects": {
-    "C:\\Cshop\\Cshop_array\\functionOP\\functionOP.csproj": {
+    "C:\\c#\\Cshop_arraySTR\\functionOP\\functionOP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Cshop\\Cshop_array\\functionOP\\functionOP.csproj",
+        "projectUniqueName": "C:\\c#\\Cshop_arraySTR\\functionOP\\functionOP.csproj",
         "projectName": "functionOP",
-        "projectPath": "C:\\Cshop\\Cshop_array\\functionOP\\functionOP.csproj",
-        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "C:\\Cshop\\Cshop_array\\functionOP\\obj\\",
+        "projectPath": "C:\\c#\\Cshop_arraySTR\\functionOP\\functionOP.csproj",
+        "packagesPath": "C:\\Users\\박상준\\.nuget\\packages\\",
+        "outputPath": "C:\\c#\\Cshop_arraySTR\\functionOP\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\박상준\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -59,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
