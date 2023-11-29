@@ -1,0 +1,14 @@
+C:\c#\Cshop_arraySTR\StructPractice\bin\Debug\net6.0\StructPractice.exe
+C:\c#\Cshop_arraySTR\StructPractice\bin\Debug\net6.0\StructPractice.deps.json
+C:\c#\Cshop_arraySTR\StructPractice\bin\Debug\net6.0\StructPractice.runtimeconfig.json
+C:\c#\Cshop_arraySTR\StructPractice\bin\Debug\net6.0\StructPractice.dll
+C:\c#\Cshop_arraySTR\StructPractice\bin\Debug\net6.0\StructPractice.pdb
+C:\c#\Cshop_arraySTR\StructPractice\obj\Debug\net6.0\StructPractice.GeneratedMSBuildEditorConfig.editorconfig
+C:\c#\Cshop_arraySTR\StructPractice\obj\Debug\net6.0\StructPractice.AssemblyInfoInputs.cache
+C:\c#\Cshop_arraySTR\StructPractice\obj\Debug\net6.0\StructPractice.AssemblyInfo.cs
+C:\c#\Cshop_arraySTR\StructPractice\obj\Debug\net6.0\StructPractice.csproj.CoreCompileInputs.cache
+C:\c#\Cshop_arraySTR\StructPractice\obj\Debug\net6.0\StructPractice.dll
+C:\c#\Cshop_arraySTR\StructPractice\obj\Debug\net6.0\refint\StructPractice.dll
+C:\c#\Cshop_arraySTR\StructPractice\obj\Debug\net6.0\StructPractice.pdb
+C:\c#\Cshop_arraySTR\StructPractice\obj\Debug\net6.0\StructPractice.genruntimeconfig.cache
+C:\c#\Cshop_arraySTR\StructPractice\obj\Debug\net6.0\ref\StructPractice.dll
