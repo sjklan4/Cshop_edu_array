@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "functionOP", "functionOP.cs
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunctionNote", "..\ConsoleApp2\FunctionNote.csproj", "{8F2E63B4-5CDC-4104-B39D-E852023C2C99}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunctionPr", "..\FunctionPr\FunctionPr.csproj", "{4787DC7B-CAEC-4082-B04D-0312A30A696F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunctionPr", "..\FunctionPr\FunctionPr.csproj", "{4787DC7B-CAEC-4082-B04D-0312A30A696F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StructPractice", "..\StructPractice\StructPractice.csproj", "{43F895BC-525D-4448-B98E-020FFF3CB642}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{4787DC7B-CAEC-4082-B04D-0312A30A696F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4787DC7B-CAEC-4082-B04D-0312A30A696F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4787DC7B-CAEC-4082-B04D-0312A30A696F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43F895BC-525D-4448-B98E-020FFF3CB642}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43F895BC-525D-4448-B98E-020FFF3CB642}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43F895BC-525D-4448-B98E-020FFF3CB642}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43F895BC-525D-4448-B98E-020FFF3CB642}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

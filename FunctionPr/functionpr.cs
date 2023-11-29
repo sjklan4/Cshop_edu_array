@@ -52,10 +52,70 @@ class FunctionCall
     
     }
 
-    static void Main()
+    static int Max(int x, int y)
     {
+        return (x > y) ? x : y;
+    }
+
+    static int Min(int x, int y)
+    {
+        if (x < y)
+        {
+            return x;
+        }
+        else
+        {
+            return y;
+        }
+    }
+
+    static double GetSum(double x, double y)
+    {
+        double r = x + y;
+        return r;
+    }
+
+    static int ABS(int num)
+    {
+        return(num < 0) ? - num : num;
+    }
+
+    static int Addnumber(int a, int b) 
+    { 
+        return a + b;
+    }
+
+
+
+
+    static void Main()
+
+    {
+     
         int r = SquareFuntion(2);
         Console.WriteLine(r);
+        Console.WriteLine("");
+
+        Console.WriteLine(Max(3, 5));
+        Console.WriteLine(Min(-3, -5));
+        Console.WriteLine("");
+
+        double result = GetSum(3, 0.14);
+        Console.WriteLine(result);
+        Console.WriteLine("");
+
+        int num = - 21;
+        int abs = ABS(num);
+        Console.WriteLine(abs);
+        Console.WriteLine("");
+
+        int a = 3;
+        int b = 5;
+        int c = Addnumber(3, 5);
+        Console.WriteLine($"{a} + {b} = {c}");
+        Console.WriteLine("");
     }
+    
+ 
 
 }
