@@ -1,0 +1,14 @@
+C:\c#\Cshop_arraySTR\UserEnum\bin\Debug\net6.0\UserEnum.exe
+C:\c#\Cshop_arraySTR\UserEnum\bin\Debug\net6.0\UserEnum.deps.json
+C:\c#\Cshop_arraySTR\UserEnum\bin\Debug\net6.0\UserEnum.runtimeconfig.json
+C:\c#\Cshop_arraySTR\UserEnum\bin\Debug\net6.0\UserEnum.dll
+C:\c#\Cshop_arraySTR\UserEnum\bin\Debug\net6.0\UserEnum.pdb
+C:\c#\Cshop_arraySTR\UserEnum\obj\Debug\net6.0\UserEnum.GeneratedMSBuildEditorConfig.editorconfig
+C:\c#\Cshop_arraySTR\UserEnum\obj\Debug\net6.0\UserEnum.AssemblyInfoInputs.cache
+C:\c#\Cshop_arraySTR\UserEnum\obj\Debug\net6.0\UserEnum.AssemblyInfo.cs
+C:\c#\Cshop_arraySTR\UserEnum\obj\Debug\net6.0\UserEnum.csproj.CoreCompileInputs.cache
+C:\c#\Cshop_arraySTR\UserEnum\obj\Debug\net6.0\UserEnum.dll
+C:\c#\Cshop_arraySTR\UserEnum\obj\Debug\net6.0\refint\UserEnum.dll
+C:\c#\Cshop_arraySTR\UserEnum\obj\Debug\net6.0\UserEnum.pdb
+C:\c#\Cshop_arraySTR\UserEnum\obj\Debug\net6.0\UserEnum.genruntimeconfig.cache
+C:\c#\Cshop_arraySTR\UserEnum\obj\Debug\net6.0\ref\UserEnum.dll

@@ -1,0 +1,14 @@
+C:\c#\Cshop_arraySTR\Enumeration\bin\Debug\net6.0\Enumeration.exe
+C:\c#\Cshop_arraySTR\Enumeration\bin\Debug\net6.0\Enumeration.deps.json
+C:\c#\Cshop_arraySTR\Enumeration\bin\Debug\net6.0\Enumeration.runtimeconfig.json
+C:\c#\Cshop_arraySTR\Enumeration\bin\Debug\net6.0\Enumeration.dll
+C:\c#\Cshop_arraySTR\Enumeration\bin\Debug\net6.0\Enumeration.pdb
+C:\c#\Cshop_arraySTR\Enumeration\obj\Debug\net6.0\Enumeration.GeneratedMSBuildEditorConfig.editorconfig
+C:\c#\Cshop_arraySTR\Enumeration\obj\Debug\net6.0\Enumeration.AssemblyInfoInputs.cache
+C:\c#\Cshop_arraySTR\Enumeration\obj\Debug\net6.0\Enumeration.AssemblyInfo.cs
+C:\c#\Cshop_arraySTR\Enumeration\obj\Debug\net6.0\Enumeration.csproj.CoreCompileInputs.cache
+C:\c#\Cshop_arraySTR\Enumeration\obj\Debug\net6.0\Enumeration.dll
+C:\c#\Cshop_arraySTR\Enumeration\obj\Debug\net6.0\refint\Enumeration.dll
+C:\c#\Cshop_arraySTR\Enumeration\obj\Debug\net6.0\Enumeration.pdb
+C:\c#\Cshop_arraySTR\Enumeration\obj\Debug\net6.0\Enumeration.genruntimeconfig.cache
+C:\c#\Cshop_arraySTR\Enumeration\obj\Debug\net6.0\ref\Enumeration.dll
