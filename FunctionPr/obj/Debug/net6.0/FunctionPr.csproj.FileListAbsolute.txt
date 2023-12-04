@@ -27,3 +27,17 @@ C:\c#\Cshop_arraySTR\FunctionPr\obj\Debug\net6.0\refint\FunctionPr.dll
 C:\c#\Cshop_arraySTR\FunctionPr\obj\Debug\net6.0\FunctionPr.pdb
 C:\c#\Cshop_arraySTR\FunctionPr\obj\Debug\net6.0\FunctionPr.genruntimeconfig.cache
 C:\c#\Cshop_arraySTR\FunctionPr\obj\Debug\net6.0\ref\FunctionPr.dll
+C:\c#\Cshopedu\FunctionPr\bin\Debug\net6.0\FunctionPr.exe
+C:\c#\Cshopedu\FunctionPr\bin\Debug\net6.0\FunctionPr.deps.json
+C:\c#\Cshopedu\FunctionPr\bin\Debug\net6.0\FunctionPr.runtimeconfig.json
+C:\c#\Cshopedu\FunctionPr\bin\Debug\net6.0\FunctionPr.dll
+C:\c#\Cshopedu\FunctionPr\bin\Debug\net6.0\FunctionPr.pdb
+C:\c#\Cshopedu\FunctionPr\obj\Debug\net6.0\FunctionPr.GeneratedMSBuildEditorConfig.editorconfig
+C:\c#\Cshopedu\FunctionPr\obj\Debug\net6.0\FunctionPr.AssemblyInfoInputs.cache
+C:\c#\Cshopedu\FunctionPr\obj\Debug\net6.0\FunctionPr.AssemblyInfo.cs
+C:\c#\Cshopedu\FunctionPr\obj\Debug\net6.0\FunctionPr.csproj.CoreCompileInputs.cache
+C:\c#\Cshopedu\FunctionPr\obj\Debug\net6.0\FunctionPr.dll
+C:\c#\Cshopedu\FunctionPr\obj\Debug\net6.0\refint\FunctionPr.dll
+C:\c#\Cshopedu\FunctionPr\obj\Debug\net6.0\FunctionPr.pdb
+C:\c#\Cshopedu\FunctionPr\obj\Debug\net6.0\FunctionPr.genruntimeconfig.cache
+C:\c#\Cshopedu\FunctionPr\obj\Debug\net6.0\ref\FunctionPr.dll

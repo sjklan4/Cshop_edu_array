@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\c#\\Cshop_arraySTR\\ConsoleApp2\\FunctionNote.csproj",
+      "projectUniqueName": "C:\\c#\\Cshopedu\\ConsoleApp2\\FunctionNote.csproj",
       "projectName": "FunctionNote",
-      "projectPath": "C:\\c#\\Cshop_arraySTR\\ConsoleApp2\\FunctionNote.csproj",
+      "projectPath": "C:\\c#\\Cshopedu\\ConsoleApp2\\FunctionNote.csproj",
       "packagesPath": "C:\\Users\\박상준\\.nuget\\packages\\",
-      "outputPath": "C:\\c#\\Cshop_arraySTR\\ConsoleApp2\\obj\\",
+      "outputPath": "C:\\c#\\Cshopedu\\ConsoleApp2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\박상준\\AppData\\Roaming\\NuGet\\NuGet.Config",
