@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("Arrayop")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("arrayOP")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("Arrayop")]
-[assembly: System.Reflection.AssemblyTitleAttribute("Arrayop")]
+[assembly: System.Reflection.AssemblyProductAttribute("arrayOP")]
+[assembly: System.Reflection.AssemblyTitleAttribute("arrayOP")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // MSBuild WriteCodeFragment 클래스에서 생성되었습니다.

@@ -1,0 +1,14 @@
+C:\c#\Cshopedu\RandomClassDemo\bin\Debug\net6.0\RandomClassDemo.exe
+C:\c#\Cshopedu\RandomClassDemo\bin\Debug\net6.0\RandomClassDemo.deps.json
+C:\c#\Cshopedu\RandomClassDemo\bin\Debug\net6.0\RandomClassDemo.runtimeconfig.json
+C:\c#\Cshopedu\RandomClassDemo\bin\Debug\net6.0\RandomClassDemo.dll
+C:\c#\Cshopedu\RandomClassDemo\bin\Debug\net6.0\RandomClassDemo.pdb
+C:\c#\Cshopedu\RandomClassDemo\obj\Debug\net6.0\RandomClassDemo.GeneratedMSBuildEditorConfig.editorconfig
+C:\c#\Cshopedu\RandomClassDemo\obj\Debug\net6.0\RandomClassDemo.AssemblyInfoInputs.cache
+C:\c#\Cshopedu\RandomClassDemo\obj\Debug\net6.0\RandomClassDemo.AssemblyInfo.cs
+C:\c#\Cshopedu\RandomClassDemo\obj\Debug\net6.0\RandomClassDemo.csproj.CoreCompileInputs.cache
+C:\c#\Cshopedu\RandomClassDemo\obj\Debug\net6.0\RandomClassDemo.dll
+C:\c#\Cshopedu\RandomClassDemo\obj\Debug\net6.0\refint\RandomClassDemo.dll
+C:\c#\Cshopedu\RandomClassDemo\obj\Debug\net6.0\RandomClassDemo.pdb
+C:\c#\Cshopedu\RandomClassDemo\obj\Debug\net6.0\RandomClassDemo.genruntimeconfig.cache
+C:\c#\Cshopedu\RandomClassDemo\obj\Debug\net6.0\ref\RandomClassDemo.dll
