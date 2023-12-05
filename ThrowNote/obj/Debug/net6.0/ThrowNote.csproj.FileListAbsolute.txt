@@ -1,0 +1,15 @@
+C:\Cshop\C#study\ThrowNote\bin\Debug\net6.0\ThrowNote.exe
+C:\Cshop\C#study\ThrowNote\bin\Debug\net6.0\ThrowNote.deps.json
+C:\Cshop\C#study\ThrowNote\bin\Debug\net6.0\ThrowNote.runtimeconfig.json
+C:\Cshop\C#study\ThrowNote\bin\Debug\net6.0\ThrowNote.dll
+C:\Cshop\C#study\ThrowNote\bin\Debug\net6.0\ThrowNote.pdb
+C:\Cshop\C#study\ThrowNote\obj\Debug\net6.0\ThrowNote.GeneratedMSBuildEditorConfig.editorconfig
+C:\Cshop\C#study\ThrowNote\obj\Debug\net6.0\ThrowNote.AssemblyInfoInputs.cache
+C:\Cshop\C#study\ThrowNote\obj\Debug\net6.0\ThrowNote.AssemblyInfo.cs
+C:\Cshop\C#study\ThrowNote\obj\Debug\net6.0\ThrowNote.csproj.CoreCompileInputs.cache
+C:\Cshop\C#study\ThrowNote\obj\Debug\net6.0\ThrowNote.sourcelink.json
+C:\Cshop\C#study\ThrowNote\obj\Debug\net6.0\ThrowNote.dll
+C:\Cshop\C#study\ThrowNote\obj\Debug\net6.0\refint\ThrowNote.dll
+C:\Cshop\C#study\ThrowNote\obj\Debug\net6.0\ThrowNote.pdb
+C:\Cshop\C#study\ThrowNote\obj\Debug\net6.0\ThrowNote.genruntimeconfig.cache
+C:\Cshop\C#study\ThrowNote\obj\Debug\net6.0\ref\ThrowNote.dll

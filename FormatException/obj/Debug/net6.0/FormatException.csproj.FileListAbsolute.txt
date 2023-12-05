@@ -1,0 +1,15 @@
+C:\Cshop\C#study\FormatException\bin\Debug\net6.0\FormatException.exe
+C:\Cshop\C#study\FormatException\bin\Debug\net6.0\FormatException.deps.json
+C:\Cshop\C#study\FormatException\bin\Debug\net6.0\FormatException.runtimeconfig.json
+C:\Cshop\C#study\FormatException\bin\Debug\net6.0\FormatException.dll
+C:\Cshop\C#study\FormatException\bin\Debug\net6.0\FormatException.pdb
+C:\Cshop\C#study\FormatException\obj\Debug\net6.0\FormatException.GeneratedMSBuildEditorConfig.editorconfig
+C:\Cshop\C#study\FormatException\obj\Debug\net6.0\FormatException.AssemblyInfoInputs.cache
+C:\Cshop\C#study\FormatException\obj\Debug\net6.0\FormatException.AssemblyInfo.cs
+C:\Cshop\C#study\FormatException\obj\Debug\net6.0\FormatException.csproj.CoreCompileInputs.cache
+C:\Cshop\C#study\FormatException\obj\Debug\net6.0\FormatException.sourcelink.json
+C:\Cshop\C#study\FormatException\obj\Debug\net6.0\FormatException.dll
+C:\Cshop\C#study\FormatException\obj\Debug\net6.0\refint\FormatException.dll
+C:\Cshop\C#study\FormatException\obj\Debug\net6.0\FormatException.pdb
+C:\Cshop\C#study\FormatException\obj\Debug\net6.0\FormatException.genruntimeconfig.cache
+C:\Cshop\C#study\FormatException\obj\Debug\net6.0\ref\FormatException.dll
