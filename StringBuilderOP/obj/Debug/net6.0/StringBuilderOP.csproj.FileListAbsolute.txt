@@ -1,0 +1,14 @@
+C:\c#\Cshopedu\StringBuilderOP\bin\Debug\net6.0\StringBuilderOP.exe
+C:\c#\Cshopedu\StringBuilderOP\bin\Debug\net6.0\StringBuilderOP.deps.json
+C:\c#\Cshopedu\StringBuilderOP\bin\Debug\net6.0\StringBuilderOP.runtimeconfig.json
+C:\c#\Cshopedu\StringBuilderOP\bin\Debug\net6.0\StringBuilderOP.dll
+C:\c#\Cshopedu\StringBuilderOP\bin\Debug\net6.0\StringBuilderOP.pdb
+C:\c#\Cshopedu\StringBuilderOP\obj\Debug\net6.0\StringBuilderOP.GeneratedMSBuildEditorConfig.editorconfig
+C:\c#\Cshopedu\StringBuilderOP\obj\Debug\net6.0\StringBuilderOP.AssemblyInfoInputs.cache
+C:\c#\Cshopedu\StringBuilderOP\obj\Debug\net6.0\StringBuilderOP.AssemblyInfo.cs
+C:\c#\Cshopedu\StringBuilderOP\obj\Debug\net6.0\StringBuilderOP.csproj.CoreCompileInputs.cache
+C:\c#\Cshopedu\StringBuilderOP\obj\Debug\net6.0\StringBuilderOP.dll
+C:\c#\Cshopedu\StringBuilderOP\obj\Debug\net6.0\refint\StringBuilderOP.dll
+C:\c#\Cshopedu\StringBuilderOP\obj\Debug\net6.0\StringBuilderOP.pdb
+C:\c#\Cshopedu\StringBuilderOP\obj\Debug\net6.0\StringBuilderOP.genruntimeconfig.cache
+C:\c#\Cshopedu\StringBuilderOP\obj\Debug\net6.0\ref\StringBuilderOP.dll
