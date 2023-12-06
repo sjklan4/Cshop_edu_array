@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "egXxe4hIc+0QQ43okyG56DVXO0BvsTBl4NcgmqIKS/i9xIAig4Y+PFOlh9idTBCtCQRoIOTuPWRcmkWGrGbc3g==",
+  "dgSpecHash": "E7QupA3W+fi/CT5a3g2qi71CzxwgV1fRS3q3NprHs4Xb3GXlc3KiAoX29F9t1F6e8esa05N2Nu7AfNc+gCAGlQ==",
   "success": true,
-  "projectFilePath": "C:\\c#\\Cshopedu\\StringBuilderOP\\StringBuilderOP.csproj",
+  "projectFilePath": "C:\\Cshop\\C#study\\StringBuilderOP\\StringBuilderOP.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
