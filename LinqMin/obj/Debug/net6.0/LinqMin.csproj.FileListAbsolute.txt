@@ -1,0 +1,15 @@
+C:\Cshop\C#study\LinqMin\bin\Debug\net6.0\LinqMin.exe
+C:\Cshop\C#study\LinqMin\bin\Debug\net6.0\LinqMin.deps.json
+C:\Cshop\C#study\LinqMin\bin\Debug\net6.0\LinqMin.runtimeconfig.json
+C:\Cshop\C#study\LinqMin\bin\Debug\net6.0\LinqMin.dll
+C:\Cshop\C#study\LinqMin\bin\Debug\net6.0\LinqMin.pdb
+C:\Cshop\C#study\LinqMin\obj\Debug\net6.0\LinqMin.GeneratedMSBuildEditorConfig.editorconfig
+C:\Cshop\C#study\LinqMin\obj\Debug\net6.0\LinqMin.AssemblyInfoInputs.cache
+C:\Cshop\C#study\LinqMin\obj\Debug\net6.0\LinqMin.AssemblyInfo.cs
+C:\Cshop\C#study\LinqMin\obj\Debug\net6.0\LinqMin.csproj.CoreCompileInputs.cache
+C:\Cshop\C#study\LinqMin\obj\Debug\net6.0\LinqMin.sourcelink.json
+C:\Cshop\C#study\LinqMin\obj\Debug\net6.0\LinqMin.dll
+C:\Cshop\C#study\LinqMin\obj\Debug\net6.0\refint\LinqMin.dll
+C:\Cshop\C#study\LinqMin\obj\Debug\net6.0\LinqMin.pdb
+C:\Cshop\C#study\LinqMin\obj\Debug\net6.0\LinqMin.genruntimeconfig.cache
+C:\Cshop\C#study\LinqMin\obj\Debug\net6.0\ref\LinqMin.dll

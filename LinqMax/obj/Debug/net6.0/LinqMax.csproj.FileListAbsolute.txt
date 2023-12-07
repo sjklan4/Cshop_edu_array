@@ -1,0 +1,15 @@
+C:\Cshop\C#study\LinqMax\bin\Debug\net6.0\LinqMax.exe
+C:\Cshop\C#study\LinqMax\bin\Debug\net6.0\LinqMax.deps.json
+C:\Cshop\C#study\LinqMax\bin\Debug\net6.0\LinqMax.runtimeconfig.json
+C:\Cshop\C#study\LinqMax\bin\Debug\net6.0\LinqMax.dll
+C:\Cshop\C#study\LinqMax\bin\Debug\net6.0\LinqMax.pdb
+C:\Cshop\C#study\LinqMax\obj\Debug\net6.0\LinqMax.GeneratedMSBuildEditorConfig.editorconfig
+C:\Cshop\C#study\LinqMax\obj\Debug\net6.0\LinqMax.AssemblyInfoInputs.cache
+C:\Cshop\C#study\LinqMax\obj\Debug\net6.0\LinqMax.AssemblyInfo.cs
+C:\Cshop\C#study\LinqMax\obj\Debug\net6.0\LinqMax.csproj.CoreCompileInputs.cache
+C:\Cshop\C#study\LinqMax\obj\Debug\net6.0\LinqMax.sourcelink.json
+C:\Cshop\C#study\LinqMax\obj\Debug\net6.0\LinqMax.dll
+C:\Cshop\C#study\LinqMax\obj\Debug\net6.0\refint\LinqMax.dll
+C:\Cshop\C#study\LinqMax\obj\Debug\net6.0\LinqMax.pdb
+C:\Cshop\C#study\LinqMax\obj\Debug\net6.0\LinqMax.genruntimeconfig.cache
+C:\Cshop\C#study\LinqMax\obj\Debug\net6.0\ref\LinqMax.dll

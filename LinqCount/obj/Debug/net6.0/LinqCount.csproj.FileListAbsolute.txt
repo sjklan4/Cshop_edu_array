@@ -1,0 +1,15 @@
+C:\Cshop\C#study\LinqCount\bin\Debug\net6.0\LinqCount.exe
+C:\Cshop\C#study\LinqCount\bin\Debug\net6.0\LinqCount.deps.json
+C:\Cshop\C#study\LinqCount\bin\Debug\net6.0\LinqCount.runtimeconfig.json
+C:\Cshop\C#study\LinqCount\bin\Debug\net6.0\LinqCount.dll
+C:\Cshop\C#study\LinqCount\bin\Debug\net6.0\LinqCount.pdb
+C:\Cshop\C#study\LinqCount\obj\Debug\net6.0\LinqCount.GeneratedMSBuildEditorConfig.editorconfig
+C:\Cshop\C#study\LinqCount\obj\Debug\net6.0\LinqCount.AssemblyInfoInputs.cache
+C:\Cshop\C#study\LinqCount\obj\Debug\net6.0\LinqCount.AssemblyInfo.cs
+C:\Cshop\C#study\LinqCount\obj\Debug\net6.0\LinqCount.csproj.CoreCompileInputs.cache
+C:\Cshop\C#study\LinqCount\obj\Debug\net6.0\LinqCount.sourcelink.json
+C:\Cshop\C#study\LinqCount\obj\Debug\net6.0\LinqCount.dll
+C:\Cshop\C#study\LinqCount\obj\Debug\net6.0\refint\LinqCount.dll
+C:\Cshop\C#study\LinqCount\obj\Debug\net6.0\LinqCount.pdb
+C:\Cshop\C#study\LinqCount\obj\Debug\net6.0\LinqCount.genruntimeconfig.cache
+C:\Cshop\C#study\LinqCount\obj\Debug\net6.0\ref\LinqCount.dll
