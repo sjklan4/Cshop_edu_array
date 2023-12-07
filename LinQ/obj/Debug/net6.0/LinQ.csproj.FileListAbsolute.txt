@@ -1,0 +1,14 @@
+C:\c#\Cshopedu\LinQ\bin\Debug\net6.0\LinQ.exe
+C:\c#\Cshopedu\LinQ\bin\Debug\net6.0\LinQ.deps.json
+C:\c#\Cshopedu\LinQ\bin\Debug\net6.0\LinQ.runtimeconfig.json
+C:\c#\Cshopedu\LinQ\bin\Debug\net6.0\LinQ.dll
+C:\c#\Cshopedu\LinQ\bin\Debug\net6.0\LinQ.pdb
+C:\c#\Cshopedu\LinQ\obj\Debug\net6.0\LinQ.GeneratedMSBuildEditorConfig.editorconfig
+C:\c#\Cshopedu\LinQ\obj\Debug\net6.0\LinQ.AssemblyInfoInputs.cache
+C:\c#\Cshopedu\LinQ\obj\Debug\net6.0\LinQ.AssemblyInfo.cs
+C:\c#\Cshopedu\LinQ\obj\Debug\net6.0\LinQ.csproj.CoreCompileInputs.cache
+C:\c#\Cshopedu\LinQ\obj\Debug\net6.0\LinQ.dll
+C:\c#\Cshopedu\LinQ\obj\Debug\net6.0\refint\LinQ.dll
+C:\c#\Cshopedu\LinQ\obj\Debug\net6.0\LinQ.pdb
+C:\c#\Cshopedu\LinQ\obj\Debug\net6.0\LinQ.genruntimeconfig.cache
+C:\c#\Cshopedu\LinQ\obj\Debug\net6.0\ref\LinQ.dll
