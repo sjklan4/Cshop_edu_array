@@ -14,6 +14,5 @@ class Linqsum
             sum += numbers[i];
         }
         Console.WriteLine(sum);
-
     }
 }
