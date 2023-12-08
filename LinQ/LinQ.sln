@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqMin", "..\LinqMin\LinqM
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqMinMax", "..\LinqMinMax\LinqMinMax.csproj", "{FE27687B-9DF5-4D08-984C-330F2AB8EE61}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generictest", "..\Generictest\Generictest.csproj", "{5F0A2244-BC30-41E8-A791-DC33B1395EE3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{FE27687B-9DF5-4D08-984C-330F2AB8EE61}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE27687B-9DF5-4D08-984C-330F2AB8EE61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE27687B-9DF5-4D08-984C-330F2AB8EE61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F0A2244-BC30-41E8-A791-DC33B1395EE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F0A2244-BC30-41E8-A791-DC33B1395EE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F0A2244-BC30-41E8-A791-DC33B1395EE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F0A2244-BC30-41E8-A791-DC33B1395EE3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

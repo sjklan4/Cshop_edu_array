@@ -1,0 +1,14 @@
+C:\c#\Cshopedu\Generictest\bin\Debug\net6.0\Generictest.exe
+C:\c#\Cshopedu\Generictest\bin\Debug\net6.0\Generictest.deps.json
+C:\c#\Cshopedu\Generictest\bin\Debug\net6.0\Generictest.runtimeconfig.json
+C:\c#\Cshopedu\Generictest\bin\Debug\net6.0\Generictest.dll
+C:\c#\Cshopedu\Generictest\bin\Debug\net6.0\Generictest.pdb
+C:\c#\Cshopedu\Generictest\obj\Debug\net6.0\Generictest.GeneratedMSBuildEditorConfig.editorconfig
+C:\c#\Cshopedu\Generictest\obj\Debug\net6.0\Generictest.AssemblyInfoInputs.cache
+C:\c#\Cshopedu\Generictest\obj\Debug\net6.0\Generictest.AssemblyInfo.cs
+C:\c#\Cshopedu\Generictest\obj\Debug\net6.0\Generictest.csproj.CoreCompileInputs.cache
+C:\c#\Cshopedu\Generictest\obj\Debug\net6.0\Generictest.dll
+C:\c#\Cshopedu\Generictest\obj\Debug\net6.0\refint\Generictest.dll
+C:\c#\Cshopedu\Generictest\obj\Debug\net6.0\Generictest.pdb
+C:\c#\Cshopedu\Generictest\obj\Debug\net6.0\Generictest.genruntimeconfig.cache
+C:\c#\Cshopedu\Generictest\obj\Debug\net6.0\ref\Generictest.dll
