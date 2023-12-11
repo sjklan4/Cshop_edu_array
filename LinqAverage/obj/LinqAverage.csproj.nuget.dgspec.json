@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Cshop\\C#study\\LinqAverage\\LinqAverage.csproj": {}
+    "C:\\c#\\Cshopedu\\LinqAverage\\LinqAverage.csproj": {}
   },
   "projects": {
-    "C:\\Cshop\\C#study\\LinqAverage\\LinqAverage.csproj": {
+    "C:\\c#\\Cshopedu\\LinqAverage\\LinqAverage.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Cshop\\C#study\\LinqAverage\\LinqAverage.csproj",
+        "projectUniqueName": "C:\\c#\\Cshopedu\\LinqAverage\\LinqAverage.csproj",
         "projectName": "LinqAverage",
-        "projectPath": "C:\\Cshop\\C#study\\LinqAverage\\LinqAverage.csproj",
-        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "C:\\Cshop\\C#study\\LinqAverage\\obj\\",
+        "projectPath": "C:\\c#\\Cshopedu\\LinqAverage\\LinqAverage.csproj",
+        "packagesPath": "C:\\Users\\박상준\\.nuget\\packages\\",
+        "outputPath": "C:\\c#\\Cshopedu\\LinqAverage\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\박상준\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -59,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

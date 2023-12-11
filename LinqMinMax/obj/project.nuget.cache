@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "n+ePiyWrfHrFR+2uAazgCUw/+JfmrDMqPux5cFlnwNQl2UaAWDFoAzRAIlS7MjOoT17TAG6sjhDHT5htwHIYJg==",
+  "dgSpecHash": "m2tTfcQvkfS2gCOFGhRkFxaWNe9IB66pmgADw/NETqLUSrnLgwBWNyXQVghEUlYxCP23CJljRB5efcBkTfvFsg==",
   "success": true,
-  "projectFilePath": "C:\\Cshop\\C#study\\LinqMinMax\\LinqMinMax.csproj",
+  "projectFilePath": "C:\\c#\\Cshopedu\\LinqMinMax\\LinqMinMax.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
