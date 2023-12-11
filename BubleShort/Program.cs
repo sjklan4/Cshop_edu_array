@@ -18,8 +18,8 @@ class BubleSort
         Console.WriteLine(string.Join(", ", data));
 
 
-
-        for (int i = 0; i < data.Length; i++)
+        //선택 정렬 알고리즘
+        for (int i = 0; i < data.Length - 1; i++)
         {
             for (int j = i + 1; j < N; j++)
             {

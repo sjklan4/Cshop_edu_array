@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BubleShort", "BubleShort.csproj", "{9B20079D-40C8-4F2D-8949-D5DD4DE2B999}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BubleShort", "BubleShort.csproj", "{9B20079D-40C8-4F2D-8949-D5DD4DE2B999}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SumAlgorithm", "..\SumAlgorithm\SumAlgorithm.csproj", "{465D9417-8729-498D-8281-9C66F407411C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountAlgorithm", "..\CountAlgorithm\CountAlgorithm.csproj", "{3DDE1539-2989-49DE-BC06-059974899602}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{9B20079D-40C8-4F2D-8949-D5DD4DE2B999}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B20079D-40C8-4F2D-8949-D5DD4DE2B999}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B20079D-40C8-4F2D-8949-D5DD4DE2B999}.Release|Any CPU.Build.0 = Release|Any CPU
+		{465D9417-8729-498D-8281-9C66F407411C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{465D9417-8729-498D-8281-9C66F407411C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{465D9417-8729-498D-8281-9C66F407411C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{465D9417-8729-498D-8281-9C66F407411C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DDE1539-2989-49DE-BC06-059974899602}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DDE1539-2989-49DE-BC06-059974899602}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DDE1539-2989-49DE-BC06-059974899602}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DDE1539-2989-49DE-BC06-059974899602}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
