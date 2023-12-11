@@ -25,6 +25,7 @@ class BubleSort
                     int temp = data[i];
                     data[i] = data[j];
                     data[j] = temp;
+
                 }
             }
 
