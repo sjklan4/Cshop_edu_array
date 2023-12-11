@@ -5,7 +5,6 @@ class BubleSort
 {
     
 
-
     static void Main() 
     {
         int[] data = { 3, 2, 1, 5, 4 };
@@ -20,14 +19,8 @@ class BubleSort
         {
             for (int j = 0; j < data.Length; j++) 
             {
-                if (data[i] > data[j])
-                { 
-                    int temp = data[i];
-                    data[i] = data[j];
-                    data[j] = temp;
 
                 }
-            }
 
         }
 
