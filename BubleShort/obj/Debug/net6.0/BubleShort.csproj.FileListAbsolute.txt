@@ -1,0 +1,14 @@
+C:\c#\Cshopedu\BubleShort\bin\Debug\net6.0\BubleShort.exe
+C:\c#\Cshopedu\BubleShort\bin\Debug\net6.0\BubleShort.deps.json
+C:\c#\Cshopedu\BubleShort\bin\Debug\net6.0\BubleShort.runtimeconfig.json
+C:\c#\Cshopedu\BubleShort\bin\Debug\net6.0\BubleShort.dll
+C:\c#\Cshopedu\BubleShort\bin\Debug\net6.0\BubleShort.pdb
+C:\c#\Cshopedu\BubleShort\obj\Debug\net6.0\BubleShort.GeneratedMSBuildEditorConfig.editorconfig
+C:\c#\Cshopedu\BubleShort\obj\Debug\net6.0\BubleShort.AssemblyInfoInputs.cache
+C:\c#\Cshopedu\BubleShort\obj\Debug\net6.0\BubleShort.AssemblyInfo.cs
+C:\c#\Cshopedu\BubleShort\obj\Debug\net6.0\BubleShort.csproj.CoreCompileInputs.cache
+C:\c#\Cshopedu\BubleShort\obj\Debug\net6.0\BubleShort.dll
+C:\c#\Cshopedu\BubleShort\obj\Debug\net6.0\refint\BubleShort.dll
+C:\c#\Cshopedu\BubleShort\obj\Debug\net6.0\BubleShort.pdb
+C:\c#\Cshopedu\BubleShort\obj\Debug\net6.0\BubleShort.genruntimeconfig.cache
+C:\c#\Cshopedu\BubleShort\obj\Debug\net6.0\ref\BubleShort.dll

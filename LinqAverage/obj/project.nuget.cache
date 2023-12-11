@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "06kGENUBNPwxjY8qSvR9DHOp4zBaFlBXDw+1ifgxTf6MMk8ncdB8uZH07t2oYhPOHwdbU587gpYPDnQ0S1jy4g==",
+  "dgSpecHash": "j1zkFfskhYMPtiOuDvThBZyKXcTPPArpMXpenvw4VtUQ4NY9VD/74u9hE4HSWYD/fWQ+8SIhjB2UIDFUwjheUg==",
   "success": true,
-  "projectFilePath": "C:\\Cshop\\C#study\\LinqAverage\\LinqAverage.csproj",
+  "projectFilePath": "C:\\c#\\Cshopedu\\LinqAverage\\LinqAverage.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
