@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("CountAlgorithm")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("CountAlgorithm1")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("CountAlgorithm")]
-[assembly: System.Reflection.AssemblyTitleAttribute("CountAlgorithm")]
+[assembly: System.Reflection.AssemblyProductAttribute("CountAlgorithm1")]
+[assembly: System.Reflection.AssemblyTitleAttribute("CountAlgorithm1")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // MSBuild WriteCodeFragment 클래스에서 생성되었습니다.

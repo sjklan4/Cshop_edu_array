@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SumAlgorithm", "..\SumAlgor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountAlgorithm", "..\CountAlgorithm\CountAlgorithm.csproj", "{3DDE1539-2989-49DE-BC06-059974899602}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountAlgorithm1", "..\CountAlgorithm1\CountAlgorithm1.csproj", "{292F7C91-C5ED-44C2-AF21-4A0D96512D01}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{3DDE1539-2989-49DE-BC06-059974899602}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3DDE1539-2989-49DE-BC06-059974899602}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DDE1539-2989-49DE-BC06-059974899602}.Release|Any CPU.Build.0 = Release|Any CPU
+		{292F7C91-C5ED-44C2-AF21-4A0D96512D01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{292F7C91-C5ED-44C2-AF21-4A0D96512D01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{292F7C91-C5ED-44C2-AF21-4A0D96512D01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{292F7C91-C5ED-44C2-AF21-4A0D96512D01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

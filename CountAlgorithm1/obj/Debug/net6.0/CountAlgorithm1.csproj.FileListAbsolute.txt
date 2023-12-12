@@ -1,0 +1,14 @@
+C:\c#\Cshopedu\CountAlgorithm1\bin\Debug\net6.0\CountAlgorithm1.exe
+C:\c#\Cshopedu\CountAlgorithm1\bin\Debug\net6.0\CountAlgorithm1.deps.json
+C:\c#\Cshopedu\CountAlgorithm1\bin\Debug\net6.0\CountAlgorithm1.runtimeconfig.json
+C:\c#\Cshopedu\CountAlgorithm1\bin\Debug\net6.0\CountAlgorithm1.dll
+C:\c#\Cshopedu\CountAlgorithm1\bin\Debug\net6.0\CountAlgorithm1.pdb
+C:\c#\Cshopedu\CountAlgorithm1\obj\Debug\net6.0\CountAlgorithm1.GeneratedMSBuildEditorConfig.editorconfig
+C:\c#\Cshopedu\CountAlgorithm1\obj\Debug\net6.0\CountAlgorithm1.AssemblyInfoInputs.cache
+C:\c#\Cshopedu\CountAlgorithm1\obj\Debug\net6.0\CountAlgorithm1.AssemblyInfo.cs
+C:\c#\Cshopedu\CountAlgorithm1\obj\Debug\net6.0\CountAlgorithm1.csproj.CoreCompileInputs.cache
+C:\c#\Cshopedu\CountAlgorithm1\obj\Debug\net6.0\CountAlgorithm1.dll
+C:\c#\Cshopedu\CountAlgorithm1\obj\Debug\net6.0\refint\CountAlgorithm1.dll
+C:\c#\Cshopedu\CountAlgorithm1\obj\Debug\net6.0\CountAlgorithm1.pdb
+C:\c#\Cshopedu\CountAlgorithm1\obj\Debug\net6.0\CountAlgorithm1.genruntimeconfig.cache
+C:\c#\Cshopedu\CountAlgorithm1\obj\Debug\net6.0\ref\CountAlgorithm1.dll
