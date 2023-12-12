@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 class SumAlgorithm
 {
@@ -17,5 +18,17 @@ class SumAlgorithm
 
         }
         Console.WriteLine(sum); //최종 출력
+        Console.WriteLine("");
+        ////Linq? 가능?
+        //int[] numbers = { 100, 75, 50, 37, 90, 95 };
+        //int sumnumber = numbers.Where(n => n >= 80).Sum();
+
+        //Console.WriteLine(sumnumber);
+        //Console.WriteLine("");
+        ////linq가설 2번째
+
+        //int sumnumber1 = new[] { 100, 75, 50, 37, 90, 95 }.Where(n => n >= 80).Sum();
+        //Console.WriteLine($"{sumnumber}.");
+
     }
 }

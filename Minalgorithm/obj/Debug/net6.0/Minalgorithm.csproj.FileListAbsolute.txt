@@ -1,0 +1,14 @@
+C:\c#\Cshopedu\Minalgorithm\bin\Debug\net6.0\Minalgorithm.exe
+C:\c#\Cshopedu\Minalgorithm\bin\Debug\net6.0\Minalgorithm.deps.json
+C:\c#\Cshopedu\Minalgorithm\bin\Debug\net6.0\Minalgorithm.runtimeconfig.json
+C:\c#\Cshopedu\Minalgorithm\bin\Debug\net6.0\Minalgorithm.dll
+C:\c#\Cshopedu\Minalgorithm\bin\Debug\net6.0\Minalgorithm.pdb
+C:\c#\Cshopedu\Minalgorithm\obj\Debug\net6.0\Minalgorithm.GeneratedMSBuildEditorConfig.editorconfig
+C:\c#\Cshopedu\Minalgorithm\obj\Debug\net6.0\Minalgorithm.AssemblyInfoInputs.cache
+C:\c#\Cshopedu\Minalgorithm\obj\Debug\net6.0\Minalgorithm.AssemblyInfo.cs
+C:\c#\Cshopedu\Minalgorithm\obj\Debug\net6.0\Minalgorithm.csproj.CoreCompileInputs.cache
+C:\c#\Cshopedu\Minalgorithm\obj\Debug\net6.0\Minalgorithm.dll
+C:\c#\Cshopedu\Minalgorithm\obj\Debug\net6.0\refint\Minalgorithm.dll
+C:\c#\Cshopedu\Minalgorithm\obj\Debug\net6.0\Minalgorithm.pdb
+C:\c#\Cshopedu\Minalgorithm\obj\Debug\net6.0\Minalgorithm.genruntimeconfig.cache
+C:\c#\Cshopedu\Minalgorithm\obj\Debug\net6.0\ref\Minalgorithm.dll
