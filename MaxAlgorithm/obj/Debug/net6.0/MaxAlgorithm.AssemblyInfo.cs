@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MaxAlgorithm")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1afa6105a7057b427e90ebda44747129bf31eb28")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9dd43c8bb41debabcd36a7b163ee7bc32d478cae")]
 [assembly: System.Reflection.AssemblyProductAttribute("MaxAlgorithm")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MaxAlgorithm")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

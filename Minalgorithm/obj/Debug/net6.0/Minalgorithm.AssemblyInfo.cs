@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Minalgorithm")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9dd43c8bb41debabcd36a7b163ee7bc32d478cae")]
 [assembly: System.Reflection.AssemblyProductAttribute("Minalgorithm")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Minalgorithm")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
