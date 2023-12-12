@@ -1,0 +1,15 @@
+C:\Cshop\C#study\MaxAlgorithm\bin\Debug\net6.0\MaxAlgorithm.exe
+C:\Cshop\C#study\MaxAlgorithm\bin\Debug\net6.0\MaxAlgorithm.deps.json
+C:\Cshop\C#study\MaxAlgorithm\bin\Debug\net6.0\MaxAlgorithm.runtimeconfig.json
+C:\Cshop\C#study\MaxAlgorithm\bin\Debug\net6.0\MaxAlgorithm.dll
+C:\Cshop\C#study\MaxAlgorithm\bin\Debug\net6.0\MaxAlgorithm.pdb
+C:\Cshop\C#study\MaxAlgorithm\obj\Debug\net6.0\MaxAlgorithm.GeneratedMSBuildEditorConfig.editorconfig
+C:\Cshop\C#study\MaxAlgorithm\obj\Debug\net6.0\MaxAlgorithm.AssemblyInfoInputs.cache
+C:\Cshop\C#study\MaxAlgorithm\obj\Debug\net6.0\MaxAlgorithm.AssemblyInfo.cs
+C:\Cshop\C#study\MaxAlgorithm\obj\Debug\net6.0\MaxAlgorithm.csproj.CoreCompileInputs.cache
+C:\Cshop\C#study\MaxAlgorithm\obj\Debug\net6.0\MaxAlgorithm.sourcelink.json
+C:\Cshop\C#study\MaxAlgorithm\obj\Debug\net6.0\MaxAlgorithm.dll
+C:\Cshop\C#study\MaxAlgorithm\obj\Debug\net6.0\refint\MaxAlgorithm.dll
+C:\Cshop\C#study\MaxAlgorithm\obj\Debug\net6.0\MaxAlgorithm.pdb
+C:\Cshop\C#study\MaxAlgorithm\obj\Debug\net6.0\MaxAlgorithm.genruntimeconfig.cache
+C:\Cshop\C#study\MaxAlgorithm\obj\Debug\net6.0\ref\MaxAlgorithm.dll
