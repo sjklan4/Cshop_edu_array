@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Minalgorithm", "..\Minalgor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaxAlgorithm", "..\MaxAlgorithm\MaxAlgorithm.csproj", "{A02BD122-CC31-45B9-B1B6-AE4445399615}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NearAlgorithm", "..\NearAlgorithm\NearAlgorithm.csproj", "{269C3B25-19BC-4F33-A892-6322B3E9DDF9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{A02BD122-CC31-45B9-B1B6-AE4445399615}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A02BD122-CC31-45B9-B1B6-AE4445399615}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A02BD122-CC31-45B9-B1B6-AE4445399615}.Release|Any CPU.Build.0 = Release|Any CPU
+		{269C3B25-19BC-4F33-A892-6322B3E9DDF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{269C3B25-19BC-4F33-A892-6322B3E9DDF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{269C3B25-19BC-4F33-A892-6322B3E9DDF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{269C3B25-19BC-4F33-A892-6322B3E9DDF9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
