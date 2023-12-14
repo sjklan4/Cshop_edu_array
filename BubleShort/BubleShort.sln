@@ -21,9 +21,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NearAlgorithm", "..\NearAlg
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RankAlgolithm", "..\RankAlgolithm\RankAlgolithm.csproj", "{6C4BA75A-F019-46C4-B32D-CD37EDCCF46C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortAlgorithm", "..\SortAlgorithm\SortAlgorithm.csproj", "{2E41B3FB-B286-412D-8B16-BB63A689F34B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SortAlgorithm", "..\SortAlgorithm\SortAlgorithm.csproj", "{2E41B3FB-B286-412D-8B16-BB63A689F34B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchAlgolithm", "..\SearchAlgolithm\SearchAlgolithm.csproj", "{C1236DFF-3410-4789-ABE8-6B796F1BE03B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SearchAlgolithm", "..\SearchAlgolithm\SearchAlgolithm.csproj", "{C1236DFF-3410-4789-ABE8-6B796F1BE03B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NearAllAlg", "..\NearAllAlg\NearAllAlg.csproj", "{5A630819-89B8-4B30-BA30-48BF3C700C64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RankAlgorithm", "..\RankAlgorithm\RankAlgorithm.csproj", "{CA4A84B1-35B0-445E-B394-46866BC84CCD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MergeAlgorithm", "..\ConsoleApp3\MergeAlgorithm.csproj", "{49DF9380-7130-40F3-A0EB-2256292A62E0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +81,18 @@ Global
 		{C1236DFF-3410-4789-ABE8-6B796F1BE03B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1236DFF-3410-4789-ABE8-6B796F1BE03B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1236DFF-3410-4789-ABE8-6B796F1BE03B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A630819-89B8-4B30-BA30-48BF3C700C64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A630819-89B8-4B30-BA30-48BF3C700C64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A630819-89B8-4B30-BA30-48BF3C700C64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A630819-89B8-4B30-BA30-48BF3C700C64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA4A84B1-35B0-445E-B394-46866BC84CCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA4A84B1-35B0-445E-B394-46866BC84CCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA4A84B1-35B0-445E-B394-46866BC84CCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA4A84B1-35B0-445E-B394-46866BC84CCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49DF9380-7130-40F3-A0EB-2256292A62E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49DF9380-7130-40F3-A0EB-2256292A62E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49DF9380-7130-40F3-A0EB-2256292A62E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49DF9380-7130-40F3-A0EB-2256292A62E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

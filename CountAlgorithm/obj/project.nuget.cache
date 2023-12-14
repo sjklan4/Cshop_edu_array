@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZF1vFWMbBXmKTnPph7I4/wO1ErEiIuplmOVWBzSFrLqpM7RdBCM7ZnpEEDfa8gmuTIGnZfItRrl0O1zLHmppug==",
+  "dgSpecHash": "xBgxGtiaHqfkoslQSifN9ij4f7FswQ/KH5Vhf6mFPfkpd944smm6eSv23c4WPCxG28XUzsacZG1RzgH9vClFOw==",
   "success": true,
-  "projectFilePath": "C:\\c#\\Cshopedu\\CountAlgorithm\\CountAlgorithm.csproj",
+  "projectFilePath": "C:\\Cshop\\C#study\\CountAlgorithm\\CountAlgorithm.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
