@@ -1,0 +1,14 @@
+C:\c#\Cshopedu\NearAlgorithm\bin\Debug\net6.0\NearAlgorithm.exe
+C:\c#\Cshopedu\NearAlgorithm\bin\Debug\net6.0\NearAlgorithm.deps.json
+C:\c#\Cshopedu\NearAlgorithm\bin\Debug\net6.0\NearAlgorithm.runtimeconfig.json
+C:\c#\Cshopedu\NearAlgorithm\bin\Debug\net6.0\NearAlgorithm.dll
+C:\c#\Cshopedu\NearAlgorithm\bin\Debug\net6.0\NearAlgorithm.pdb
+C:\c#\Cshopedu\NearAlgorithm\obj\Debug\net6.0\NearAlgorithm.GeneratedMSBuildEditorConfig.editorconfig
+C:\c#\Cshopedu\NearAlgorithm\obj\Debug\net6.0\NearAlgorithm.AssemblyInfoInputs.cache
+C:\c#\Cshopedu\NearAlgorithm\obj\Debug\net6.0\NearAlgorithm.AssemblyInfo.cs
+C:\c#\Cshopedu\NearAlgorithm\obj\Debug\net6.0\NearAlgorithm.csproj.CoreCompileInputs.cache
+C:\c#\Cshopedu\NearAlgorithm\obj\Debug\net6.0\NearAlgorithm.dll
+C:\c#\Cshopedu\NearAlgorithm\obj\Debug\net6.0\refint\NearAlgorithm.dll
+C:\c#\Cshopedu\NearAlgorithm\obj\Debug\net6.0\NearAlgorithm.pdb
+C:\c#\Cshopedu\NearAlgorithm\obj\Debug\net6.0\NearAlgorithm.genruntimeconfig.cache
+C:\c#\Cshopedu\NearAlgorithm\obj\Debug\net6.0\ref\NearAlgorithm.dll

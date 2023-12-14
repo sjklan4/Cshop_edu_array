@@ -1,0 +1,14 @@
+C:\c#\Cshopedu\RankAlgolithm\bin\Debug\net6.0\RankAlgolithm.exe
+C:\c#\Cshopedu\RankAlgolithm\bin\Debug\net6.0\RankAlgolithm.deps.json
+C:\c#\Cshopedu\RankAlgolithm\bin\Debug\net6.0\RankAlgolithm.runtimeconfig.json
+C:\c#\Cshopedu\RankAlgolithm\bin\Debug\net6.0\RankAlgolithm.dll
+C:\c#\Cshopedu\RankAlgolithm\bin\Debug\net6.0\RankAlgolithm.pdb
+C:\c#\Cshopedu\RankAlgolithm\obj\Debug\net6.0\RankAlgolithm.GeneratedMSBuildEditorConfig.editorconfig
+C:\c#\Cshopedu\RankAlgolithm\obj\Debug\net6.0\RankAlgolithm.AssemblyInfoInputs.cache
+C:\c#\Cshopedu\RankAlgolithm\obj\Debug\net6.0\RankAlgolithm.AssemblyInfo.cs
+C:\c#\Cshopedu\RankAlgolithm\obj\Debug\net6.0\RankAlgolithm.csproj.CoreCompileInputs.cache
+C:\c#\Cshopedu\RankAlgolithm\obj\Debug\net6.0\RankAlgolithm.dll
+C:\c#\Cshopedu\RankAlgolithm\obj\Debug\net6.0\refint\RankAlgolithm.dll
+C:\c#\Cshopedu\RankAlgolithm\obj\Debug\net6.0\RankAlgolithm.pdb
+C:\c#\Cshopedu\RankAlgolithm\obj\Debug\net6.0\RankAlgolithm.genruntimeconfig.cache
+C:\c#\Cshopedu\RankAlgolithm\obj\Debug\net6.0\ref\RankAlgolithm.dll

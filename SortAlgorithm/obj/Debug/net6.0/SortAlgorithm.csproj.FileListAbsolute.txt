@@ -1,0 +1,14 @@
+C:\c#\Cshopedu\SortAlgorithm\bin\Debug\net6.0\SortAlgorithm.exe
+C:\c#\Cshopedu\SortAlgorithm\bin\Debug\net6.0\SortAlgorithm.deps.json
+C:\c#\Cshopedu\SortAlgorithm\bin\Debug\net6.0\SortAlgorithm.runtimeconfig.json
+C:\c#\Cshopedu\SortAlgorithm\bin\Debug\net6.0\SortAlgorithm.dll
+C:\c#\Cshopedu\SortAlgorithm\bin\Debug\net6.0\SortAlgorithm.pdb
+C:\c#\Cshopedu\SortAlgorithm\obj\Debug\net6.0\SortAlgorithm.GeneratedMSBuildEditorConfig.editorconfig
+C:\c#\Cshopedu\SortAlgorithm\obj\Debug\net6.0\SortAlgorithm.AssemblyInfoInputs.cache
+C:\c#\Cshopedu\SortAlgorithm\obj\Debug\net6.0\SortAlgorithm.AssemblyInfo.cs
+C:\c#\Cshopedu\SortAlgorithm\obj\Debug\net6.0\SortAlgorithm.csproj.CoreCompileInputs.cache
+C:\c#\Cshopedu\SortAlgorithm\obj\Debug\net6.0\SortAlgorithm.dll
+C:\c#\Cshopedu\SortAlgorithm\obj\Debug\net6.0\refint\SortAlgorithm.dll
+C:\c#\Cshopedu\SortAlgorithm\obj\Debug\net6.0\SortAlgorithm.pdb
+C:\c#\Cshopedu\SortAlgorithm\obj\Debug\net6.0\SortAlgorithm.genruntimeconfig.cache
+C:\c#\Cshopedu\SortAlgorithm\obj\Debug\net6.0\ref\SortAlgorithm.dll
