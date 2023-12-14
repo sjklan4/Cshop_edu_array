@@ -1,0 +1,14 @@
+C:\c#\Cshopedu\SearchAlgolithm\bin\Debug\net6.0\SearchAlgolithm.exe
+C:\c#\Cshopedu\SearchAlgolithm\bin\Debug\net6.0\SearchAlgolithm.deps.json
+C:\c#\Cshopedu\SearchAlgolithm\bin\Debug\net6.0\SearchAlgolithm.runtimeconfig.json
+C:\c#\Cshopedu\SearchAlgolithm\bin\Debug\net6.0\SearchAlgolithm.dll
+C:\c#\Cshopedu\SearchAlgolithm\bin\Debug\net6.0\SearchAlgolithm.pdb
+C:\c#\Cshopedu\SearchAlgolithm\obj\Debug\net6.0\SearchAlgolithm.GeneratedMSBuildEditorConfig.editorconfig
+C:\c#\Cshopedu\SearchAlgolithm\obj\Debug\net6.0\SearchAlgolithm.AssemblyInfoInputs.cache
+C:\c#\Cshopedu\SearchAlgolithm\obj\Debug\net6.0\SearchAlgolithm.AssemblyInfo.cs
+C:\c#\Cshopedu\SearchAlgolithm\obj\Debug\net6.0\SearchAlgolithm.csproj.CoreCompileInputs.cache
+C:\c#\Cshopedu\SearchAlgolithm\obj\Debug\net6.0\SearchAlgolithm.dll
+C:\c#\Cshopedu\SearchAlgolithm\obj\Debug\net6.0\refint\SearchAlgolithm.dll
+C:\c#\Cshopedu\SearchAlgolithm\obj\Debug\net6.0\SearchAlgolithm.pdb
+C:\c#\Cshopedu\SearchAlgolithm\obj\Debug\net6.0\SearchAlgolithm.genruntimeconfig.cache
+C:\c#\Cshopedu\SearchAlgolithm\obj\Debug\net6.0\ref\SearchAlgolithm.dll
