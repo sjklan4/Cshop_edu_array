@@ -1,0 +1,14 @@
+C:\c#\Cshopedu\ConsoleApp4\bin\Debug\net6.0\ConsoleApp4.exe
+C:\c#\Cshopedu\ConsoleApp4\bin\Debug\net6.0\ConsoleApp4.deps.json
+C:\c#\Cshopedu\ConsoleApp4\bin\Debug\net6.0\ConsoleApp4.runtimeconfig.json
+C:\c#\Cshopedu\ConsoleApp4\bin\Debug\net6.0\ConsoleApp4.dll
+C:\c#\Cshopedu\ConsoleApp4\bin\Debug\net6.0\ConsoleApp4.pdb
+C:\c#\Cshopedu\ConsoleApp4\obj\Debug\net6.0\ConsoleApp4.GeneratedMSBuildEditorConfig.editorconfig
+C:\c#\Cshopedu\ConsoleApp4\obj\Debug\net6.0\ConsoleApp4.AssemblyInfoInputs.cache
+C:\c#\Cshopedu\ConsoleApp4\obj\Debug\net6.0\ConsoleApp4.AssemblyInfo.cs
+C:\c#\Cshopedu\ConsoleApp4\obj\Debug\net6.0\ConsoleApp4.csproj.CoreCompileInputs.cache
+C:\c#\Cshopedu\ConsoleApp4\obj\Debug\net6.0\ConsoleApp4.dll
+C:\c#\Cshopedu\ConsoleApp4\obj\Debug\net6.0\refint\ConsoleApp4.dll
+C:\c#\Cshopedu\ConsoleApp4\obj\Debug\net6.0\ConsoleApp4.pdb
+C:\c#\Cshopedu\ConsoleApp4\obj\Debug\net6.0\ConsoleApp4.genruntimeconfig.cache
+C:\c#\Cshopedu\ConsoleApp4\obj\Debug\net6.0\ref\ConsoleApp4.dll

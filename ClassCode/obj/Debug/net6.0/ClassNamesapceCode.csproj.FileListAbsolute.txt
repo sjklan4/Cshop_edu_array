@@ -1,0 +1,14 @@
+C:\c#\Cshopedu\ClassCode\bin\Debug\net6.0\ClassNamesapceCode.exe
+C:\c#\Cshopedu\ClassCode\bin\Debug\net6.0\ClassNamesapceCode.deps.json
+C:\c#\Cshopedu\ClassCode\bin\Debug\net6.0\ClassNamesapceCode.runtimeconfig.json
+C:\c#\Cshopedu\ClassCode\bin\Debug\net6.0\ClassNamesapceCode.dll
+C:\c#\Cshopedu\ClassCode\bin\Debug\net6.0\ClassNamesapceCode.pdb
+C:\c#\Cshopedu\ClassCode\obj\Debug\net6.0\ClassNamesapceCode.GeneratedMSBuildEditorConfig.editorconfig
+C:\c#\Cshopedu\ClassCode\obj\Debug\net6.0\ClassNamesapceCode.AssemblyInfoInputs.cache
+C:\c#\Cshopedu\ClassCode\obj\Debug\net6.0\ClassNamesapceCode.AssemblyInfo.cs
+C:\c#\Cshopedu\ClassCode\obj\Debug\net6.0\ClassNamesapceCode.csproj.CoreCompileInputs.cache
+C:\c#\Cshopedu\ClassCode\obj\Debug\net6.0\ClassNamesapceCode.dll
+C:\c#\Cshopedu\ClassCode\obj\Debug\net6.0\refint\ClassNamesapceCode.dll
+C:\c#\Cshopedu\ClassCode\obj\Debug\net6.0\ClassNamesapceCode.pdb
+C:\c#\Cshopedu\ClassCode\obj\Debug\net6.0\ClassNamesapceCode.genruntimeconfig.cache
+C:\c#\Cshopedu\ClassCode\obj\Debug\net6.0\ref\ClassNamesapceCode.dll
