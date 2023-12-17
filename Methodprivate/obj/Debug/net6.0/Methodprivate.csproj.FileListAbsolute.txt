@@ -1,0 +1,15 @@
+C:\Cshop\C#study\Methodprivate\bin\Debug\net6.0\Methodprivate.exe
+C:\Cshop\C#study\Methodprivate\bin\Debug\net6.0\Methodprivate.deps.json
+C:\Cshop\C#study\Methodprivate\bin\Debug\net6.0\Methodprivate.runtimeconfig.json
+C:\Cshop\C#study\Methodprivate\bin\Debug\net6.0\Methodprivate.dll
+C:\Cshop\C#study\Methodprivate\bin\Debug\net6.0\Methodprivate.pdb
+C:\Cshop\C#study\Methodprivate\obj\Debug\net6.0\Methodprivate.GeneratedMSBuildEditorConfig.editorconfig
+C:\Cshop\C#study\Methodprivate\obj\Debug\net6.0\Methodprivate.AssemblyInfoInputs.cache
+C:\Cshop\C#study\Methodprivate\obj\Debug\net6.0\Methodprivate.AssemblyInfo.cs
+C:\Cshop\C#study\Methodprivate\obj\Debug\net6.0\Methodprivate.csproj.CoreCompileInputs.cache
+C:\Cshop\C#study\Methodprivate\obj\Debug\net6.0\Methodprivate.sourcelink.json
+C:\Cshop\C#study\Methodprivate\obj\Debug\net6.0\Methodprivate.dll
+C:\Cshop\C#study\Methodprivate\obj\Debug\net6.0\refint\Methodprivate.dll
+C:\Cshop\C#study\Methodprivate\obj\Debug\net6.0\Methodprivate.pdb
+C:\Cshop\C#study\Methodprivate\obj\Debug\net6.0\Methodprivate.genruntimeconfig.cache
+C:\Cshop\C#study\Methodprivate\obj\Debug\net6.0\ref\Methodprivate.dll
