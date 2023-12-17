@@ -1,0 +1,7 @@
+C:\Cshop\C#study\Desturctor\bin\Debug\Desturctor.exe.config
+C:\Cshop\C#study\Desturctor\bin\Debug\Desturctor.exe
+C:\Cshop\C#study\Desturctor\bin\Debug\Desturctor.pdb
+C:\Cshop\C#study\Desturctor\obj\Debug\Desturctor.csproj.AssemblyReference.cache
+C:\Cshop\C#study\Desturctor\obj\Debug\Desturctor.csproj.CoreCompileInputs.cache
+C:\Cshop\C#study\Desturctor\obj\Debug\Desturctor.exe
+C:\Cshop\C#study\Desturctor\obj\Debug\Desturctor.pdb

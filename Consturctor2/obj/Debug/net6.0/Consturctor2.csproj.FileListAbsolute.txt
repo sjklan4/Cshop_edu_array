@@ -1,0 +1,15 @@
+C:\Cshop\C#study\Consturctor2\bin\Debug\net6.0\Consturctor2.exe
+C:\Cshop\C#study\Consturctor2\bin\Debug\net6.0\Consturctor2.deps.json
+C:\Cshop\C#study\Consturctor2\bin\Debug\net6.0\Consturctor2.runtimeconfig.json
+C:\Cshop\C#study\Consturctor2\bin\Debug\net6.0\Consturctor2.dll
+C:\Cshop\C#study\Consturctor2\bin\Debug\net6.0\Consturctor2.pdb
+C:\Cshop\C#study\Consturctor2\obj\Debug\net6.0\Consturctor2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Cshop\C#study\Consturctor2\obj\Debug\net6.0\Consturctor2.AssemblyInfoInputs.cache
+C:\Cshop\C#study\Consturctor2\obj\Debug\net6.0\Consturctor2.AssemblyInfo.cs
+C:\Cshop\C#study\Consturctor2\obj\Debug\net6.0\Consturctor2.csproj.CoreCompileInputs.cache
+C:\Cshop\C#study\Consturctor2\obj\Debug\net6.0\Consturctor2.sourcelink.json
+C:\Cshop\C#study\Consturctor2\obj\Debug\net6.0\Consturctor2.dll
+C:\Cshop\C#study\Consturctor2\obj\Debug\net6.0\refint\Consturctor2.dll
+C:\Cshop\C#study\Consturctor2\obj\Debug\net6.0\Consturctor2.pdb
+C:\Cshop\C#study\Consturctor2\obj\Debug\net6.0\Consturctor2.genruntimeconfig.cache
+C:\Cshop\C#study\Consturctor2\obj\Debug\net6.0\ref\Consturctor2.dll

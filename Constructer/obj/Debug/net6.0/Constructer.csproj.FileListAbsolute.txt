@@ -1,0 +1,15 @@
+C:\Cshop\C#study\Constructer\bin\Debug\net6.0\Constructer.exe
+C:\Cshop\C#study\Constructer\bin\Debug\net6.0\Constructer.deps.json
+C:\Cshop\C#study\Constructer\bin\Debug\net6.0\Constructer.runtimeconfig.json
+C:\Cshop\C#study\Constructer\bin\Debug\net6.0\Constructer.dll
+C:\Cshop\C#study\Constructer\bin\Debug\net6.0\Constructer.pdb
+C:\Cshop\C#study\Constructer\obj\Debug\net6.0\Constructer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Cshop\C#study\Constructer\obj\Debug\net6.0\Constructer.AssemblyInfoInputs.cache
+C:\Cshop\C#study\Constructer\obj\Debug\net6.0\Constructer.AssemblyInfo.cs
+C:\Cshop\C#study\Constructer\obj\Debug\net6.0\Constructer.csproj.CoreCompileInputs.cache
+C:\Cshop\C#study\Constructer\obj\Debug\net6.0\Constructer.sourcelink.json
+C:\Cshop\C#study\Constructer\obj\Debug\net6.0\Constructer.dll
+C:\Cshop\C#study\Constructer\obj\Debug\net6.0\refint\Constructer.dll
+C:\Cshop\C#study\Constructer\obj\Debug\net6.0\Constructer.pdb
+C:\Cshop\C#study\Constructer\obj\Debug\net6.0\Constructer.genruntimeconfig.cache
+C:\Cshop\C#study\Constructer\obj\Debug\net6.0\ref\Constructer.dll
