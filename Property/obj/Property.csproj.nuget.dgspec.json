@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\c#\\Cshopedu\\Property\\Property.csproj": {}
+    "C:\\Cshop\\C#study\\Property\\Property.csproj": {}
   },
   "projects": {
-    "C:\\c#\\Cshopedu\\Property\\Property.csproj": {
+    "C:\\Cshop\\C#study\\Property\\Property.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\c#\\Cshopedu\\Property\\Property.csproj",
+        "projectUniqueName": "C:\\Cshop\\C#study\\Property\\Property.csproj",
         "projectName": "Property",
-        "projectPath": "C:\\c#\\Cshopedu\\Property\\Property.csproj",
-        "packagesPath": "C:\\Users\\박상준\\.nuget\\packages\\",
-        "outputPath": "C:\\c#\\Cshopedu\\Property\\obj\\",
+        "projectPath": "C:\\Cshop\\C#study\\Property\\Property.csproj",
+        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
+        "outputPath": "C:\\Cshop\\C#study\\Property\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\박상준\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

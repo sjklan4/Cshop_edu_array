@@ -1,0 +1,17 @@
+C:\Cshop\C#study\IndexerNote\obj\Debug\net6.0\IndexerNote.GeneratedMSBuildEditorConfig.editorconfig
+C:\Cshop\C#study\IndexerNote\obj\Debug\net6.0\IndexerNote.AssemblyInfoInputs.cache
+C:\Cshop\C#study\IndexerNote\obj\Debug\net6.0\IndexerNote.AssemblyInfo.cs
+C:\Cshop\C#study\IndexerNote\obj\Debug\net6.0\IndexerNote.csproj.CoreCompileInputs.cache
+C:\Cshop\C#study\IndexerNote\obj\Debug\net6.0\IndexerNote.sourcelink.json
+C:\Cshop\C#study\IndexerNote\bin\Debug\net6.0\IndexerNote.exe
+C:\Cshop\C#study\IndexerNote\bin\Debug\net6.0\IndexerNote.deps.json
+C:\Cshop\C#study\IndexerNote\bin\Debug\net6.0\IndexerNote.runtimeconfig.json
+C:\Cshop\C#study\IndexerNote\bin\Debug\net6.0\IndexerNote.dll
+C:\Cshop\C#study\IndexerNote\bin\Debug\net6.0\IndexerNote.pdb
+C:\Cshop\C#study\IndexerNote\obj\Debug\net6.0\IndexerNote.dll
+C:\Cshop\C#study\IndexerNote\obj\Debug\net6.0\refint\IndexerNote.dll
+C:\Cshop\C#study\IndexerNote\obj\Debug\net6.0\IndexerNote.pdb
+C:\Cshop\C#study\IndexerNote\obj\Debug\net6.0\IndexerNote.genruntimeconfig.cache
+C:\Cshop\C#study\IndexerNote\obj\Debug\net6.0\ref\IndexerNote.dll
+C:\Cshop\C#study\IndexerNote\obj\Debug\net6.0\IndexerNote.Properties.Resources.resources
+C:\Cshop\C#study\IndexerNote\obj\Debug\net6.0\IndexerNote.csproj.GenerateResource.cache

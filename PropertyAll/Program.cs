@@ -63,13 +63,18 @@ namespace PropertyAll
         { 
             // Set과 Get 메서드 사용
             Car car1 = new Car();
-            car1.SetColor("RED");
+            car1.SetColor("Red");
             Console.WriteLine(car1.GetType());
 
             // 속성을 사용
             Car whiteCar = new Car();
             whiteCar.Color = "White";           //set {}
             Console.WriteLine(whiteCar.Color);  //get {}
+
+            //읽기 전용 속성
+            Car K = new Car();
+            Console.WriteLine(K.Make);
+
 
             // 쓰기 전용 속성
             Car car = new Car();

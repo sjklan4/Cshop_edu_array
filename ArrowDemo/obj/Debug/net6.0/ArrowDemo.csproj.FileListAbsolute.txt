@@ -1,0 +1,15 @@
+C:\Cshop\C#study\ArrowDemo\bin\Debug\net6.0\ArrowDemo.exe
+C:\Cshop\C#study\ArrowDemo\bin\Debug\net6.0\ArrowDemo.deps.json
+C:\Cshop\C#study\ArrowDemo\bin\Debug\net6.0\ArrowDemo.runtimeconfig.json
+C:\Cshop\C#study\ArrowDemo\bin\Debug\net6.0\ArrowDemo.dll
+C:\Cshop\C#study\ArrowDemo\bin\Debug\net6.0\ArrowDemo.pdb
+C:\Cshop\C#study\ArrowDemo\obj\Debug\net6.0\ArrowDemo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Cshop\C#study\ArrowDemo\obj\Debug\net6.0\ArrowDemo.AssemblyInfoInputs.cache
+C:\Cshop\C#study\ArrowDemo\obj\Debug\net6.0\ArrowDemo.AssemblyInfo.cs
+C:\Cshop\C#study\ArrowDemo\obj\Debug\net6.0\ArrowDemo.csproj.CoreCompileInputs.cache
+C:\Cshop\C#study\ArrowDemo\obj\Debug\net6.0\ArrowDemo.sourcelink.json
+C:\Cshop\C#study\ArrowDemo\obj\Debug\net6.0\ArrowDemo.dll
+C:\Cshop\C#study\ArrowDemo\obj\Debug\net6.0\refint\ArrowDemo.dll
+C:\Cshop\C#study\ArrowDemo\obj\Debug\net6.0\ArrowDemo.pdb
+C:\Cshop\C#study\ArrowDemo\obj\Debug\net6.0\ArrowDemo.genruntimeconfig.cache
+C:\Cshop\C#study\ArrowDemo\obj\Debug\net6.0\ref\ArrowDemo.dll

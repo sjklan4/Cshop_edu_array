@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MAkzNKQRl0AIaC2F5ipHR1zdap4j5y+oVjIHPCsUiPwZuT5D7fvkABika1doVKbwexYaPf9m3QG4euD9rXAvjA==",
+  "dgSpecHash": "HUwXTFzdk3I7Em7PgwAVuEVZadYU60lbmbqqLH1ibMyF3na/TtEi0G8FfHwWY7jbbeop6/FMBfzUlbn1UA3GcA==",
   "success": true,
-  "projectFilePath": "C:\\c#\\Cshopedu\\PropertyAll\\PropertyAll.csproj",
+  "projectFilePath": "C:\\Cshop\\C#study\\PropertyAll\\PropertyAll.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
