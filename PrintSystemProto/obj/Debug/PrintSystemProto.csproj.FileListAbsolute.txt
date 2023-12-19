@@ -1,0 +1,10 @@
+C:\c#\Cshopedu\PrintSystemProto\bin\Debug\PrintSystemProto.exe.config
+C:\c#\Cshopedu\PrintSystemProto\bin\Debug\PrintSystemProto.exe
+C:\c#\Cshopedu\PrintSystemProto\bin\Debug\PrintSystemProto.pdb
+C:\c#\Cshopedu\PrintSystemProto\obj\Debug\PrintSystemProto.csproj.AssemblyReference.cache
+C:\c#\Cshopedu\PrintSystemProto\obj\Debug\PrintSystemProto.Form1.resources
+C:\c#\Cshopedu\PrintSystemProto\obj\Debug\PrintSystemProto.Properties.Resources.resources
+C:\c#\Cshopedu\PrintSystemProto\obj\Debug\PrintSystemProto.csproj.GenerateResource.cache
+C:\c#\Cshopedu\PrintSystemProto\obj\Debug\PrintSystemProto.csproj.CoreCompileInputs.cache
+C:\c#\Cshopedu\PrintSystemProto\obj\Debug\PrintSystemProto.exe
+C:\c#\Cshopedu\PrintSystemProto\obj\Debug\PrintSystemProto.pdb
