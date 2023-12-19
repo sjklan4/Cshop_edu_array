@@ -1,0 +1,14 @@
+C:\c#\Cshopedu\delegatetest\bin\Debug\net6.0\delegatetest.exe
+C:\c#\Cshopedu\delegatetest\bin\Debug\net6.0\delegatetest.deps.json
+C:\c#\Cshopedu\delegatetest\bin\Debug\net6.0\delegatetest.runtimeconfig.json
+C:\c#\Cshopedu\delegatetest\bin\Debug\net6.0\delegatetest.dll
+C:\c#\Cshopedu\delegatetest\bin\Debug\net6.0\delegatetest.pdb
+C:\c#\Cshopedu\delegatetest\obj\Debug\net6.0\delegatetest.GeneratedMSBuildEditorConfig.editorconfig
+C:\c#\Cshopedu\delegatetest\obj\Debug\net6.0\delegatetest.AssemblyInfoInputs.cache
+C:\c#\Cshopedu\delegatetest\obj\Debug\net6.0\delegatetest.AssemblyInfo.cs
+C:\c#\Cshopedu\delegatetest\obj\Debug\net6.0\delegatetest.csproj.CoreCompileInputs.cache
+C:\c#\Cshopedu\delegatetest\obj\Debug\net6.0\delegatetest.dll
+C:\c#\Cshopedu\delegatetest\obj\Debug\net6.0\refint\delegatetest.dll
+C:\c#\Cshopedu\delegatetest\obj\Debug\net6.0\delegatetest.pdb
+C:\c#\Cshopedu\delegatetest\obj\Debug\net6.0\delegatetest.genruntimeconfig.cache
+C:\c#\Cshopedu\delegatetest\obj\Debug\net6.0\ref\delegatetest.dll
