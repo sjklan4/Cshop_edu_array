@@ -9,12 +9,18 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 
 namespace PrintSystemProto
 {
     public partial class Form1 : Form
     {
+        //MySqlConnection connection = new MySqlConnection("Server=127.0.0.1" +
+        //    "Database=printsystemproto" +
+        //    "Uid=root" +
+        //    "Pwd=qjabek46");
+
         public Form1()
         {
             InitializeComponent();
@@ -62,6 +68,34 @@ namespace PrintSystemProto
             else
             {
                 dataGridView1.Rows.Add(modelValue, modelNameValue);
+                using (MySqlConnection connection = new MySqlConnection("Server=127.0.0.1;" +
+                                                                        "Database=printsystemproto;" +
+                                                                        "Uid=root;" +
+                                                                        "Pwd=qjabek46"))
+                {
+                    string insertQry = "INSERT INTO printsystemproto(model,modelname) VALUES('" + modelValue + "', '" + modelNameValue + "')";
+                    try
+                    {
+                        connection.Open();
+                        MySqlCommand command = new MySqlCommand(insertQry, connection);
+
+                        if (command.ExecuteNonQuery() == 1)
+                        {
+                            MessageBox.Show("인서트 성공");
+                        }
+                        else
+                        {
+                            MessageBox.Show("인서트 실패");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.ToString());
+                        throw;
+                    }
+                
+                    
+                }
             }
 
             //for (int i = 0; i < dataGridView1.Rows.Count; i++)

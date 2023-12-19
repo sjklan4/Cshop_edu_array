@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ConsturncuorOverload")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4e6224b5a8fdebc5a89ce2b75ab71b9173650c15")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("ConsturncuorOverload")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ConsturncuorOverload")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
