@@ -28,25 +28,11 @@ namespace PrintSystemProto
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
-                DataGridViewCell selectedCell = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex]; //값이 있는 곳의 선택 값의 위치를 지정하기 위함
-                
-                if (e.ColumnIndex == 0) 
-                {
 
-                    modelbox.Text = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
 
-                }
-                else if (e.ColumnIndex == 1)
-                {
-                    modelNamebox.Text = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
-                }
-            
         }
 
 
-        
-        
 
 
         private bool DupleValuechk(string val, int column)
