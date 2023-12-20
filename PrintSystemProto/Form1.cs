@@ -10,11 +10,17 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Data.SqlClient;
 
 namespace PrintSystemProto
 {
     public partial class Form1 : Form
     {
+        public static string uid = "sa";
+        public static string pws = "x";
+        public static string database = "printsystem";
+        public static string server = "localhost";
+
         //MySqlConnection connection = new MySqlConnection("Server=127.0.0.1" +
         //    "Database=printsystemproto" +
         //    "Uid=root" +
@@ -67,10 +73,38 @@ namespace PrintSystemProto
             else
             {
                 dataGridView1.Rows.Add(modelValue, modelNameValue);
-                using (MySqlConnection connection = new MySqlConnection("Server=127.0.0.1;" +
-                                                                        "Database=printsystemproto;" +
+                // mssql 적용 부분 ---------------------------------------------------------------------------------------------------
+                string connstr = "SERVER=" + server + ";DATABASE=" + database + ";UID=" + uid + ";PASSWORD=" + pws + ";";
+                SqlConnection conn = new SqlConnection(connstr);
+
+                try
+                {
+                    conn.Open();
+                    string insertQry = "INSERT INTO printsystemtable(model,modelname) VALUES('" + modelValue + "', '" + modelNameValue + "')";
+                    
+                    SqlCommand cmd = new SqlCommand(insertQry, conn);
+                    
+
+                    if (cmd.ExecuteNonQuery() == 1)
+                    {
+                        MessageBox.Show("인서트 성공");
+                    }
+                    else
+                    {
+                        MessageBox.Show("인서트 실패");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                    throw;
+                }
+
+                //mariadb 적용 구문 부분 -------------------------------------------------------------------------------------------
+                /*using (MySqlConnection connection = new MySqlConnection("Server=;" +
+                                                                        "Database=;" +
                                                                         "Uid=root;" +
-                                                                        "Pwd=qjabek46"))
+                                                                        "Pwd="))
                 {
                     string insertQry = "INSERT INTO printsystemproto(model,modelname) VALUES('" + modelValue + "', '" + modelNameValue + "')";
                     try
@@ -94,7 +128,8 @@ namespace PrintSystemProto
                     }
                 
                     
-                }
+                }*/
+                //----------------------------------------------------------------------------------------------------------------------
             }
 
             //for (int i = 0; i < dataGridView1.Rows.Count; i++)
