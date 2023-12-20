@@ -58,8 +58,6 @@ namespace PrintSystemProto
             return false; // 중복된 값이 없음
         }
 
-        public int currentindex = 0;
-        //bool valuechk = false;
 
         private void button1_Click(object sender, EventArgs e)
         {
