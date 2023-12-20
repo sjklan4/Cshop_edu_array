@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GYMHNd+HJ5aAB+TQc5exT6jN2sugEqwqjwfxNCmqkW7f2dJgxLUGkHPxhxu1/9fAHVEMPYL5oueYgBfEu6YcBA==",
+  "dgSpecHash": "dfAdHX+PtCiU3Jv/zttmhUZujUuPyHH0hb7JUdCeNEM/6Wz09P+rPRHB8WbJgD943L5fxZpoB4tM6/+B7SQJvw==",
   "success": true,
-  "projectFilePath": "C:\\c#\\Cshopedu\\delegate\\delegate.csproj",
+  "projectFilePath": "C:\\Cshop\\C#study\\delegate\\delegate.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
