@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.model = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.modelName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,9 +42,6 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.model,
-            this.modelName});
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridView1.Location = new System.Drawing.Point(23, 65);
             this.dataGridView1.Name = "dataGridView1";
@@ -55,18 +50,6 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // model
-            // 
-            this.model.HeaderText = "모델";
-            this.model.Name = "model";
-            this.model.Width = 150;
-            // 
-            // modelName
-            // 
-            this.modelName.HeaderText = "모델명";
-            this.modelName.Name = "modelName";
-            this.modelName.Width = 200;
             // 
             // button1
             // 
@@ -162,8 +145,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox modelbox;
         private System.Windows.Forms.TextBox modelNamebox;
-        private System.Windows.Forms.DataGridViewTextBoxColumn model;
-        private System.Windows.Forms.DataGridViewTextBoxColumn modelName;
         private System.Windows.Forms.Button button3;
     }
 }
