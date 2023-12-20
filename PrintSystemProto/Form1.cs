@@ -20,6 +20,9 @@ namespace PrintSystemProto
         public static string pws = "x";
         public static string database = "printsystem";
         public static string server = "localhost";
+        public string connstr = "SERVER=" + server + ";DATABASE=" + database + ";UID=" + uid + ";PASSWORD=" + pws + ";";
+        public SqlConnection mssqlconn;
+
 
 
         private const string ConnectionString = "Server=127.0.0.1;Database=printsystemproto;Uid=root;Pwd=qjabek46;"; //maria db연결
@@ -93,12 +96,11 @@ namespace PrintSystemProto
                 newRow["modelname"] = modelNameValue;
                 ((DataTable)dataGridView1.DataSource).Rows.Add(newRow);
                 // mssql 적용 부분 ---------------------------------------------------------------------------------------------------
-                /*         string connstr = "SERVER=" + server + ";DATABASE=" + database + ";UID=" + uid + ";PASSWORD=" + pws + ";";
-                         SqlConnection conn = new SqlConnection(connstr);
+                /*         
 
                          try
                          {
-                             conn.Open();
+                             mssqlconn.Open();
                              string insertQry = "INSERT INTO printsystemtable(model,modelname) VALUES('" + modelValue + "', '" + modelNameValue + "')";
 
                              SqlCommand cmd = new SqlCommand(insertQry, conn);
