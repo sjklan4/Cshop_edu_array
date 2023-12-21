@@ -25,37 +25,52 @@ namespace PrintSystemProto
 
 
 
-        private const string ConnectionString = "Server=127.0.0.1;Database=printsystemproto;Uid=root;Pwd=qjabek46;"; //maria db연결
-        private MySqlConnection sqlConnection; // maria db 연결 부분
+       // private const string ConnectionString = "Server=127.0.0.1;Database=printsystemproto;Uid=root;Pwd=qjabek46;"; //maria db연결
+       // private MySqlConnection sqlConn; // maria db 연결 부분
 
-
-        //MySqlConnection connection = new MySqlConnection("Server=127.0.0.1" +
-        //    "Database=printsystemproto" +
-        //    "Uid=root" +
-        //    "Pwd=qjabek46");
 
         public Form1()
         {
             InitializeComponent();
-            sqlConnection = new MySqlConnection(ConnectionString);
-            LoadData();
+            //mssql부분
+            mssqlconn = new SqlConnection(connstr);
+            MSLoadData();
+
+
+            //mariadb전용 구문
+            /*          sqlConn = new MySqlConnection(ConnectionString);
+                      LoadData();*/
         }
 
-        private void LoadData() // mariadb 에 있는 데이터를 가져와서 load시키기 위한 함수구문
+
+        private void MSLoadData() //MSsql 연결 부분  = select를 통한 dbdata불러오기
         {
-            sqlConnection.Open();
-            MySqlDataAdapter dbdata = new MySqlDataAdapter("SELECT * FROM printsystemproto", sqlConnection);
-            DataTable dataTable = new DataTable();
-            dbdata.Fill(dataTable);
-            dataGridView1.DataSource = dataTable;
-            sqlConnection.Close();
+            mssqlconn.Open();
+            SqlDataAdapter msdata = new SqlDataAdapter("SELECT * FROM printsystemtable", mssqlconn);
+            DataTable mstable = new DataTable();
+            msdata.Fill(mstable);
+            dataGridView1.DataSource = mstable;
+            mssqlconn.Close();
+            
+
         }
+
+        /*     private void LoadData() // mariadb 에 있는 데이터를 가져와서 load시키기 위한 함수구문
+             {
+                 sqlConnection.Open();
+                 MySqlDataAdapter dbdata = new MySqlDataAdapter("SELECT * FROM printsystemproto", sqlConnection);
+                 DataTable dataTable = new DataTable();
+                 dbdata.Fill(dataTable);
+                 dataGridView1.DataSource = dataTable;
+                 sqlConnection.Close();
+             }*/
 
         public void Form1_Load(object sender, EventArgs e)
         {
             dataGridView1.Columns[0].Name = "모델";
             dataGridView1.Columns[1].Name = "모델명";
-            LoadData();
+            //LoadData(); - maria db
+            MSLoadData(); 
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -96,31 +111,33 @@ namespace PrintSystemProto
                 newRow["modelname"] = modelNameValue;
                 ((DataTable)dataGridView1.DataSource).Rows.Add(newRow);
                 // mssql 적용 부분 ---------------------------------------------------------------------------------------------------
-                /*         
-
-                         try
-                         {
-                             mssqlconn.Open();
-                             string insertQry = "INSERT INTO printsystemtable(model,modelname) VALUES('" + modelValue + "', '" + modelNameValue + "')";
-
-                             SqlCommand cmd = new SqlCommand(insertQry, conn);
 
 
-                             if (cmd.ExecuteNonQuery() == 1)
-                             {
-                                 MessageBox.Show("인서트 성공");
-                             }
-                             else
-                             {
-                                 MessageBox.Show("인서트 실패");
-                             }
-                         }
-                         catch (Exception ex)
-                         {
-                             MessageBox.Show(ex.ToString());
-                             throw;
-                         }
-         */
+                try
+                {
+                    mssqlconn.Open();
+                    string insertQry = "INSERT INTO printsystemtable(model,modelname) VALUES('" + modelValue + "', '" + modelNameValue + "')";
+
+                    SqlCommand cmd = new SqlCommand(insertQry, mssqlconn);
+                    
+
+                    if (cmd.ExecuteNonQuery() == 1)
+                    {
+                        MessageBox.Show("인서트 성공");
+                        mssqlconn.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("인서트 실패");
+                        mssqlconn.Close();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                    throw;
+                }
+
 
                 //mariadb 적용 구문 부분 -------------------------------------------------------------------------------------------------------------------------------------------
                 //using (MySqlConnection connection = new MySqlConnection("Server=127.0.0.1;" +
@@ -128,30 +145,31 @@ namespace PrintSystemProto
                 //                                                        "Uid=root;" +
                 //                                                        "Pwd=qjabek46"))
                 //{
-                string insertQry = "INSERT INTO printsystemproto(model,modelname) VALUES('" + modelValue + "', '" + modelNameValue + "')";
-                    try
-                    {
-                        sqlConnection.Open();
-                        MySqlCommand command = new MySqlCommand(insertQry, sqlConnection);
 
-                        if (command.ExecuteNonQuery() == 1)
-                        {
-                            MessageBox.Show("인서트 성공");
-                        }
-                        else
-                        {
-                            MessageBox.Show("인서트 실패");
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.ToString());
-                        throw;
-                    }
+                /* string insertQry = "INSERT INTO printsystemproto(model,modelname) VALUES('" + modelValue + "', '" + modelNameValue + "')";
+                     try
+                     {
+                         sqlConn.Open();
+                         MySqlCommand command = new MySqlCommand(insertQry, sqlConn);
+
+                         if (command.ExecuteNonQuery() == 1)
+                         {
+                             MessageBox.Show("인서트 성공");
+                         }
+                         else
+                         {
+                             MessageBox.Show("인서트 실패");
+                         }
+                     }
+                     catch (Exception ex)
+                     {
+                         MessageBox.Show(ex.ToString());
+                         throw;
+                     }*/
 
 
-               // }
- //----------------------------------------------------------------------------------------------------------------------------------------------------------------
+                // }
+                //----------------------------------------------------------------------------------------------------------------------------------------------------------------
             }
 
             //for (int i = 0; i < dataGridView1.Rows.Count; i++)
