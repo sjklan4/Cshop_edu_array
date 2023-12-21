@@ -35,6 +35,7 @@
             this.modelbox = new System.Windows.Forms.TextBox();
             this.modelNamebox = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.modelinf = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -114,6 +115,17 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // modelinf
+            // 
+            this.modelinf.Font = new System.Drawing.Font("굴림", 15F);
+            this.modelinf.Location = new System.Drawing.Point(838, 259);
+            this.modelinf.Name = "modelinf";
+            this.modelinf.Size = new System.Drawing.Size(146, 37);
+            this.modelinf.TabIndex = 10;
+            this.modelinf.Text = "ModelINF";
+            this.modelinf.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.modelinf.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AllowDrop = true;
@@ -121,6 +133,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1066, 775);
             this.ControlBox = false;
+            this.Controls.Add(this.modelinf);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.modelNamebox);
             this.Controls.Add(this.modelbox);
@@ -146,6 +159,7 @@
         private System.Windows.Forms.TextBox modelbox;
         private System.Windows.Forms.TextBox modelNamebox;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button modelinf;
     }
 }
 

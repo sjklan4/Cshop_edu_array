@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintSystemProto", "PrintSystemProto.csproj", "{380556DA-3B77-4164-96DD-FFEA8CA83BF7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelINF", "..\ModelINF\ModelINF.csproj", "{F3F95B7C-0839-40D3-97F4-678064E6B6FA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{380556DA-3B77-4164-96DD-FFEA8CA83BF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{380556DA-3B77-4164-96DD-FFEA8CA83BF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{380556DA-3B77-4164-96DD-FFEA8CA83BF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3F95B7C-0839-40D3-97F4-678064E6B6FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3F95B7C-0839-40D3-97F4-678064E6B6FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3F95B7C-0839-40D3-97F4-678064E6B6FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3F95B7C-0839-40D3-97F4-678064E6B6FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
