@@ -90,3 +90,4 @@ C:\c#\Cshopedu\PrintSystemProto\bin\Debug\System.Numerics.Vectors.xml
 C:\c#\Cshopedu\PrintSystemProto\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\c#\Cshopedu\PrintSystemProto\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\c#\Cshopedu\PrintSystemProto\obj\Debug\PrintSystemProto.csproj.CopyComplete
+C:\c#\Cshopedu\PrintSystemProto\obj\Debug\PrintSystemProto.ModelINFT.resources

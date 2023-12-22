@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Data.SqlClient;
 
+
 namespace PrintSystemProto
 {
     public partial class Form1 : Form
@@ -228,7 +229,7 @@ namespace PrintSystemProto
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Close();
+            this.Close();
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -239,6 +240,14 @@ namespace PrintSystemProto
                 modelNamebox.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
             }
            
+        }
+
+        private void modelinf_Click(object sender, EventArgs e)
+        {
+            
+            ModelINFT modelINFT = new ModelINFT();
+            modelINFT.Show();
+
         }
     }
 }

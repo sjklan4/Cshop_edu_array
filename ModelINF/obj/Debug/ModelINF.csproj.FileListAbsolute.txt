@@ -1,0 +1,10 @@
+C:\c#\Cshopedu\ModelINF\bin\Debug\ModelINF.exe.config
+C:\c#\Cshopedu\ModelINF\bin\Debug\ModelINF.exe
+C:\c#\Cshopedu\ModelINF\bin\Debug\ModelINF.pdb
+C:\c#\Cshopedu\ModelINF\obj\Debug\ModelINF.csproj.AssemblyReference.cache
+C:\c#\Cshopedu\ModelINF\obj\Debug\ModelINF.modelinf.resources
+C:\c#\Cshopedu\ModelINF\obj\Debug\ModelINF.Properties.Resources.resources
+C:\c#\Cshopedu\ModelINF\obj\Debug\ModelINF.csproj.GenerateResource.cache
+C:\c#\Cshopedu\ModelINF\obj\Debug\ModelINF.csproj.CoreCompileInputs.cache
+C:\c#\Cshopedu\ModelINF\obj\Debug\ModelINF.exe
+C:\c#\Cshopedu\ModelINF\obj\Debug\ModelINF.pdb

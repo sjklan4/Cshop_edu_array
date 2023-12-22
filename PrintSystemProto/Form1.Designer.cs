@@ -125,6 +125,7 @@
             this.modelinf.Text = "ModelINF";
             this.modelinf.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.modelinf.UseVisualStyleBackColor = true;
+            this.modelinf.Click += new System.EventHandler(this.modelinf_Click);
             // 
             // Form1
             // 
@@ -159,7 +160,7 @@
         private System.Windows.Forms.TextBox modelbox;
         private System.Windows.Forms.TextBox modelNamebox;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button modelinf;
+        public System.Windows.Forms.Button modelinf;
     }
 }
 
