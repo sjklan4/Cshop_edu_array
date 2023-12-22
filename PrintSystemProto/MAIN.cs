@@ -6,8 +6,9 @@ using System.Windows.Forms;
 
 namespace PrintSystemProto
 {
-    internal static class Program
+    internal static class MAIN
     {
+        public static ModelINFT fmModel;
         /// <summary>
         /// 해당 애플리케이션의 주 진입점입니다.
         /// </summary>
@@ -16,7 +17,16 @@ namespace PrintSystemProto
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            fmModel = new ModelINFT();
+            try
+            {
+                Application.Run(new Form1());
+            }catch(Exception ex) { 
+                Console.WriteLine(ex.ToString());   
+            }finally
+            {
+
+            }
         }
     }
 }

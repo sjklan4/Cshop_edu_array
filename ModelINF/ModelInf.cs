@@ -17,7 +17,7 @@ namespace ModelINF
         {
             InitializeComponent();
         }
-
+        
         private void Exitbutton_Click(object sender, EventArgs e)
         {
             this.Close();

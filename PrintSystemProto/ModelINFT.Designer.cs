@@ -74,14 +74,14 @@
             this.Controls.Add(this.comboBox1);
             this.Name = "ModelINFT";
             this.Text = "ModelINFT";
+            this.Load += new System.EventHandler(this.ModelINFT_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        public System.Windows.Forms.ComboBox comboBox1;
     }
 }

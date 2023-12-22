@@ -15,6 +15,7 @@ using System.Data.SqlClient;
 
 namespace PrintSystemProto
 {
+    using static MAIN;
     public partial class Form1 : Form
     {
         public static string uid = "sa";  //mssql 접속에 필요한 정보구문 
@@ -26,9 +27,13 @@ namespace PrintSystemProto
 
 
 
-       // private const string ConnectionString = "Server=127.0.0.1;Database=printsystemproto;Uid=root;Pwd=qjabek46;"; //maria db연결
-       // private MySqlConnection sqlConn; // maria db 연결 부분
-
+        // private const string ConnectionString = "Server=127.0.0.1;Database=printsystemproto;Uid=root;Pwd=qjabek46;"; //maria db연결
+        // private MySqlConnection sqlConn; // maria db 연결 부분
+        protected override void WndProc(ref Message m)
+        {
+            base.WndProc(ref m);
+            Console.WriteLine($"{m.Msg}");
+        }
 
         public Form1()
         {
@@ -51,10 +56,22 @@ namespace PrintSystemProto
             DataTable mstable = new DataTable();
             msdata.Fill(mstable);
             dataGridView1.DataSource = mstable;
+      
             mssqlconn.Close();
             
 
         }
+
+        public DataTable Instancedatabse() // modelinf로 db데이터 전달을 위한 구문 - 반복구문 수정 필요
+        {
+            mssqlconn.Open();
+            SqlDataAdapter msdata = new SqlDataAdapter("SELECT * FROM printsystemtable", mssqlconn);
+            DataTable mstable = new DataTable();
+            msdata.Fill(mstable);
+            return mstable;
+
+        }
+
 
         /*     private void LoadData() // mariadb 에 있는 데이터를 가져와서 load시키기 위한 함수구문
              {
@@ -244,9 +261,12 @@ namespace PrintSystemProto
 
         private void modelinf_Click(object sender, EventArgs e)
         {
-            
-            ModelINFT modelINFT = new ModelINFT();
-            modelINFT.Show();
+
+            fmModel.Show();
+            fmModel.comboBox1.Items.Clear();
+            fmModel.comboBox1.Items.Add(modelbox.Text);
+            //ModelINFT modelINFT = new ModelINFT();
+            //modelINFT.Show();
 
         }
     }
