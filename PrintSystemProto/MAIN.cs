@@ -8,7 +8,7 @@ namespace PrintSystemProto
 {
     internal static class MAIN
     {
-        public static ModelINFT fmModel;
+        public static ModelINFT fmModel; //modelinf 클래스를 사용하는 선언문
         /// <summary>
         /// 해당 애플리케이션의 주 진입점입니다.
         /// </summary>

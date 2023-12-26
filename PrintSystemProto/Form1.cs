@@ -29,11 +29,12 @@ namespace PrintSystemProto
 
         // private const string ConnectionString = "Server=127.0.0.1;Database=printsystemproto;Uid=root;Pwd=qjabek46;"; //maria db연결
         // private MySqlConnection sqlConn; // maria db 연결 부분
-        protected override void WndProc(ref Message m)
-        {
-            base.WndProc(ref m);
-            Console.WriteLine($"{m.Msg}");
-        }
+        // 아래는 윈폼의 귀동 현황 데이터를 보여주는 관련 구문
+        //protected override void WndProc(ref Message m)
+        //{
+        //    base.WndProc(ref m);
+        //    Console.WriteLine($"{m.Msg}");
+        //}
 
         public Form1()
         {
@@ -49,25 +50,27 @@ namespace PrintSystemProto
         }
 
 
-        private void MSLoadData() //MSsql 연결 부분  = select를 통한 dbdata불러오기
+        public void MSLoadData() //MSsql 연결 부분  = select를 통한 dbdata불러오기
         {
             mssqlconn.Open();
-            SqlDataAdapter msdata = new SqlDataAdapter("SELECT * FROM printsystemtable", mssqlconn);
+            SqlDataAdapter msdata = new SqlDataAdapter("SELECT * FROM printsystemtable WHERE Delflg = 0", mssqlconn);
             DataTable mstable = new DataTable();
             msdata.Fill(mstable);
             dataGridView1.DataSource = mstable;
-      
+        
             mssqlconn.Close();
             
 
         }
 
+        // 아래는 아직 사용 안하는 구문 - 예비용 구문
         public DataTable Instancedatabse() // modelinf로 db데이터 전달을 위한 구문 - 반복구문 수정 필요
         {
             mssqlconn.Open();
-            SqlDataAdapter msdata = new SqlDataAdapter("SELECT * FROM printsystemtable", mssqlconn);
+            SqlDataAdapter msdata = new SqlDataAdapter("SELECT model FROM printsystemtable WHERE Delflg = 0", mssqlconn);
             DataTable mstable = new DataTable();
             msdata.Fill(mstable);
+            mssqlconn.Close();
             return mstable;
 
         }
@@ -134,9 +137,9 @@ namespace PrintSystemProto
                 try
                 {
                     mssqlconn.Open();
-                    string insertQry = "INSERT INTO printsystemtable(model,modelname) VALUES('" + modelValue + "', '" + modelNameValue + "')";
+                    string InsertQry = "INSERT INTO printsystemtable(model,modelname) VALUES('" + modelValue + "', '" + modelNameValue + "')";
 
-                    SqlCommand cmd = new SqlCommand(insertQry, mssqlconn);
+                    SqlCommand cmd = new SqlCommand(InsertQry, mssqlconn);
                     
 
                     if (cmd.ExecuteNonQuery() == 1)
@@ -261,13 +264,60 @@ namespace PrintSystemProto
 
         private void modelinf_Click(object sender, EventArgs e)
         {
+            if (!fmModel.IsDisposed)
+            {
+                fmModel.Show();
+                fmModel.comboBox1.Items.Clear();
 
-            fmModel.Show();
-            fmModel.comboBox1.Items.Clear();
-            fmModel.comboBox1.Items.Add(modelbox.Text);
-            //ModelINFT modelINFT = new ModelINFT();
-            //modelINFT.Show();
+                var indata = Instancedatabse();
+                for (int i = 0; i < indata.Rows.Count; i++)
+                {
+                    fmModel.comboBox1.Items.Add(indata.Rows[i]["model"]);
+                }
 
+                //ModelINFT modelINFT = new ModelINFT();
+                //modelINFT.Show();
+            }
+        }
+
+        private void DelBTN_Click(object sender, EventArgs e)
+        {
+            int datrow = dataGridView1.SelectedRows.Count;
+            string modelValue = modelbox.Text.Trim();
+            string modelNameValue = modelNamebox.Text.Trim();
+            if (datrow > 0)
+            {
+                try
+                {
+                    mssqlconn.Open();
+                    string DelQry = "UPDATE printsystemtable SET Delflg = 1 WHERE model = '" + modelValue + "' OR modelname '"+ modelNameValue  + "'" ;
+
+                    SqlCommand cmd = new SqlCommand(DelQry, mssqlconn);
+
+
+                    if (cmd.ExecuteNonQuery() == 1)
+                    {
+                        MessageBox.Show("삭제 성공");
+                        mssqlconn.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("삭제 실패");
+                        mssqlconn.Close();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                    throw;
+                }
+            }
+            else
+            {
+                MessageBox.Show("삭제 데이터를 선택하세요");
+            }
+            
+            
         }
     }
 }

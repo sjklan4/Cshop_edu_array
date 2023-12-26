@@ -13,14 +13,14 @@ namespace PrintSystemProto
     public partial class ModelINFT : Form
     {
         private Form1 formInstance;
-        private DataTable GetDataForm1()
-        {
-            return formInstance.Instancedatabse();
-        }
+        //private DataTable GetDataForm1()
+        //{
+        //    return formInstance.Instancedatabse();
+        //}
     
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            comboBox1.Items.Add(GetDataForm1());
+            //comboBox1.Items.Add(GetDataForm1());
 
         }
 
@@ -34,7 +34,7 @@ namespace PrintSystemProto
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
