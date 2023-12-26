@@ -53,7 +53,7 @@ namespace PrintSystemProto
         public void MSLoadData() //MSsql 연결 부분  = select를 통한 dbdata불러오기
         {
             mssqlconn.Open();
-            SqlDataAdapter msdata = new SqlDataAdapter("SELECT * FROM printsystemtable WHERE Delflg = 0", mssqlconn);
+            SqlDataAdapter msdata = new SqlDataAdapter("SELECT * FROM printsystemtable", mssqlconn); //where조건 삭제했음 - 확인필요******
             DataTable mstable = new DataTable();
             msdata.Fill(mstable);
             dataGridView1.DataSource = mstable;
@@ -107,7 +107,7 @@ namespace PrintSystemProto
         {
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
-                if (row.Cells[column].Value != null && row.Cells[column].Value.ToString().Trim().Equals(val, StringComparison.OrdinalIgnoreCase))
+                if (row.Cells[column].Value != null && row.Cells[column].Value.ToString().Trim().Equals(val, StringComparison.OrdinalIgnoreCase)) //개체의 값이 같은지 비교하기위함 Equals라는 매서드사용
                 {
                     return true; // 중복된 값이 있음
                 }
@@ -121,7 +121,7 @@ namespace PrintSystemProto
             string modelValue = modelbox.Text.Trim();
             string modelNameValue = modelNamebox.Text.Trim();
 
-            if (DupleValuechk(modelValue, 0) || DupleValuechk(modelNameValue, 1)) // =modelbox, 0번 cell 
+            if (DupleValuechk(modelValue, 0) || DupleValuechk(modelNameValue, 1)) // =modelbox, 0번 cell  (변수,컬럼번호를 argument로 전달) - DUP위 구문에서 true이면 중복값, 아니면 아래 신규값추가
             {
                 MessageBox.Show("중복된 값이 있습니다.");
             }
