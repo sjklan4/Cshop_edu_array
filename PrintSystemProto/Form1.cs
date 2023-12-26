@@ -21,7 +21,7 @@ namespace PrintSystemProto
         public static string uid = "sa";  //mssql 접속에 필요한 정보구문 
         public static string pws = "x";
         public static string database = "printsystem";
-        public static string server = "SJKLAN SQLEXPRESS";
+        public static string server = "Localhost";   // 편집 확인 필요~~~
         public string connstr = "SERVER=" + server + ";DATABASE=" + database + ";UID=" + uid + ";PASSWORD=" + pws + ";";
         public SqlConnection mssqlconn;
 
@@ -63,11 +63,11 @@ namespace PrintSystemProto
 
         }
 
-        // 아래는 아직 사용 안하는 구문 - 예비용 구문
+      
         public DataTable Instancedatabse() // modelinf로 db데이터 전달을 위한 구문 - 반복구문 수정 필요
         {
             mssqlconn.Open();
-            SqlDataAdapter msdata = new SqlDataAdapter("SELECT model FROM printsystemtable WHERE Delflg = 0", mssqlconn);
+            SqlDataAdapter msdata = new SqlDataAdapter("SELECT model FROM printsystemtable", mssqlconn);
             DataTable mstable = new DataTable();
             msdata.Fill(mstable);
             mssqlconn.Close();
@@ -283,6 +283,7 @@ namespace PrintSystemProto
         private void DelBTN_Click(object sender, EventArgs e)
         {
             int datrow = dataGridView1.SelectedRows.Count;
+            int delrow = dataGridView1.CurrentCell.RowIndex; // 활성화된 셀의 위치를 가져옴 - 번호로
             string modelValue = modelbox.Text.Trim();
             string modelNameValue = modelNamebox.Text.Trim();
             if (datrow > 0)
@@ -290,14 +291,14 @@ namespace PrintSystemProto
                 try
                 {
                     mssqlconn.Open();
-                    string DelQry = "UPDATE printsystemtable SET Delflg = 1 WHERE model = '" + modelValue + "' OR modelname '"+ modelNameValue  + "'" ;
-
+                    string DelQry = "DELETE FROM printsystemtable WHERE model = '" + modelValue + "' OR modelname = '" + modelNameValue + "'";
                     SqlCommand cmd = new SqlCommand(DelQry, mssqlconn);
-
+                 
 
                     if (cmd.ExecuteNonQuery() == 1)
                     {
                         MessageBox.Show("삭제 성공");
+                        dataGridView1.Rows.Remove(dataGridView1.Rows[delrow]); // 가져온 번호에 해당하는 열을 지움 지금 data는 전체 행 선택으로 설정 되어있음
                         mssqlconn.Close();
                     }
                     else
@@ -310,6 +311,10 @@ namespace PrintSystemProto
                 {
                     MessageBox.Show(ex.ToString());
                     throw;
+                }
+                finally
+                {
+                    
                 }
             }
             else
