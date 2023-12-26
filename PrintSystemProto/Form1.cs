@@ -19,7 +19,7 @@ namespace PrintSystemProto
         public static string uid = "sa";  //mssql 접속에 필요한 정보구문 
         public static string pws = "x";
         public static string database = "printsystem";
-        public static string server = "localhost";
+        public static string server = "SJKLAN SQLEXPRESS";
         public string connstr = "SERVER=" + server + ";DATABASE=" + database + ";UID=" + uid + ";PASSWORD=" + pws + ";";
         public SqlConnection mssqlconn;
 
