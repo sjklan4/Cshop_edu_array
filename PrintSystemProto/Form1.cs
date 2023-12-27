@@ -63,7 +63,6 @@ namespace PrintSystemProto
 
         }
 
-      
         public DataTable Instancedatabse() // modelinf로 db데이터 전달을 위한 구문 - 반복구문 수정 필요
         {
             mssqlconn.Open();
@@ -88,10 +87,10 @@ namespace PrintSystemProto
 
         public void Form1_Load(object sender, EventArgs e)
         {
-            dataGridView1.Columns[0].Name = "모델";
-            dataGridView1.Columns[1].Name = "모델명";
-            //LoadData(); - maria db
-            MSLoadData(); 
+            //dataGridView1.Columns[0].Name = "모델";
+            //dataGridView1.Columns[1].Name = "모델명";
+            ////LoadData(); - maria db
+            //MSLoadData(); 
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -252,7 +251,7 @@ namespace PrintSystemProto
             this.Close();
         }
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e) //data선택시 text박스에 선택값 보여주두록 하는것
         {
             if (dataGridView1.Rows[e.RowIndex].Cells[0].Value != null)
             {
@@ -262,7 +261,7 @@ namespace PrintSystemProto
            
         }
 
-        private void modelinf_Click(object sender, EventArgs e)
+        private void modelinf_Click(object sender, EventArgs e) // modelinfo안에 콤보박스 연동시켜주는 구문
         {
             if (!fmModel.IsDisposed)
             {
@@ -291,11 +290,10 @@ namespace PrintSystemProto
                 try
                 {
                     mssqlconn.Open();
-<<<<<<< HEAD
+
                     string DelQry = "DELETE FROM printsystemtable WHERE model = '" + modelValue + "' OR modelname = '" + modelNameValue + "'";
-=======
-                    string DelQry = "UPDATE printsystemtable SET Delflg = 1 WHERE model = '" + modelValue + "' OR modelname '"+ modelNameValue  + "'" ;
->>>>>>> 12ddddddddddddd
+
+
                     SqlCommand cmd = new SqlCommand(DelQry, mssqlconn);
                  
 

@@ -92,3 +92,9 @@ C:\c#\Cshopedu\PrintSystemProto\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\c#\Cshopedu\PrintSystemProto\obj\Debug\PrintSystemProto.csproj.CopyComplete
 C:\c#\Cshopedu\PrintSystemProto\obj\Debug\PrintSystemProto.ModelINFT.resources
 C:\Cshop\C#study\PrintSystemProto\obj\Debug\PrintSystemProto.ModelINFT.resources
+C:\c#\Cshopedu\PrintSystemProto\bin\Debug\ExcelDataReader.DataSet.dll
+C:\c#\Cshopedu\PrintSystemProto\bin\Debug\ExcelDataReader.dll
+C:\c#\Cshopedu\PrintSystemProto\bin\Debug\ExcelDataReader.pdb
+C:\c#\Cshopedu\PrintSystemProto\bin\Debug\ExcelDataReader.xml
+C:\c#\Cshopedu\PrintSystemProto\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\c#\Cshopedu\PrintSystemProto\bin\Debug\ExcelDataReader.DataSet.xml
