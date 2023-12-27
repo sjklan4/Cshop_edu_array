@@ -7,16 +7,31 @@ using System;
 
 class DelegateDemo
 {
-    static void Hi() => Console.WriteLine("안녕하세요");
+    static void Goforward() => Console.WriteLine("직진");
+    static void Goleft() => Console.WriteLine("좌회전");
+    static void Gofast() => Console.WriteLine("과속");
+    delegate void CarDriver(); //대리자 형식 생성
 
-    delegate void SayDelegate();
 
     static void Main()
     {
-        SayDelegate say = Hi;
-        say();
+        Goforward(); //직접 호출
+        //CarDriver goHome = new CarDriver(Goforward); // 대리 운전
+        CarDriver goHome = Goforward;
+        goHome += Goleft; goHome += Gofast; goHome -= Gofast;
+        //goHome += delegate () { Console.WriteLine("우회전"); }; //무명 메서드 / 익명함수
+        goHome += () => Console.WriteLine("후진"); //람다 식
+        goHome();
+        
+        // 내장된 대리자 형식을 통해서 직접 대리자 개체 생성
+        Action driver = Goforward;
+        driver += Goleft;
+        driver += () => Console.WriteLine("후진");
+        driver();
 
-        var hi = new SayDelegate(Hi);
-        hi();
+        Action go = () => Console.WriteLine("운전");
+        go();
+
+        
     }
 }

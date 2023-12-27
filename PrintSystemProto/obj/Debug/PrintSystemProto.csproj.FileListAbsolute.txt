@@ -98,3 +98,9 @@ C:\c#\Cshopedu\PrintSystemProto\bin\Debug\ExcelDataReader.pdb
 C:\c#\Cshopedu\PrintSystemProto\bin\Debug\ExcelDataReader.xml
 C:\c#\Cshopedu\PrintSystemProto\bin\Debug\ExcelDataReader.DataSet.pdb
 C:\c#\Cshopedu\PrintSystemProto\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Cshop\C#study\PrintSystemProto\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Cshop\C#study\PrintSystemProto\bin\Debug\ExcelDataReader.dll
+C:\Cshop\C#study\PrintSystemProto\bin\Debug\ExcelDataReader.pdb
+C:\Cshop\C#study\PrintSystemProto\bin\Debug\ExcelDataReader.xml
+C:\Cshop\C#study\PrintSystemProto\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\Cshop\C#study\PrintSystemProto\bin\Debug\ExcelDataReader.DataSet.xml

@@ -104,22 +104,26 @@ namespace PrintSystemProto
             string partcolorVL = Part_Color.Text.Trim();
 
         
-           DataRow newRow = ((DataTable)Partch_Table.DataSource).NewRow();
-                //newRow["model"] = model;
-                newRow["부품명"] = partnameVL;
-                newRow["부품번호"] = partnumVL;
-                newRow["색상"] = partcolorVL;
-                ((DataTable)Partch_Table.DataSource).Rows.Add(newRow);
+     
     
                 try
                 {
                     mssqlconn.Open();
-                    string InsertQry = "INSERT INTO partchtable(부품명,부품번호,색상) VALUES('" + partnameVL + "', '" + partnumVL + "','" + partcolorVL +"')";
-
+                    string InsertQry = "INSERT INTO partchtable(부품명,부품번호,색상) VALUES('" + partnameVL + "', '" + partnumVL + "','" + partcolorVL +"'); select scope_identity()"; // 자동 증가열 값을 가져오는 함수 scope_identity 이다.
+                    
                     SqlCommand cmd = new SqlCommand(InsertQry, mssqlconn);
+                    DataRow newRow = ((DataTable)Partch_Table.DataSource).NewRow(); //그리드의 data행에 datatable값이 있는 db의 테이블 전체를 가져와서 신규 행에 넣도록 인스턴스
+                    decimal gnALC = Convert.ToDecimal(cmd.ExecuteScalar()); // cope_identity를 사용하기 위해 excutescalar라는 내장함수를 가지고 영향을 받은 1행 1열을 반환시킨다. ALC가 table첫행에 잇음
+                    int generatedALC = (int)gnALC;
+                    newRow["ALC"] = gnALC;
+                    newRow["부품명"] = partnameVL;
+                    newRow["부품번호"] = partnumVL;
+                    newRow["색상"] = partcolorVL;
+                    ((DataTable)Partch_Table.DataSource).Rows.Add(newRow);
 
 
-                    if (cmd.ExecuteNonQuery() == 1)
+               
+                if (cmd.ExecuteNonQuery() == 1)
                     {
                         MessageBox.Show("추가 성공");
                         mssqlconn.Close();
