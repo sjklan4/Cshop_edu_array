@@ -291,7 +291,11 @@ namespace PrintSystemProto
                 try
                 {
                     mssqlconn.Open();
+<<<<<<< HEAD
                     string DelQry = "DELETE FROM printsystemtable WHERE model = '" + modelValue + "' OR modelname = '" + modelNameValue + "'";
+=======
+                    string DelQry = "UPDATE printsystemtable SET Delflg = 1 WHERE model = '" + modelValue + "' OR modelname '"+ modelNameValue  + "'" ;
+>>>>>>> 12ddddddddddddd
                     SqlCommand cmd = new SqlCommand(DelQry, mssqlconn);
                  
 
