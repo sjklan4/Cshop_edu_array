@@ -66,7 +66,7 @@ namespace PrintSystemProto
         public DataTable Instancedatabse() // modelinf로 db데이터 전달을 위한 구문 - 반복구문 수정 필요
         {
             mssqlconn.Open();
-            SqlDataAdapter msdata = new SqlDataAdapter("SELECT model FROM printsystemtable", mssqlconn);
+            SqlDataAdapter msdata = new SqlDataAdapter("SELECT * FROM printsystemtable", mssqlconn);
             DataTable mstable = new DataTable();
             msdata.Fill(mstable);
             mssqlconn.Close();
@@ -271,7 +271,7 @@ namespace PrintSystemProto
                 var indata = Instancedatabse();
                 for (int i = 0; i < indata.Rows.Count; i++)
                 {
-                    fmModel.comboBox1.Items.Add(indata.Rows[i]["model"]);
+                    fmModel.comboBox1.Items.Add($"{indata.Rows[i]["model"]} - { indata.Rows[i]["modelname"] }"); //2개 컬럼을 한번에 가져오기 위한 구조변경
                 }
 
                 //ModelINFT modelINFT = new ModelINFT();
