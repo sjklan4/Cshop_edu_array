@@ -66,12 +66,10 @@ namespace PrintSystemProto
 
             InitializeComponent();
             chkbox();
-
             mssqlconn = new SqlConnection(connstr);
             MSLoadData2();
             ProcessData(); //공정 합 db를 불러오기위해서 별도 load 중복 함수로 되어 있어서 추후 수정 필!
             
-   
         }
 
         public void chkbox()
@@ -84,9 +82,66 @@ namespace PrintSystemProto
                 Width = 50
             };
             Partch_Table.Columns.Insert(0, Select);//체크박스 추가 
+        }
+        public void Partch_Table_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+     
+        }
 
-            Partch_Table.CellContentClick += dataGridView1_CellContentClick; //체크박스 클릭시 그리드박스안 데이터를 클릭하도록 동작을 주는 구문
+        private void Partch_RegistBtn_Click(object sender, EventArgs e)
+        {
+            if (Partch_Table.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = Partch_Table.SelectedRows[0];
 
+                // 선택한 행의 모든 데이터들을 변수에 집어 넣는 구문
+                decimal ALCvl = Convert.ToDecimal(selectedRow.Cells["ALC"].Value);
+                string partchname = selectedRow.Cells["부품명"].Value.ToString();
+                string partchnum = selectedRow.Cells["부품번호"].Value.ToString();
+                string color = selectedRow.Cells["색상"].Value.ToString();
+                string selectcombo =  comboBox1.SelectedItem.ToString(); //콤보박스 내용 가져오기
+                string[] comboPartdata = selectcombo.Split('-'); //지금 콤보 박스 내용에 2개 컬럼 데이터가 오기 때문에 '-'를 기점으로 나누어 줌
+                // Call a method to save the data to the database connected to another DataGridView
+                //PartchData(ALCvl, partchname, partchnum, color);
+            
+                    string model = comboPartdata[0].Trim();
+                    string modelname = comboPartdata[1].Trim();
+
+                try
+                {
+                    mssqlconn.Open();
+                    string InsertQry = "INSERT INTO processtable(model, modelname, ALC, 부품명, 부품번호, 색상) VALUES('" + model + "','" + modelname + "','" + ALCvl + "','" + partchname + "', '" + partchnum + "','" + color + "')";
+                    SqlCommand processcmd = new SqlCommand(InsertQry, mssqlconn);
+                    DataRow newRow = ((DataTable)Partch_Table.DataSource).NewRow();
+
+                    newRow["model"] = model;
+                    newRow["modelname"] = modelname;
+                    newRow["ALC"] = ALCvl;
+                    newRow["부품명"] = partchname;
+                    newRow["부품번호"] = partchnum;
+                    newRow["색상"] = color;
+                    ((DataTable)Partch_Table.DataSource).Rows.Add(newRow);
+
+                    if (processcmd.ExecuteNonQuery() == 1)
+                    {
+                        MessageBox.Show("공정 추가");
+                        mssqlconn.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("공정추가 실패 - 중복값 또는 공정을 확인해주세요");
+                        mssqlconn.Close();
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.ToString());
+                    throw;
+                }
+                
+
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -108,33 +163,6 @@ namespace PrintSystemProto
             Partch_Table.Columns[2].Name = "부품번호";
             Partch_Table.Columns[3].Name = "부품색상";*/
             MSLoadData2();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.ColumnIndex == 0 && e.RowIndex >= 0)
-            {
-                Partch_Table = new DataGridView();
-                bool ischked = (bool)Partch_Table.Rows[e.RowIndex].Cells["Select"].Value; // chkbox셀의 값을 가져오는 구문 
-                //체크시 해당 행에 있는 모든 데이터들(해당하는 컬럼)을 ischked와 같은 상태로 바꾸기 위한 구문
-                for (int i = 0; i < Partch_Table.Columns.Count; i++)
-                {
-                    Partch_Table.Rows[e.RowIndex].Cells[i].Value = ischked;
-                }
-                if (ischked)
-                {
-                    decimal ALCvl = Convert.ToDecimal(Partch_Table.Rows[e.RowIndex].Cells["ALC"].Value);
-                    string partchname = Partch_Table.Rows[e.RowIndex].Cells["부품명"].Value.ToString();
-                    string partchnum = Partch_Table.Rows[e.RowIndex].Cells["부품번호"].Value.ToString();
-                    string color = Partch_Table.Rows[e.RowIndex].Cells["색상"].Value.ToString();
-                }
-                else
-                {
-                    MessageBox.Show("부품을 선택해주세요");
-                }
-            }
-                    
-
         }
 
         private void registbtn_Click(object sender, EventArgs e)
@@ -207,9 +235,8 @@ namespace PrintSystemProto
 
         }
 
-        private void Partch_RegistBtn_Click(object sender, EventArgs e)
-        {
+   
 
-        }
+     
     }
 }

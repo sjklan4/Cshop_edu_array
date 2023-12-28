@@ -93,7 +93,7 @@
             this.Partch_Table.RowTemplate.Height = 23;
             this.Partch_Table.Size = new System.Drawing.Size(550, 197);
             this.Partch_Table.TabIndex = 3;
-            this.Partch_Table.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.Partch_Table.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Partch_Table_CellContentClick);
             // 
             // AddPartch
             // 
