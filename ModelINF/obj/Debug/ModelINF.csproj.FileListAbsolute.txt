@@ -21,3 +21,4 @@ C:\c#\Cshopedu\ModelINF\obj\Debug\ModelINF.csproj.CoreCompileInputs.cache
 C:\c#\Cshopedu\ModelINF\obj\Debug\ModelINF.exe
 C:\c#\Cshopedu\ModelINF\obj\Debug\ModelINF.pdb
 >>>>>>> 576b43afa916337cdcc3c486add3c42864d9d42a
+C:\Cshop\C#study\ModelINF\obj\Debug\ModelINF.modelinf.resources

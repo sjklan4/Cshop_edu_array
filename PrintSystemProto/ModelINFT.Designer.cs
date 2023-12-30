@@ -48,9 +48,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.Partch_RegistBtn = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.Process_Chk = new System.Windows.Forms.DataGridView();
+            this.Process_table = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.Partch_Table)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Process_Chk)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Process_table)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -271,16 +271,16 @@
             this.label5.Text = "검사제품내용";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // Process_Chk
+            // Process_table
             // 
-            this.Process_Chk.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.Process_Chk.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Process_Chk.Location = new System.Drawing.Point(48, 374);
-            this.Process_Chk.Name = "Process_Chk";
-            this.Process_Chk.RowTemplate.Height = 23;
-            this.Process_Chk.Size = new System.Drawing.Size(550, 213);
-            this.Process_Chk.TabIndex = 16;
-            this.Process_Chk.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Process_Chk_CellContentClick);
+            this.Process_table.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.Process_table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Process_table.Location = new System.Drawing.Point(48, 374);
+            this.Process_table.Name = "Process_table";
+            this.Process_table.RowTemplate.Height = 23;
+            this.Process_table.Size = new System.Drawing.Size(550, 213);
+            this.Process_table.TabIndex = 16;
+            this.Process_table.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Process_Chk_CellContentClick);
             // 
             // ModelINFT
             // 
@@ -291,7 +291,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.Process_Chk);
+            this.Controls.Add(this.Process_table);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.Partch_RegistBtn);
@@ -312,7 +312,7 @@
             this.Text = "ModelINFT";
             this.Load += new System.EventHandler(this.ModelINFT_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Partch_Table)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Process_Chk)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Process_table)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -339,6 +339,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button Partch_RegistBtn;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridView Process_Chk;
+        private System.Windows.Forms.DataGridView Process_table;
     }
 }

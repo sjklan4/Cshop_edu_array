@@ -26,8 +26,12 @@ namespace PrintSystemProto
         public static string server = "Localhost";   // 편집 확인 필요~~~
         public string connstr = "SERVER=" + server + ";DATABASE=" + database + ";UID=" + uid + ";PASSWORD=" + pws + ";";
         public SqlConnection mssqlconn;
-       
 
+        //process그리드에 넣기 위해 전역 변수 사용 - 매개 변수 로직과 비교 필요......
+        private string gbALCvalue;
+        private string gbPartname;
+        private string gbPartnum;
+        private string gbColor;
 
         //private DataTable GetDataForm1()
         //{
@@ -56,7 +60,7 @@ namespace PrintSystemProto
             SqlDataAdapter processdb = new SqlDataAdapter("SELECT * FROM processtable",mssqlconn);
             DataTable prtable = new DataTable();
             processdb.Fill(prtable);
-            Process_Chk.DataSource = processdb;
+            Process_table.DataSource = prtable;
             mssqlconn.Close();    
         }
 
@@ -69,7 +73,7 @@ namespace PrintSystemProto
             mssqlconn = new SqlConnection(connstr);
             MSLoadData2();
             ProcessData(); //공정 합 db를 불러오기위해서 별도 load 중복 함수로 되어 있어서 추후 수정 필!
-            
+
         }
 
         public void chkbox()
@@ -82,45 +86,71 @@ namespace PrintSystemProto
                 Width = 50
             };
             Partch_Table.Columns.Insert(0, Select);//체크박스 추가 
+            Partch_Table.CellContentClick += Partch_Table_CellContentClick;
         }
+
+        
         public void Partch_Table_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-     
+            if (e.ColumnIndex == 0 && e.RowIndex >= 0)
+            {
+                DataGridViewCheckBoxCell checkbox = (DataGridViewCheckBoxCell)Partch_Table.Rows[e.RowIndex].Cells["Select"];
+                bool isChecked = (bool)checkbox.EditedFormattedValue;
+
+                if (isChecked)
+                {
+
+                    DataRowView selectRow = (DataRowView)Partch_Table.Rows[e.RowIndex].DataBoundItem;
+                    DataRow selectrowdata = selectRow.Row;
+
+                    gbALCvalue = selectrowdata["ALC"].ToString();
+                    gbPartname = selectrowdata["부품명"].ToString();
+                    gbPartnum = selectrowdata["부품번호"].ToString();
+                    gbColor = selectrowdata["색상"].ToString();
+
+                }
+            }
         }
 
         private void Partch_RegistBtn_Click(object sender, EventArgs e)
         {
-            if (Partch_Table.SelectedRows.Count > 0)
-            {
-                DataGridViewRow selectedRow = Partch_Table.SelectedRows[0];
-
-                // 선택한 행의 모든 데이터들을 변수에 집어 넣는 구문
-                decimal ALCvl = Convert.ToDecimal(selectedRow.Cells["ALC"].Value);
-                string partchname = selectedRow.Cells["부품명"].Value.ToString();
-                string partchnum = selectedRow.Cells["부품번호"].Value.ToString();
-                string color = selectedRow.Cells["색상"].Value.ToString();
-                string selectcombo =  comboBox1.SelectedItem.ToString(); //콤보박스 내용 가져오기
-                string[] comboPartdata = selectcombo.Split('-'); //지금 콤보 박스 내용에 2개 컬럼 데이터가 오기 때문에 '-'를 기점으로 나누어 줌
-                // Call a method to save the data to the database connected to another DataGridView
-                //PartchData(ALCvl, partchname, partchnum, color);
             
-                    string model = comboPartdata[0].Trim();
-                    string modelname = comboPartdata[1].Trim();
+            if (!string.IsNullOrEmpty(gbALCvalue))
+            {
+                //int RowIndex = Partch_Table.SelectedRows[0].Index; // 파츠 테이블의 선택한 행 번호 를 가져온다.
+
+               // string chkvalue = Partch_Table.Rows[RowIndex].Cells["Select"].Value.ToString(); // 행번호 와 컬럼위치를 지정해서 문자형식으로 담아줌 -  파츠테이블의 컬럼위치에 있는 해당행 전체 
+
+               
+                //DataGridViewRow selectedRow = new DataGridViewRow();
+
+      
+                string selectcombo = comboBox1.SelectedItem.ToString(); //콤보박스 내용 가져오기
+                string[] comboPartdata = selectcombo.Split('-'); //지금 콤보 박스 내용에 2개 컬럼 데이터가 오기 때문에 '-'를 기점으로 나누어 줌
+
+                string model = comboPartdata[0].Trim();
+                string modelname = comboPartdata[1].Trim();
+
+                string ALCvalue = gbALCvalue;
+                string Partname = gbPartname;
+                string Partnum = gbPartnum;
+                string Color = gbColor;
+
 
                 try
                 {
                     mssqlconn.Open();
-                    string InsertQry = "INSERT INTO processtable(model, modelname, ALC, 부품명, 부품번호, 색상) VALUES('" + model + "','" + modelname + "','" + ALCvl + "','" + partchname + "', '" + partchnum + "','" + color + "')";
-                    SqlCommand processcmd = new SqlCommand(InsertQry, mssqlconn);
-                    DataRow newRow = ((DataTable)Partch_Table.DataSource).NewRow();
+                    string InsertQry2 = "INSERT INTO processtable(model, modelname, ALC, 부품명, 부품번호, 색상) VALUES('"+ model + "','"+ modelname +"','" + ALCvalue + "','" + Partname + "', '" + Partnum + "','" + Color + "')";
+                    SqlCommand processcmd = new SqlCommand(InsertQry2, mssqlconn);
+                    DataRow newRow = ((DataTable)Process_table.DataSource).NewRow();
 
                     newRow["model"] = model;
                     newRow["modelname"] = modelname;
-                    newRow["ALC"] = ALCvl;
-                    newRow["부품명"] = partchname;
-                    newRow["부품번호"] = partchnum;
-                    newRow["색상"] = color;
-                    ((DataTable)Partch_Table.DataSource).Rows.Add(newRow);
+                    newRow["ALC"] = gbALCvalue;
+                    newRow["부품명"] = gbPartname;
+                    newRow["부품번호"] = gbPartnum;
+                    newRow["색상"] = gbColor;
+                    ((DataTable)Process_table.DataSource).Rows.Add(newRow);
 
                     if (processcmd.ExecuteNonQuery() == 1)
                     {
@@ -139,7 +169,7 @@ namespace PrintSystemProto
                     MessageBox.Show(ex.ToString());
                     throw;
                 }
-                
+
 
             }
         }
