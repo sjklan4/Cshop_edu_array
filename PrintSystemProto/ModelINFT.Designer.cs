@@ -65,9 +65,9 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("굴림", 12F);
-            this.button1.Location = new System.Drawing.Point(772, 17);
+            this.button1.Location = new System.Drawing.Point(604, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 40);
+            this.button1.Size = new System.Drawing.Size(91, 28);
             this.button1.TabIndex = 1;
             this.button1.Text = "종   료";
             this.button1.UseVisualStyleBackColor = true;
@@ -76,9 +76,9 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("굴림", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button2.Location = new System.Drawing.Point(623, 17);
+            this.button2.Location = new System.Drawing.Point(477, 3);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(129, 41);
+            this.button2.Size = new System.Drawing.Size(121, 28);
             this.button2.TabIndex = 2;
             this.button2.Text = "printsystem";
             this.button2.UseVisualStyleBackColor = true;
@@ -99,7 +99,7 @@
             // 
             this.AddPartch.AutoSize = true;
             this.AddPartch.Font = new System.Drawing.Font("굴림", 19F);
-            this.AddPartch.Location = new System.Drawing.Point(700, 87);
+            this.AddPartch.Location = new System.Drawing.Point(697, 42);
             this.AddPartch.Name = "AddPartch";
             this.AddPartch.Size = new System.Drawing.Size(116, 26);
             this.AddPartch.TabIndex = 4;
@@ -110,7 +110,7 @@
             // Part_Name
             // 
             this.Part_Name.Font = new System.Drawing.Font("굴림", 12F);
-            this.Part_Name.Location = new System.Drawing.Point(657, 212);
+            this.Part_Name.Location = new System.Drawing.Point(650, 154);
             this.Part_Name.Multiline = true;
             this.Part_Name.Name = "Part_Name";
             this.Part_Name.Size = new System.Drawing.Size(200, 35);
@@ -121,7 +121,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(654, 190);
+            this.label1.Location = new System.Drawing.Point(647, 133);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 16);
             this.label1.TabIndex = 6;
@@ -132,7 +132,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(654, 255);
+            this.label2.Location = new System.Drawing.Point(647, 196);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 16);
             this.label2.TabIndex = 7;
@@ -143,7 +143,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(654, 319);
+            this.label3.Location = new System.Drawing.Point(647, 255);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 16);
             this.label3.TabIndex = 8;
@@ -153,7 +153,7 @@
             // Part_Num
             // 
             this.Part_Num.Font = new System.Drawing.Font("굴림", 12F);
-            this.Part_Num.Location = new System.Drawing.Point(657, 278);
+            this.Part_Num.Location = new System.Drawing.Point(650, 215);
             this.Part_Num.Multiline = true;
             this.Part_Num.Name = "Part_Num";
             this.Part_Num.Size = new System.Drawing.Size(200, 35);
@@ -162,7 +162,7 @@
             // Part_Color
             // 
             this.Part_Color.Font = new System.Drawing.Font("굴림", 12F);
-            this.Part_Color.Location = new System.Drawing.Point(657, 340);
+            this.Part_Color.Location = new System.Drawing.Point(650, 276);
             this.Part_Color.Multiline = true;
             this.Part_Color.Name = "Part_Color";
             this.Part_Color.Size = new System.Drawing.Size(200, 35);
@@ -172,9 +172,9 @@
             // 
             this.registbtn.Cursor = System.Windows.Forms.Cursors.Default;
             this.registbtn.Font = new System.Drawing.Font("돋움체", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.registbtn.Location = new System.Drawing.Point(694, 397);
+            this.registbtn.Location = new System.Drawing.Point(654, 317);
             this.registbtn.Name = "registbtn";
-            this.registbtn.Size = new System.Drawing.Size(138, 35);
+            this.registbtn.Size = new System.Drawing.Size(89, 35);
             this.registbtn.TabIndex = 11;
             this.registbtn.Text = "부품추가";
             this.registbtn.UseVisualStyleBackColor = true;
@@ -195,9 +195,9 @@
             // 
             this.button4.Cursor = System.Windows.Forms.Cursors.Default;
             this.button4.Font = new System.Drawing.Font("돋움체", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button4.Location = new System.Drawing.Point(694, 441);
+            this.button4.Location = new System.Drawing.Point(764, 317);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(138, 25);
+            this.button4.Size = new System.Drawing.Size(76, 35);
             this.button4.TabIndex = 14;
             this.button4.Text = "Excel";
             this.button4.UseVisualStyleBackColor = true;
@@ -230,7 +230,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("굴림", 12F);
-            this.textBox1.Location = new System.Drawing.Point(657, 149);
+            this.textBox1.Location = new System.Drawing.Point(650, 92);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(200, 35);
@@ -240,7 +240,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label6.Location = new System.Drawing.Point(658, 126);
+            this.label6.Location = new System.Drawing.Point(651, 68);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(40, 16);
             this.label6.TabIndex = 20;
@@ -278,7 +278,7 @@
             this.Process_table.Location = new System.Drawing.Point(48, 374);
             this.Process_table.Name = "Process_table";
             this.Process_table.RowTemplate.Height = 23;
-            this.Process_table.Size = new System.Drawing.Size(550, 213);
+            this.Process_table.Size = new System.Drawing.Size(802, 213);
             this.Process_table.TabIndex = 16;
             this.Process_table.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Process_Chk_CellContentClick);
             // 

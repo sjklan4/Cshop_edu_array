@@ -28,10 +28,12 @@ namespace PrintSystemProto
         public SqlConnection mssqlconn;
 
         //process그리드에 넣기 위해 전역 변수 사용 - 매개 변수 로직과 비교 필요......
-        private string gbALCvalue;
+
+        private List<Tuple<string, string, string, string>> selectedPDataList = new List<Tuple<string, string, string, string>>();
+        /*private string gbALCvalue;
         private string gbPartname;
         private string gbPartnum;
-        private string gbColor;
+        private string gbColor;*/
 
         //private DataTable GetDataForm1()
         //{
@@ -89,25 +91,50 @@ namespace PrintSystemProto
             Partch_Table.CellContentClick += Partch_Table_CellContentClick;
         }
 
-        
+        // 입력된 부품 내용들에 대한 조합을 위한 선택을 하는 구문 - 부품 선택 테이블 
         public void Partch_Table_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 0 && e.RowIndex >= 0)
             {
                 DataGridViewCheckBoxCell checkbox = (DataGridViewCheckBoxCell)Partch_Table.Rows[e.RowIndex].Cells["Select"];
-                bool isChecked = (bool)checkbox.EditedFormattedValue;
+                bool isChecked = (bool)checkbox.EditedFormattedValue; //bool형식으로 변환해서 결과 값 반환
 
                 if (isChecked)
                 {
 
                     DataRowView selectRow = (DataRowView)Partch_Table.Rows[e.RowIndex].DataBoundItem;
                     DataRow selectrowdata = selectRow.Row;
-
+/*
+                
                     gbALCvalue = selectrowdata["ALC"].ToString();
                     gbPartname = selectrowdata["부품명"].ToString();
                     gbPartnum = selectrowdata["부품번호"].ToString();
-                    gbColor = selectrowdata["색상"].ToString();
+                    gbColor = selectrowdata["색상"].ToString();*/
 
+                    string ALC = selectrowdata["ALC"].ToString();
+                    string partName = selectrowdata["부품명"].ToString();
+                    string partNum = selectrowdata["부품번호"].ToString();
+                    string color = selectrowdata["색상"].ToString();
+
+                    selectedPDataList.Add(new Tuple<string, string, string, string>(ALC, partName, partNum, color));
+
+                }
+                else
+                {
+                    //해제 기능 테스트필요 필!!!
+                    //체크 해제시 담긴데이터들을 삭제 시키기 위함. - 삭제 안시키면 select리스트 데이터에 그대로 남아서 추후 insert시 체크가 풀린 데이터까지 다 들어감.
+                    DataRowView selectRow = (DataRowView)Partch_Table.Rows[e.RowIndex].DataBoundItem;
+                    DataRow selectrowdata = selectRow.Row;
+
+                    string ALC = selectrowdata["ALC"].ToString();
+                    string partName = selectrowdata["부품명"].ToString();
+                    string partNum = selectrowdata["부품번호"].ToString();
+                    string color = selectrowdata["색상"].ToString();
+
+                    selectedPDataList.RemoveAll(item => item.Item1 == ALC &&
+                                                      item.Item2 == partName &&
+                                                      item.Item3 == partNum &&
+                                                      item.Item4 == color);
                 }
             }
         }
@@ -115,7 +142,8 @@ namespace PrintSystemProto
         private void Partch_RegistBtn_Click(object sender, EventArgs e)
         {
             
-            if (!string.IsNullOrEmpty(gbALCvalue))
+            //if (!string.IsNullOrEmpty(gbALCvalue))
+            if(selectedPDataList.Count > 0)
             {
                 //int RowIndex = Partch_Table.SelectedRows[0].Index; // 파츠 테이블의 선택한 행 번호 를 가져온다.
 
@@ -126,41 +154,54 @@ namespace PrintSystemProto
 
       
                 string selectcombo = comboBox1.SelectedItem.ToString(); //콤보박스 내용 가져오기
+
+                if (string.IsNullOrEmpty(selectcombo))
+                {
+                    MessageBox.Show("모델과 모델이름을 선택해주세요");
+                    return;
+                }
+
                 string[] comboPartdata = selectcombo.Split('-'); //지금 콤보 박스 내용에 2개 컬럼 데이터가 오기 때문에 '-'를 기점으로 나누어 줌
 
                 string model = comboPartdata[0].Trim();
                 string modelname = comboPartdata[1].Trim();
 
-                string ALCvalue = gbALCvalue;
-                string Partname = gbPartname;
-                string Partnum = gbPartnum;
-                string Color = gbColor;
-
-
                 try
                 {
                     mssqlconn.Open();
-                    string InsertQry2 = "INSERT INTO processtable(model, modelname, ALC, 부품명, 부품번호, 색상) VALUES('"+ model + "','"+ modelname +"','" + ALCvalue + "','" + Partname + "', '" + Partnum + "','" + Color + "')";
-                    SqlCommand processcmd = new SqlCommand(InsertQry2, mssqlconn);
-                    DataRow newRow = ((DataTable)Process_table.DataSource).NewRow();
 
-                    newRow["model"] = model;
-                    newRow["modelname"] = modelname;
-                    newRow["ALC"] = gbALCvalue;
-                    newRow["부품명"] = gbPartname;
-                    newRow["부품번호"] = gbPartnum;
-                    newRow["색상"] = gbColor;
-                    ((DataTable)Process_table.DataSource).Rows.Add(newRow);
 
-                    if (processcmd.ExecuteNonQuery() == 1)
+                    foreach (var selectedPData in selectedPDataList)
                     {
-                        MessageBox.Show("공정 추가");
-                        mssqlconn.Close();
-                    }
-                    else
-                    {
-                        MessageBox.Show("공정추가 실패 - 중복값 또는 공정을 확인해주세요");
-                        mssqlconn.Close();
+                        string ALCvalue = selectedPData.Item1;
+                        string Partname = selectedPData.Item2;
+                        string Partnum = selectedPData.Item3;
+                        string Color = selectedPData.Item4;
+
+                        string InsertQry2 = "INSERT INTO processtable(model, modelname, ALC, 부품명, 부품번호, 색상)"
+                                                + "VALUES('" + model + "','" + modelname + "','" + ALCvalue + "','" + Partname + "', '" + Partnum + "','" + Color + "')";
+                        SqlCommand processcmd = new SqlCommand(InsertQry2, mssqlconn);
+                        DataRow newRow = ((DataTable)Process_table.DataSource).NewRow();
+
+                        newRow["model"] = model;
+                        newRow["modelname"] = modelname;
+                        newRow["ALC"] = ALCvalue;
+                        newRow["부품명"] = Partname;
+                        newRow["부품번호"] = Partnum;
+                        newRow["색상"] = Color;
+                        ((DataTable)Process_table.DataSource).Rows.Add(newRow);
+
+                        if (processcmd.ExecuteNonQuery() == 1)
+                        {
+                            MessageBox.Show("공정 추가");
+                           
+                        }
+                        else
+                        {
+                            MessageBox.Show("공정추가 실패 - 중복값 또는 공정을 확인해주세요");
+
+                        }
+
                     }
                 }
                 catch (Exception ex)
@@ -168,6 +209,10 @@ namespace PrintSystemProto
 
                     MessageBox.Show(ex.ToString());
                     throw;
+                }
+                finally 
+                {
+                    mssqlconn.Close();
                 }
 
 
