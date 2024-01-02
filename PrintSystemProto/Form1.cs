@@ -314,10 +314,7 @@ namespace PrintSystemProto
                     MessageBox.Show(ex.ToString());
                     throw;
                 }
-                finally
-                {
-                    
-                }
+            
             }
             else
             {

@@ -30,6 +30,7 @@ namespace PrintSystemProto
         //process그리드에 넣기 위해 전역 변수 사용 - 매개 변수 로직과 비교 필요......
 
         private List<Tuple<string, string, string, string>> selectedPDataList = new List<Tuple<string, string, string, string>>();
+        private bool cellValueChangedHandled = false;
         /*private string gbALCvalue;
         private string gbPartname;
         private string gbPartnum;
@@ -88,15 +89,20 @@ namespace PrintSystemProto
                 Width = 50
             };
             Partch_Table.Columns.Insert(0, Select);//체크박스 추가 
-            Partch_Table.CellContentClick += Partch_Table_CellContentClick;
+            Partch_Table.CellValueChanged += Partch_Table_CellContentClick;
         }
 
         // 입력된 부품 내용들에 대한 조합을 위한 선택을 하는 구문 - 부품 선택 테이블 
         public void Partch_Table_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 0 && e.RowIndex >= 0)
+            if (cellValueChangedHandled)
             {
-                DataGridViewCheckBoxCell checkbox = (DataGridViewCheckBoxCell)Partch_Table.Rows[e.RowIndex].Cells["Select"];
+                return;
+            }
+
+            if (e.ColumnIndex == Partch_Table.Columns["Select"].Index && e.RowIndex >= 0) // 체크박스가 있는 컬럼의 위치에서 변동이 생기는 행이 있으면 이라는 것으로 시작
+            {
+                DataGridViewCheckBoxCell checkbox = (DataGridViewCheckBoxCell)Partch_Table.Rows[e.RowIndex].Cells["Select"]; // 체크박스 클래스를 patch테이블의 해당 컬럼의 row값을 넣어주는 구문
                 bool isChecked = (bool)checkbox.EditedFormattedValue; //bool형식으로 변환해서 결과 값 반환
 
                 if (isChecked)
@@ -116,7 +122,8 @@ namespace PrintSystemProto
                     string partNum = selectrowdata["부품번호"].ToString();
                     string color = selectrowdata["색상"].ToString();
 
-                    selectedPDataList.Add(new Tuple<string, string, string, string>(ALC, partName, partNum, color));
+                   selectedPDataList.Add(new Tuple<string, string, string, string>(ALC, partName, partNum, color));
+                   
 
                 }
                 else
@@ -136,6 +143,9 @@ namespace PrintSystemProto
                                                       item.Item3 == partNum &&
                                                       item.Item4 == color);
                 }
+                cellValueChangedHandled = true;
+                Partch_Table.EndEdit();
+                cellValueChangedHandled = false;
             }
         }
 
@@ -147,75 +157,81 @@ namespace PrintSystemProto
             {
                 //int RowIndex = Partch_Table.SelectedRows[0].Index; // 파츠 테이블의 선택한 행 번호 를 가져온다.
 
-               // string chkvalue = Partch_Table.Rows[RowIndex].Cells["Select"].Value.ToString(); // 행번호 와 컬럼위치를 지정해서 문자형식으로 담아줌 -  파츠테이블의 컬럼위치에 있는 해당행 전체 
+                // string chkvalue = Partch_Table.Rows[RowIndex].Cells["Select"].Value.ToString(); // 행번호 와 컬럼위치를 지정해서 문자형식으로 담아줌 -  파츠테이블의 컬럼위치에 있는 해당행 전체 
 
-               
+
                 //DataGridViewRow selectedRow = new DataGridViewRow();
 
-      
-                string selectcombo = comboBox1.SelectedItem.ToString(); //콤보박스 내용 가져오기
 
-                if (string.IsNullOrEmpty(selectcombo))
+                string selectcombo = comboBox1.SelectedItem?.ToString(); //콤보박스 내용 가져오기
+                
+                if (string.IsNullOrEmpty(selectcombo)) // 유효성? 검사 부분 - 콤보 선택 안하면 경고 띄우기
                 {
                     MessageBox.Show("모델과 모델이름을 선택해주세요");
                     return;
                 }
 
-                string[] comboPartdata = selectcombo.Split('-'); //지금 콤보 박스 내용에 2개 컬럼 데이터가 오기 때문에 '-'를 기점으로 나누어 줌
-
-                string model = comboPartdata[0].Trim();
-                string modelname = comboPartdata[1].Trim();
-
-                try
+                else
                 {
-                    mssqlconn.Open();
-
-
-                    foreach (var selectedPData in selectedPDataList)
+                    try
                     {
-                        string ALCvalue = selectedPData.Item1;
-                        string Partname = selectedPData.Item2;
-                        string Partnum = selectedPData.Item3;
-                        string Color = selectedPData.Item4;
+                        mssqlconn.Open();
 
-                        string InsertQry2 = "INSERT INTO processtable(model, modelname, ALC, 부품명, 부품번호, 색상)"
-                                                + "VALUES('" + model + "','" + modelname + "','" + ALCvalue + "','" + Partname + "', '" + Partnum + "','" + Color + "')";
-                        SqlCommand processcmd = new SqlCommand(InsertQry2, mssqlconn);
-                        DataRow newRow = ((DataTable)Process_table.DataSource).NewRow();
 
-                        newRow["model"] = model;
-                        newRow["modelname"] = modelname;
-                        newRow["ALC"] = ALCvalue;
-                        newRow["부품명"] = Partname;
-                        newRow["부품번호"] = Partnum;
-                        newRow["색상"] = Color;
-                        ((DataTable)Process_table.DataSource).Rows.Add(newRow);
-
-                        if (processcmd.ExecuteNonQuery() == 1)
+                        foreach (var selectedPData in selectedPDataList)
                         {
-                            MessageBox.Show("공정 추가");
+                            string[] comboPartdata = selectcombo.Split('-'); //지금 콤보 박스 내용에 2개 컬럼 데이터가 오기 때문에 '-'를 기점으로 나누어 줌
+
+                            string model = comboPartdata[0].Trim(); //model 컬럼 내용
+                            string modelname = comboPartdata[1].Trim(); // modelname 컬럼 내용
+                            string ALCvalue = selectedPData.Item1;
+                            string Partname = selectedPData.Item2;
+                            string Partnum = selectedPData.Item3;
+                            string Color = selectedPData.Item4;
+
+                            string InsertQry2 = "INSERT INTO processtable(model, modelname, ALC, 부품명, 부품번호, 색상)"
+                                                    + "VALUES('" + model + "','" + modelname + "','" + ALCvalue + "','" + Partname + "', '" + Partnum + "','" + Color + "')";
+                            SqlCommand processcmd = new SqlCommand(InsertQry2, mssqlconn);
+                            DataRow newRow = ((DataTable)Process_table.DataSource).NewRow();
+
+                            newRow["model"] = model;
+                            newRow["modelname"] = modelname;
+                            newRow["ALC"] = ALCvalue;
+                            newRow["부품명"] = Partname;
+                            newRow["부품번호"] = Partnum;
+                            newRow["색상"] = Color;
+                            ((DataTable)Process_table.DataSource).Rows.Add(newRow);
+
+                            if (processcmd.ExecuteNonQuery() == 1)
+                            {
+                                MessageBox.Show("공정 추가");
                            
-                        }
-                        else
-                        {
-                            MessageBox.Show("공정추가 실패 - 중복값 또는 공정을 확인해주세요");
+                            }
+                            else
+                            {
+                                MessageBox.Show("공정추가 실패 - 중복값 또는 공정을 확인해주세요");
+
+                            }
 
                         }
-
                     }
-                }
-                catch (Exception ex)
-                {
+                    catch (Exception ex)
+                    {
 
-                    MessageBox.Show(ex.ToString());
-                    throw;
-                }
-                finally 
-                {
-                    mssqlconn.Close();
-                }
+                        MessageBox.Show(ex.ToString());
+                        throw;
+                    }
+                    finally 
+                    {
+                        mssqlconn.Close();
+                    }
 
 
+                }
+            }
+            else
+            {
+                MessageBox.Show("부품을 선택해주세요");
             }
         }
 
@@ -310,8 +326,58 @@ namespace PrintSystemProto
 
         }
 
-   
+        // 공정 삭제 버튼 
+        private void button5_Click(object sender, EventArgs e)
+        {
+            int selectRowdata = Process_table.SelectedRows.Count;
+            int delProcess = Process_table.CurrentCell.RowIndex;
+            string model = Process_table.Rows[delProcess].Cells["model"].Value.ToString();
+            /*string modelname = Process_table.SelectedRows[selectRowdata].Cells["modelname"].ToString();
+            string ALC = Process_table.SelectedRows[selectRowdata].Cells["ALC"].ToString();
+            string Partname = Process_table.SelectedRows[selectRowdata].Cells["부품명"].ToString();
+            string PartNum = Process_table.SelectedRows[selectRowdata].Cells["부품번호"].ToString();
+            string Color = Process_table.SelectedRows[selectRowdata].Cells["색상"].ToString();*/
 
-     
+            if (selectRowdata > 0)
+            {
+                try
+                {
+                    mssqlconn.Open();
+                    string Process_DelQry = "DELETE FROM processtable WHERE model = '" + model + "'";
+
+                    SqlCommand Process_delcmd = new SqlCommand(Process_DelQry, mssqlconn);
+                    int resultrow = Process_delcmd.ExecuteNonQuery(); //여러 행이 묶여서 삭제 될 수도 있어서 영향 받는 행을 별도로 추출
+
+                    if (resultrow > 0)
+                    {
+                        Process_table.Rows.Remove(Process_table.Rows[delProcess]);
+                        MessageBox.Show("공정이 삭제 되었습니다.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("실패! : 공정을 다시 확인해주세요");
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("오류가 발생하였습니다. 담당자에게 문의해주세요");
+                    throw;
+                }
+                finally
+                {
+                    mssqlconn.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("삭제할 공정을 선택해주세요");
+            }
+        }
+
+        // 부품 삭제 버튼
+        private void Partch_Delbtn_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
