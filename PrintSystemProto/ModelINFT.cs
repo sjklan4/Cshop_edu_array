@@ -15,8 +15,6 @@ using System.Windows.Forms;
 
 namespace PrintSystemProto
 {
-    
-
 
     public partial class ModelINFT : Form
     {
@@ -29,8 +27,8 @@ namespace PrintSystemProto
 
         //process그리드에 넣기 위해 전역 변수 사용 - 매개 변수 로직과 비교 필요......
 
-        private List<Tuple<string, string, string, string>> selectedPDataList = new List<Tuple<string, string, string, string>>();
-        private bool cellValueChangedHandled = false;
+        private List<Tuple<string, string, string, string>> selectedPDataList = new List<Tuple<string, string, string, string>>(); //선택한 여러 부품데이터를 한번에 넣기 위해서 tuple 한번에 받아온다.
+        private bool cellValueChangedHandled = false; // 2번 반복되는 것을 막기위해서 메서드가 여러번 호출되는 것을 막기 위해 bool린 함수를 선언 false로 설정 
         /*private string gbALCvalue;
         private string gbPartname;
         private string gbPartnum;
@@ -79,6 +77,7 @@ namespace PrintSystemProto
 
         }
 
+        // select를 하기위한 열과 단순 선택 박스 기능만 추가하는 구문
         public void chkbox()
         {
             //체크 박스 추가
@@ -88,14 +87,14 @@ namespace PrintSystemProto
                 Name = "Select",
                 Width = 50
             };
-            Partch_Table.Columns.Insert(0, Select);//체크박스 추가 
+            Partch_Table.Columns.Insert(0, Select);//체크박스 추가 - 0번째 컬럼에 select 기능을 추가
             Partch_Table.CellValueChanged += Partch_Table_CellContentClick;
         }
 
         // 입력된 부품 내용들에 대한 조합을 위한 선택을 하는 구문 - 부품 선택 테이블 
         public void Partch_Table_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (cellValueChangedHandled)
+            if (cellValueChangedHandled) // 전역으로 선언한 cellvalue가 true상태 일때는 리턴 시켜서 Partch_table 매서드를 종료 시켜준다. false상태 즉 구동하지 않은 상태면 아래를 한번 구동시켜서 최종적으로 1번 움직이면 종료 - true상태이기때문에
             {
                 return;
             }
@@ -143,9 +142,10 @@ namespace PrintSystemProto
                                                       item.Item3 == partNum &&
                                                       item.Item4 == color);
                 }
-                cellValueChangedHandled = true;
-                Partch_Table.EndEdit();
-                cellValueChangedHandled = false;
+                
+                cellValueChangedHandled = true; //위에서 false상태에서 구동후 true로 만들고
+                Partch_Table.EndEdit();         // 작업한 것을 커밋후 종료 - 더이상 메서드안에 함수가 동작하지 않도록 멈춤
+                cellValueChangedHandled = false; // 다시 다음 작업을 위해 false상태로 바꿔준다.
             }
         }
 
@@ -300,6 +300,7 @@ namespace PrintSystemProto
                     MessageBox.Show(ex.ToString());
                     throw;
                 }
+                
 
             }
 
@@ -329,8 +330,8 @@ namespace PrintSystemProto
         // 공정 삭제 버튼 
         private void button5_Click(object sender, EventArgs e)
         {
-            int selectRowdata = Process_table.SelectedRows.Count;
-            int delProcess = Process_table.CurrentCell.RowIndex;
+            int selectRowdata = Process_table.SelectedRows.Count;  // 선택된 행의 숫자를 가져옴 
+            int delProcess = Process_table.CurrentCell.RowIndex;   // 활성화된 행의 번호를 가져옴 - 몇번째 행 지울지 결정하기 위함
             string model = Process_table.Rows[delProcess].Cells["model"].Value.ToString();
             /*string modelname = Process_table.SelectedRows[selectRowdata].Cells["modelname"].ToString();
             string ALC = Process_table.SelectedRows[selectRowdata].Cells["ALC"].ToString();
@@ -351,7 +352,6 @@ namespace PrintSystemProto
                     if (resultrow > 0)
                     {
                         Process_table.Rows.Remove(Process_table.Rows[delProcess]);
-                        Process_table.Refresh();
                         MessageBox.Show("공정이 삭제 되었습니다.");
                     }
                     else
@@ -366,6 +366,7 @@ namespace PrintSystemProto
                 }
                 finally
                 {
+                    Process_table.Refresh();
                     mssqlconn.Close();
                 }
             }
@@ -378,7 +379,42 @@ namespace PrintSystemProto
         // 부품 삭제 버튼
         private void Partch_Delbtn_Click(object sender, EventArgs e)
         {
-           
+
+            if (Partch_Table.SelectedRows.Count > 0)
+            {
+                try
+                {
+                    mssqlconn.Open();
+                    foreach (var DelselectRow in selectedPDataList)
+                    {
+                        int Select_Row = -1; // 기본 행의 번호는 0부터 시작 선택이 없을시 디폴트인 0 행을 삭제 될수도 있기 때문에 디폴트 값에 대한 삭제 방지 
+                        if (Partch_Table.CurrentCell != null) // null또는 선택을 안했을시 생기는 예외처리를 처리하기 위한 구문 - 오류 직접적으로 안보여주기
+                        {
+                            Select_Row = Partch_Table.CurrentCell.RowIndex;     //선택한 행의 - 활성된 행의 rowindex값을 가져오는 구문
+                        }
+                        
+                        string ALCvalue = DelselectRow.Item1;                       //선택한 ALC가 들어 있는 행의 ALC값을 받아옴
+
+                        string DelQry = "DELETE FROM partchtable where ALC = '" + ALCvalue + "'";
+                        SqlCommand Partch_Del = new SqlCommand(DelQry, mssqlconn);
+                        int resultList = Partch_Del.ExecuteNonQuery();
+
+                        if (resultList > 0)
+                        {
+                            Partch_Table.Rows.Remove(Partch_Table.Rows[Select_Row]);
+                            MessageBox.Show("부품리스트 삭제.");
+                        }
+                      
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("실패! : 리스트 내용을 확인해주세요");
+                    throw;
+                }
+                finally { mssqlconn.Close(); }
+
+            }
         }
     }
 }
