@@ -376,7 +376,7 @@ namespace PrintSystemProto
             }
         }
 
-        // 부품 삭제 버튼
+        // 부품 삭제 버튼  - 수정사항 : 예외 처리가 반복됨 
         private void Partch_Delbtn_Click(object sender, EventArgs e)
         {
 
