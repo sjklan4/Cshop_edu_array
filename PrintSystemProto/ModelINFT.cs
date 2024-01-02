@@ -351,6 +351,7 @@ namespace PrintSystemProto
                     if (resultrow > 0)
                     {
                         Process_table.Rows.Remove(Process_table.Rows[delProcess]);
+                        Process_table.Refresh();
                         MessageBox.Show("공정이 삭제 되었습니다.");
                     }
                     else
