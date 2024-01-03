@@ -56,6 +56,15 @@ namespace PrintSystemProto
             SqlDataAdapter msdata = new SqlDataAdapter("SELECT * FROM printsystemtable", mssqlconn); //where조건 삭제했음 - 확인필요******
             DataTable mstable = new DataTable();
             msdata.Fill(mstable);
+
+
+
+
+          //  SqlCommand msdata = new SqlCommand("select_print", mssqlconn); // select_print라는 저장프로시저 불러오기
+           // msdata.CommandType = CommandType.StoredProcedure; // commandtype을 스토어 프로시저로 해서 불러오기
+           // SqlDataAdapter prcData = new SqlDataAdapter(msdata); // sql데이터를 프로시저의 결과로 부터 가져오도록 한다.
+            //DataTable mstable = new DataTable(); // 데이터 테이블 인스턴스
+            //prcData.Fill(mstable);  // 프로시저로 부터 받은 데이터로 받는다.
             dataGridView1.DataSource = mstable;
         
             mssqlconn.Close();

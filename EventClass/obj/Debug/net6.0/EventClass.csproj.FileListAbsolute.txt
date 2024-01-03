@@ -1,0 +1,15 @@
+C:\Cshop\C#study\EventClass\bin\Debug\net6.0\EventClass.exe
+C:\Cshop\C#study\EventClass\bin\Debug\net6.0\EventClass.deps.json
+C:\Cshop\C#study\EventClass\bin\Debug\net6.0\EventClass.runtimeconfig.json
+C:\Cshop\C#study\EventClass\bin\Debug\net6.0\EventClass.dll
+C:\Cshop\C#study\EventClass\bin\Debug\net6.0\EventClass.pdb
+C:\Cshop\C#study\EventClass\obj\Debug\net6.0\EventClass.GeneratedMSBuildEditorConfig.editorconfig
+C:\Cshop\C#study\EventClass\obj\Debug\net6.0\EventClass.AssemblyInfoInputs.cache
+C:\Cshop\C#study\EventClass\obj\Debug\net6.0\EventClass.AssemblyInfo.cs
+C:\Cshop\C#study\EventClass\obj\Debug\net6.0\EventClass.csproj.CoreCompileInputs.cache
+C:\Cshop\C#study\EventClass\obj\Debug\net6.0\EventClass.sourcelink.json
+C:\Cshop\C#study\EventClass\obj\Debug\net6.0\EventClass.dll
+C:\Cshop\C#study\EventClass\obj\Debug\net6.0\refint\EventClass.dll
+C:\Cshop\C#study\EventClass\obj\Debug\net6.0\EventClass.pdb
+C:\Cshop\C#study\EventClass\obj\Debug\net6.0\EventClass.genruntimeconfig.cache
+C:\Cshop\C#study\EventClass\obj\Debug\net6.0\ref\EventClass.dll
