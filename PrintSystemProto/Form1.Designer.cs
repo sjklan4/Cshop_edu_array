@@ -37,6 +37,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.modelinf = new System.Windows.Forms.Button();
             this.DelBTN = new System.Windows.Forms.Button();
+            this.Insert_result = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -132,13 +133,24 @@
             // DelBTN
             // 
             this.DelBTN.Location = new System.Drawing.Point(531, 368);
-            this.DelBTN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DelBTN.Margin = new System.Windows.Forms.Padding(2);
             this.DelBTN.Name = "DelBTN";
             this.DelBTN.Size = new System.Drawing.Size(95, 27);
             this.DelBTN.TabIndex = 11;
             this.DelBTN.Text = "삭제";
             this.DelBTN.UseVisualStyleBackColor = true;
             this.DelBTN.Click += new System.EventHandler(this.DelBTN_Click);
+            // 
+            // Insert_result
+            // 
+            this.Insert_result.AutoSize = true;
+            this.Insert_result.Font = new System.Drawing.Font("굴림", 25F);
+            this.Insert_result.Location = new System.Drawing.Point(525, 431);
+            this.Insert_result.Name = "Insert_result";
+            this.Insert_result.Size = new System.Drawing.Size(83, 34);
+            this.Insert_result.TabIndex = 12;
+            this.Insert_result.Text = "결과";
+            this.Insert_result.Click += new System.EventHandler(this.Insert_result_Click);
             // 
             // Form1
             // 
@@ -147,6 +159,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1066, 707);
             this.ControlBox = false;
+            this.Controls.Add(this.Insert_result);
             this.Controls.Add(this.DelBTN);
             this.Controls.Add(this.modelinf);
             this.Controls.Add(this.button3);
@@ -176,6 +189,7 @@
         private System.Windows.Forms.Button button3;
         public System.Windows.Forms.Button modelinf;
         private System.Windows.Forms.Button DelBTN;
+        private System.Windows.Forms.Label Insert_result;
     }
 }
 

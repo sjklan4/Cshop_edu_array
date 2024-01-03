@@ -91,6 +91,8 @@ namespace PrintSystemProto
             //dataGridView1.Columns[1].Name = "모델명";
             ////LoadData(); - maria db
             //MSLoadData(); 
+        
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -117,105 +119,62 @@ namespace PrintSystemProto
 
         private void button1_Click(object sender, EventArgs e)
         {
+           
             string modelValue = modelbox.Text.Trim();
             string modelNameValue = modelNamebox.Text.Trim();
-
-            if (DupleValuechk(modelValue, 0) || DupleValuechk(modelNameValue, 1)) // =modelbox, 0번 cell  (변수,컬럼번호를 argument로 전달) - DUP위 구문에서 true이면 중복값, 아니면 아래 신규값추가
+            if (modelValue == "")
             {
-                MessageBox.Show("중복된 값이 있습니다.");
+                Insert_result.Text = "Model을 입력해주세요";
+                Insert_result.ForeColor = Color.Red;
+            }
+            else if (modelNameValue == "")
+            {
+                Insert_result.Text = "Modelname을 입력해주세요";
+                Insert_result.ForeColor = Color.Red;
             }
             else
             {
-                DataRow newRow = ((DataTable)dataGridView1.DataSource).NewRow();
-                newRow["model"] = modelValue;
-                newRow["modelname"] = modelNameValue;
-                ((DataTable)dataGridView1.DataSource).Rows.Add(newRow);
-                // mssql 적용 부분 ---------------------------------------------------------------------------------------------------
 
-
-                try
+                if (DupleValuechk(modelValue, 0) || DupleValuechk(modelNameValue, 1)) // =modelbox, 0번 cell  (변수,컬럼번호를 argument로 전달) - DUP위 구문에서 true이면 중복값, 아니면 아래 신규값추가
                 {
-                    mssqlconn.Open();
-                    string InsertQry = "INSERT INTO printsystemtable(model,modelname) VALUES('" + modelValue + "', '" + modelNameValue + "')";
+                    Insert_result.Text = "중복된 값이 있습니다.";
+                    Insert_result.ForeColor = Color.Red;
+                }
+                else
+                {
 
-                    SqlCommand cmd = new SqlCommand(InsertQry, mssqlconn);
-                    
 
-                    if (cmd.ExecuteNonQuery() == 1)
+                    try
                     {
-                        MessageBox.Show("인서트 성공");
-                        mssqlconn.Close();
+                        mssqlconn.Open();
+                        string InsertQry = "INSERT INTO printsystemtable(model,modelname) VALUES('" + modelValue + "', '" + modelNameValue + "')";
+
+                        SqlCommand cmd = new SqlCommand(InsertQry, mssqlconn);
+                        DataRow newRow = ((DataTable)dataGridView1.DataSource).NewRow();
+                        newRow["model"] = modelValue;
+                        newRow["modelname"] = modelNameValue;
+                        ((DataTable)dataGridView1.DataSource).Rows.Add(newRow);
+
+                        if (cmd.ExecuteNonQuery() == 1)
+                        {
+                            Insert_result.Text = "인서트 성공";
+                            Insert_result.ForeColor = Color.Blue;
+                            mssqlconn.Close();
+                        }
+                        else
+                        {
+                            Insert_result.Text = "인서트 실패";
+                            Insert_result.ForeColor = Color.Red;
+                            mssqlconn.Close();
+                        }
                     }
-                    else
+                    catch (Exception ex)
                     {
-                        MessageBox.Show("인서트 실패");
-                        mssqlconn.Close();
+                        MessageBox.Show(ex.ToString());
+                        throw;
                     }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.ToString());
-                    throw;
-                }
-
-
-                //mariadb 적용 구문 부분 -------------------------------------------------------------------------------------------------------------------------------------------
-                //using (MySqlConnection connection = new MySqlConnection("Server=127.0.0.1;" +
-                //                                                        "Database=printsystemproto;" +
-                //                                                        "Uid=root;" +
-                //                                                        "Pwd=qjabek46"))
-                //{
-
-                /* string insertQry = "INSERT INTO printsystemproto(model,modelname) VALUES('" + modelValue + "', '" + modelNameValue + "')";
-                     try
-                     {
-                         sqlConn.Open();
-                         MySqlCommand command = new MySqlCommand(insertQry, sqlConn);
-
-                         if (command.ExecuteNonQuery() == 1)
-                         {
-                             MessageBox.Show("인서트 성공");
-                         }
-                         else
-                         {
-                             MessageBox.Show("인서트 실패");
-                         }
-                     }
-                     catch (Exception ex)
-                     {
-                         MessageBox.Show(ex.ToString());
-                         throw;
-                     }*/
-
-
-                // }
-                //----------------------------------------------------------------------------------------------------------------------------------------------------------------
             }
-
-            //for (int i = 0; i < dataGridView1.Rows.Count; i++)
-            //{
-            //    if (dataGridView1.Rows[i].Cells[0].Value != null && dataGridView1.Rows[i].Cells[0].Value == modelbox.Text)
-            //    {
-
-            //        MessageBox.Show("중복된 모델입니다.");
-            //        valuechk = true;
-            //        break;
-            //    }
-            //    else if (dataGridView1.Rows[i].Cells[1].Value != null && dataGridView1.Rows[i].Cells[1].Value == modelNamebox.Text)
-            //    {
-
-            //        MessageBox.Show("중복된 모델이름입니다.");
-            //        valuechk = true;
-            //        break;
-            //    }
-
-            //}
-            //if (valuechk == false)
-            //{
-            //    dataGridView1.Rows.Add(modelbox.Text, modelNamebox.Text);
-            //}
-
-
         }
   
 
@@ -295,33 +254,51 @@ namespace PrintSystemProto
 
 
                     SqlCommand cmd = new SqlCommand(DelQry, mssqlconn);
-                 
+
 
                     if (cmd.ExecuteNonQuery() == 1)
                     {
-                        MessageBox.Show("삭제 성공");
+                        Insert_result.Text = "삭제 성공";
                         dataGridView1.Rows.Remove(dataGridView1.Rows[delrow]); // 가져온 번호에 해당하는 열을 지움 지금 data는 전체 행 선택으로 설정 되어있음
                         mssqlconn.Close();
                     }
                     else
                     {
-                        MessageBox.Show("삭제 실패");
+                        Insert_result.Text = "삭제 실패";
                         mssqlconn.Close();
                     }
                 }
-                catch (Exception ex)
+                catch (SqlException)
                 {
-                    MessageBox.Show(ex.ToString());
-                    throw;
+                    Insert_result.Text = "삭제 불가\n (해당 Model의 공정을 확인해주세요)";
+
                 }
+
+                catch (Exception)
+                {
+                    Insert_result.Text = "삭제 불가\n(해당 Model의 공정을 확인해주세요)";
+                    
+                }
+                finally { mssqlconn.Close(); }
             
             }
             else
             {
-                MessageBox.Show("삭제 데이터를 선택하세요");
+                Insert_result.Text = "삭제 데이터를 선택하세요";
             }
             
             
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+          
+        }
+
+        private void Insert_result_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
