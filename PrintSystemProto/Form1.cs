@@ -91,6 +91,8 @@ namespace PrintSystemProto
             //dataGridView1.Columns[1].Name = "모델명";
             ////LoadData(); - maria db
             //MSLoadData(); 
+        
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -295,7 +297,7 @@ namespace PrintSystemProto
 
 
                     SqlCommand cmd = new SqlCommand(DelQry, mssqlconn);
-                 
+
 
                     if (cmd.ExecuteNonQuery() == 1)
                     {
@@ -309,11 +311,18 @@ namespace PrintSystemProto
                         mssqlconn.Close();
                     }
                 }
-                catch (Exception ex)
+                catch (SqlException)
                 {
-                    MessageBox.Show(ex.ToString());
-                    throw;
+                    MessageBox.Show("삭제 불가\n (해당 Model의 공정을 확인해주세요)");
+
                 }
+
+                catch (Exception)
+                {
+                    MessageBox.Show("삭제 불가\n(해당 Model의 공정을 확인해주세요)");
+                    
+                }
+                finally { mssqlconn.Close(); }
             
             }
             else
@@ -322,6 +331,12 @@ namespace PrintSystemProto
             }
             
             
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+          
         }
     }
 }

@@ -132,7 +132,7 @@
             // DelBTN
             // 
             this.DelBTN.Location = new System.Drawing.Point(531, 368);
-            this.DelBTN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DelBTN.Margin = new System.Windows.Forms.Padding(2);
             this.DelBTN.Name = "DelBTN";
             this.DelBTN.Size = new System.Drawing.Size(95, 27);
             this.DelBTN.TabIndex = 11;

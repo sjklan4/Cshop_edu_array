@@ -29,6 +29,10 @@ namespace PrintSystemProto
 
         private List<Tuple<string, string, string, string>> selectedPDataList = new List<Tuple<string, string, string, string>>(); //선택한 여러 부품데이터를 한번에 넣기 위해서 tuple 한번에 받아온다.
         private bool cellValueChangedHandled = false; // 2번 반복되는 것을 막기위해서 메서드가 여러번 호출되는 것을 막기 위해 bool린 함수를 선언 false로 설정 
+       
+        
+        
+        
         /*private string gbALCvalue;
         private string gbPartname;
         private string gbPartnum;
@@ -74,7 +78,7 @@ namespace PrintSystemProto
             mssqlconn = new SqlConnection(connstr);
             MSLoadData2();
             ProcessData(); //공정 합 db를 불러오기위해서 별도 load 중복 함수로 되어 있어서 추후 수정 필!
-
+            
         }
 
         // select를 하기위한 열과 단순 선택 박스 기능만 추가하는 구문
@@ -110,7 +114,6 @@ namespace PrintSystemProto
                     DataRowView selectRow = (DataRowView)Partch_Table.Rows[e.RowIndex].DataBoundItem;
                     DataRow selectrowdata = selectRow.Row;
 /*
-                
                     gbALCvalue = selectrowdata["ALC"].ToString();
                     gbPartname = selectrowdata["부품명"].ToString();
                     gbPartnum = selectrowdata["부품번호"].ToString();
@@ -177,7 +180,6 @@ namespace PrintSystemProto
                     {
                         mssqlconn.Open();
 
-
                         foreach (var selectedPData in selectedPDataList)
                         {
                             string[] comboPartdata = selectcombo.Split('-'); //지금 콤보 박스 내용에 2개 컬럼 데이터가 오기 때문에 '-'를 기점으로 나누어 줌
@@ -191,21 +193,27 @@ namespace PrintSystemProto
 
                             string InsertQry2 = "INSERT INTO processtable(model, modelname, ALC, 부품명, 부품번호, 색상)"
                                                     + "VALUES('" + model + "','" + modelname + "','" + ALCvalue + "','" + Partname + "', '" + Partnum + "','" + Color + "')";
+                            
                             SqlCommand processcmd = new SqlCommand(InsertQry2, mssqlconn);
-                            DataRow newRow = ((DataTable)Process_table.DataSource).NewRow();
+                            
+                            //DataRow newRow = ((DataTable)Process_table.DataSource).NewRow();
 
-                            newRow["model"] = model;
+                         /*   newRow["model"] = model;
                             newRow["modelname"] = modelname;
                             newRow["ALC"] = ALCvalue;
                             newRow["부품명"] = Partname;
                             newRow["부품번호"] = Partnum;
-                            newRow["색상"] = Color;
-                            ((DataTable)Process_table.DataSource).Rows.Add(newRow);
+                            newRow["색상"] = Color;*/
+                            //((DataTable)Process_table.DataSource).Rows.Add(newRow);
 
                             if (processcmd.ExecuteNonQuery() == 1)
                             {
+                                mssqlconn.Close();
+                                ProcessData(); // 이부분안에 connection 열림 닫힘이 있음로 동작 순서상 전체 열고->닫고->process에서 열고->process에서 닫고 -> 전체 열어야 다음 foreach 조건 동작
+                                mssqlconn.Open();
                                 MessageBox.Show("공정 추가");
-                           
+                               
+
                             }
                             else
                             {
@@ -254,6 +262,7 @@ namespace PrintSystemProto
             Partch_Table.Columns[2].Name = "부품번호";
             Partch_Table.Columns[3].Name = "부품색상";*/
             MSLoadData2();
+            ProcessData();
         }
 
         private void registbtn_Click(object sender, EventArgs e)
@@ -275,31 +284,33 @@ namespace PrintSystemProto
                     DataRow newRow = ((DataTable)Partch_Table.DataSource).NewRow(); //그리드의 data행에 datatable값이 있는 db의 테이블 전체를 가져와서 신규 행에 넣도록 인스턴스
                     /*decimal gnALC = Convert.ToDecimal(cmd.ExecuteScalar()); // cope_identity를 사용하기 위해 excutescalar라는 내장함수를 가지고 영향을 받은 1행 1열을 반환시킨다. ALC가 table첫행에 잇음
                     int generatedALC = (int)gnALC;*/
-
-                    newRow["ALC"] = ALCVL;
+               
+                if (cmd.ExecuteNonQuery() == 1)
+                    {
+                    /*newRow["ALC"] = ALCVL;
                     newRow["부품명"] = partnameVL;
                     newRow["부품번호"] = partnumVL;
                     newRow["색상"] = partcolorVL;
-                    ((DataTable)Partch_Table.DataSource).Rows.Add(newRow);
-
-
-                
-                if (cmd.ExecuteNonQuery() == 1)
-                    {
+                    ((DataTable)Partch_Table.DataSource).Rows.Add(newRow);*/
+                        mssqlconn.Close();
+                        MSLoadData2();
                         MessageBox.Show("추가 성공");
-                        mssqlconn.Close();
+                    
                     }
-                    else
-                    {
-                        MessageBox.Show("추가 실패 - ALC중복값 또는 데이터 형식을 확인해주세요");
-                        mssqlconn.Close();
-                    }
+                  
                 }
-                catch (Exception ex)
+                catch (SqlException)
                 {
-                    MessageBox.Show(ex.ToString());
-                    throw;
+                    MessageBox.Show("추가 실패 - ALC중복값 또는 데이터 형식을 확인해주세요");
+                    mssqlconn.Close();
+
                 }
+                catch (Exception)
+                {
+                    MessageBox.Show("추가 실패 : 관리자에게 문의하세요");
+                    mssqlconn.Close();
+                }
+               
                 
 
             }
@@ -332,7 +343,7 @@ namespace PrintSystemProto
         {
             int selectRowdata = Process_table.SelectedRows.Count;  // 선택된 행의 숫자를 가져옴 
             int delProcess = Process_table.CurrentCell.RowIndex;   // 활성화된 행의 번호를 가져옴 - 몇번째 행 지울지 결정하기 위함
-            string model = Process_table.Rows[delProcess].Cells["model"].Value.ToString();
+            string model = Process_table.Rows[delProcess].Cells["model"].Value.ToString(); 
             /*string modelname = Process_table.SelectedRows[selectRowdata].Cells["modelname"].ToString();
             string ALC = Process_table.SelectedRows[selectRowdata].Cells["ALC"].ToString();
             string Partname = Process_table.SelectedRows[selectRowdata].Cells["부품명"].ToString();
@@ -351,24 +362,23 @@ namespace PrintSystemProto
 
                     if (resultrow > 0)
                     {
-                        Process_table.Rows.Remove(Process_table.Rows[delProcess]);
-                        MessageBox.Show("공정이 삭제 되었습니다.");
+                        mssqlconn.Close();
+                        ProcessData();
+                        //Process_table.Rows.Remove(Process_table.Rows[delProcess]);
+                        MessageBox.Show("(해당 모델의)\n공정이 삭제 되었습니다.");
                     }
                     else
                     {
                         MessageBox.Show("실패! : 공정을 다시 확인해주세요");
+                        mssqlconn.Close();
                     }
                 }
                 catch (Exception)
                 {
                     MessageBox.Show("오류가 발생하였습니다. 담당자에게 문의해주세요");
-                    throw;
-                }
-                finally
-                {
-                    Process_table.Refresh();
                     mssqlconn.Close();
                 }
+             
             }
             else
             {
@@ -401,18 +411,26 @@ namespace PrintSystemProto
 
                         if (resultList > 0)
                         {
-                            Partch_Table.Rows.Remove(Partch_Table.Rows[Select_Row]);
+                            mssqlconn.Close();
+                            MSLoadData2();
                             MessageBox.Show("부품리스트 삭제.");
                         }
                       
                     }
                 }
-                catch (Exception ex)
+                catch (SqlException)
                 {
-                    MessageBox.Show("실패! : 리스트 내용을 확인해주세요");
-                    throw;
+                    MessageBox.Show("실패! : 공정이 남아 있습니다. \n 공정을 확인해주세요");
+                    mssqlconn.Close();
+
                 }
-                finally { mssqlconn.Close(); }
+                catch (Exception)
+                {
+                    MessageBox.Show("실패! : 공정을 확인해주세요");
+                    mssqlconn.Close();
+
+                }
+                
 
             }
         }
