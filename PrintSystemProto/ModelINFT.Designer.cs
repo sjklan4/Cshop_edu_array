@@ -50,6 +50,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.Process_table = new System.Windows.Forms.DataGridView();
             this.Partch_Delbtn = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.Partch_result = new System.Windows.Forms.Label();
+            this.Process_result = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Partch_Table)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Process_table)).BeginInit();
             this.SuspendLayout();
@@ -89,7 +92,7 @@
             // 
             this.Partch_Table.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.Partch_Table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Partch_Table.Location = new System.Drawing.Point(40, 114);
+            this.Partch_Table.Location = new System.Drawing.Point(40, 118);
             this.Partch_Table.Name = "Partch_Table";
             this.Partch_Table.RowTemplate.Height = 23;
             this.Partch_Table.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -169,6 +172,7 @@
             this.Part_Color.Name = "Part_Color";
             this.Part_Color.Size = new System.Drawing.Size(200, 35);
             this.Part_Color.TabIndex = 10;
+            this.Part_Color.TextChanged += new System.EventHandler(this.Part_Color_TextChanged);
             // 
             // registbtn
             // 
@@ -222,7 +226,7 @@
             this.button5.BackColor = System.Drawing.Color.Red;
             this.button5.Cursor = System.Windows.Forms.Cursors.Default;
             this.button5.Font = new System.Drawing.Font("돋움체", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button5.Location = new System.Drawing.Point(500, 394);
+            this.button5.Location = new System.Drawing.Point(303, 394);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(90, 26);
             this.button5.TabIndex = 18;
@@ -255,7 +259,7 @@
             this.Partch_RegistBtn.BackColor = System.Drawing.Color.Lime;
             this.Partch_RegistBtn.Cursor = System.Windows.Forms.Cursors.Default;
             this.Partch_RegistBtn.Font = new System.Drawing.Font("돋움체", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Partch_RegistBtn.Location = new System.Drawing.Point(396, 394);
+            this.Partch_RegistBtn.Location = new System.Drawing.Point(185, 394);
             this.Partch_RegistBtn.Name = "Partch_RegistBtn";
             this.Partch_RegistBtn.Size = new System.Drawing.Size(91, 26);
             this.Partch_RegistBtn.TabIndex = 13;
@@ -290,7 +294,7 @@
             // 
             this.Partch_Delbtn.BackColor = System.Drawing.Color.Red;
             this.Partch_Delbtn.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Partch_Delbtn.Location = new System.Drawing.Point(494, 317);
+            this.Partch_Delbtn.Location = new System.Drawing.Point(494, 322);
             this.Partch_Delbtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Partch_Delbtn.Name = "Partch_Delbtn";
             this.Partch_Delbtn.Size = new System.Drawing.Size(96, 26);
@@ -299,11 +303,47 @@
             this.Partch_Delbtn.UseVisualStyleBackColor = false;
             this.Partch_Delbtn.Click += new System.EventHandler(this.Partch_Delbtn_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label7.Location = new System.Drawing.Point(44, 326);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(0, 16);
+            this.label7.TabIndex = 22;
+            this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // Partch_result
+            // 
+            this.Partch_result.AutoSize = true;
+            this.Partch_result.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Partch_result.Location = new System.Drawing.Point(44, 327);
+            this.Partch_result.Name = "Partch_result";
+            this.Partch_result.Size = new System.Drawing.Size(47, 16);
+            this.Partch_result.TabIndex = 23;
+            this.Partch_result.Text = "결과 ";
+            this.Partch_result.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Partch_result.Click += new System.EventHandler(this.Partch_result_Click);
+            // 
+            // Process_result
+            // 
+            this.Process_result.AutoSize = true;
+            this.Process_result.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Process_result.Location = new System.Drawing.Point(408, 399);
+            this.Process_result.Name = "Process_result";
+            this.Process_result.Size = new System.Drawing.Size(56, 19);
+            this.Process_result.TabIndex = 24;
+            this.Process_result.Text = "결과 ";
+            this.Process_result.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // ModelINFT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(906, 660);
+            this.Controls.Add(this.Process_result);
+            this.Controls.Add(this.Partch_result);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.Partch_Delbtn);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox1);
@@ -359,5 +399,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView Process_table;
         private System.Windows.Forms.Button Partch_Delbtn;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label Partch_result;
+        private System.Windows.Forms.Label Process_result;
     }
 }
