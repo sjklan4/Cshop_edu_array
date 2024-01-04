@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Data.SqlClient;
-
+using Google.Protobuf;
 
 namespace PrintSystemProto
 {
@@ -53,17 +53,13 @@ namespace PrintSystemProto
         public void MSLoadData() //MSsql 연결 부분  = select를 통한 dbdata불러오기
         {
             mssqlconn.Open();
-            SqlDataAdapter msdata = new SqlDataAdapter("SELECT * FROM printsystemtable", mssqlconn); //where조건 삭제했음 - 확인필요******
+         /*   SqlDataAdapter msdata = new SqlDataAdapter("SELECT * FROM printsystemtable", mssqlconn); //where조건 삭제했음 - 확인필요******
             DataTable mstable = new DataTable();
-            msdata.Fill(mstable);
+            msdata.Fill(mstable);*/
 
-
-
-
-
-            //SqlDataAdapter prcData = new SqlDataAdapter("select_print",mssqlconn); // 프로시저에 select가 있으면 command가 안되서 dataAdpater를 사용한 구조로 단순 처리 가능
-            // DataTable mstable = new DataTable(); // 데이터 테이블 인스턴스
-            // prcData.Fill(mstable);  // 프로시저로 부터 받은 데이터로 받는다.
+            SqlDataAdapter prcData = new SqlDataAdapter("select_print",mssqlconn); // 프로시저에 select가 있으면 command가 안되서 dataAdpater를 사용한 구조로 단순 처리 가능
+            DataTable mstable = new DataTable(); // 데이터 테이블 인스턴스
+            prcData.Fill(mstable);  // 프로시저로 부터 받은 데이터로 받는다.
             dataGridView1.DataSource = mstable;
 
             mssqlconn.Close();
@@ -155,17 +151,22 @@ namespace PrintSystemProto
                     try
                     {
                         mssqlconn.Open();
-                        string InsertQry = "INSERT INTO printsystemtable(model,modelname) VALUES('" + modelValue + "', '" + modelNameValue + "')";
+                   /*     string InsertQry = "INSERT INTO printsystemtable(model,modelname) VALUES('" + modelValue + "', '" + modelNameValue + "')";
 
-                        SqlCommand cmd = new SqlCommand(InsertQry, mssqlconn);
+                        SqlCommand cmd = new SqlCommand(InsertQry, mssqlconn);*/
+
+                        SqlCommand cmd = new SqlCommand("Insert_model", mssqlconn); //insert 명령문 추가
+                        cmd.CommandType = CommandType.StoredProcedure;  // 명령 형식을 지정해주어야 함. 안하면 Pram이 안들어감.
+                        cmd.Parameters.AddWithValue("@modelValue",modelValue);
+                        cmd.Parameters.AddWithValue("@modelNameValue", modelNameValue);
                         DataRow newRow = ((DataTable)dataGridView1.DataSource).NewRow();
                         newRow["model"] = modelValue;
                         newRow["modelname"] = modelNameValue;
                         ((DataTable)dataGridView1.DataSource).Rows.Add(newRow);
-
+                        
                         if (cmd.ExecuteNonQuery() == 1)
                         {
-                            Insert_result.Text = "인서트 성공";
+                            Insert_result.Text = "인서트 성공";   
                             Insert_result.ForeColor = Color.Blue;
                             mssqlconn.Close();
                         }
