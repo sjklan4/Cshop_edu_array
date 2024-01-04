@@ -29,7 +29,7 @@ namespace PrintSystemProto
 
         // private const string ConnectionString = "Server=127.0.0.1;Database=printsystemproto;Uid=root;Pwd=qjabek46;"; //maria db연결
         // private MySqlConnection sqlConn; // maria db 연결 부분
-        // 아래는 윈폼의 귀동 현황 데이터를 보여주는 관련 구문
+        // 아래는 윈폼의 구동 현황 데이터를 보여주는 관련 구문
         //protected override void WndProc(ref Message m)
         //{
         //    base.WndProc(ref m);
@@ -41,7 +41,7 @@ namespace PrintSystemProto
             InitializeComponent();
             //mssql부분
             mssqlconn = new SqlConnection(connstr);
-            MSLoadData();
+            Instancedatabse();
 
 
             //mariadb전용 구문
@@ -50,12 +50,12 @@ namespace PrintSystemProto
         }
 
 
-        public void MSLoadData() //MSsql 연결 부분  = select를 통한 dbdata불러오기
+  /*      public void MSLoadData() //MSsql 연결 부분  = select를 통한 dbdata불러오기
         {
             mssqlconn.Open();
-         /*   SqlDataAdapter msdata = new SqlDataAdapter("SELECT * FROM printsystemtable", mssqlconn); //where조건 삭제했음 - 확인필요******
+         *//*   SqlDataAdapter msdata = new SqlDataAdapter("SELECT * FROM printsystemtable", mssqlconn); //where조건 삭제했음 - 확인필요******
             DataTable mstable = new DataTable();
-            msdata.Fill(mstable);*/
+            msdata.Fill(mstable);*//*
 
             SqlDataAdapter prcData = new SqlDataAdapter("select_print",mssqlconn); // 프로시저에 select가 있으면 command가 안되서 dataAdpater를 사용한 구조로 단순 처리 가능
             DataTable mstable = new DataTable(); // 데이터 테이블 인스턴스
@@ -63,16 +63,17 @@ namespace PrintSystemProto
             dataGridView1.DataSource = mstable;
 
             mssqlconn.Close();
-            
+        }*/
 
-        }
 
+        // data 받아오는 것 아래 구문으로 통일 : void는 반환 해주는 것이 없어서 그대로 사용해야나 dataTable형식으로 함수 선언시 반환 받아 사용가능 - 여러 곳에서 사용이 가능
         public DataTable Instancedatabse() // modelinf로 db데이터 전달을 위한 구문 - 반복구문 수정 필요
         {
             mssqlconn.Open();
-            SqlDataAdapter msdata = new SqlDataAdapter("SELECT * FROM printsystemtable", mssqlconn);
+            SqlDataAdapter msdata = new SqlDataAdapter("select_print", mssqlconn);
             DataTable mstable = new DataTable();
             msdata.Fill(mstable);
+            dataGridView1.DataSource = mstable;
             mssqlconn.Close();
             return mstable;
 
@@ -236,6 +237,7 @@ namespace PrintSystemProto
                 fmModel.Show();
                 fmModel.comboBox1.Items.Clear();
 
+              
                 var indata = Instancedatabse();
                 for (int i = 0; i < indata.Rows.Count; i++)
                 {
@@ -259,12 +261,13 @@ namespace PrintSystemProto
                 {
                     mssqlconn.Open();
 
-                    string DelQry = "DELETE FROM printsystemtable WHERE model = '" + modelValue + "' OR modelname = '" + modelNameValue + "'";
+                    //string DelQry = "DELETE FROM printsystemtable WHERE model = '" + modelValue + "' OR modelname = '" + modelNameValue + "'";
 
-
-                    SqlCommand cmd = new SqlCommand(DelQry, mssqlconn);
-
-
+                    SqlCommand cmd = new SqlCommand("delete_model", mssqlconn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@modelValue", modelValue);
+                    cmd.Parameters.AddWithValue("@modelNameValue", modelNameValue);
+                
                     if (cmd.ExecuteNonQuery() == 1)
                     {
                         Insert_result.Text = "삭제 성공";

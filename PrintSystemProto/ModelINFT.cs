@@ -70,6 +70,7 @@ namespace PrintSystemProto
         {
             mssqlconn.Open();
             SqlDataAdapter processdb = new SqlDataAdapter("SELECT * FROM processtable",mssqlconn);
+            //SqlDataAdapter processdb = new SqlDataAdapter("select_processtable",mssqlconn); //저장 프로시저 사용시 - 프로시저 생성필요
             DataTable prtable = new DataTable();
             processdb.Fill(prtable);
             Process_table.DataSource = prtable;
@@ -310,12 +311,20 @@ namespace PrintSystemProto
                 try
                     {
                         mssqlconn.Open();
-                       // string InsertQry = "INSERT INTO partchtable(부품명,부품번호,색상) VALUES('" + partnameVL + "', '" + partnumVL + "','" + partcolorVL +"'); select scope_identity()"; // 자동 증가열 값을 가져오는 함수 scope_identity 이다.
-                        string InsertQry = "INSERT INTO partchtable(ALC,부품명,부품번호,색상) VALUES('" + ALCVL + "','" + partnameVL + "', '" + partnumVL + "','" + partcolorVL + "')"; //자동 증가열 없는 경우 사용 구문 
-
-
+                      
+                       string InsertQry = "INSERT INTO partchtable(ALC,부품명,부품번호,색상) VALUES('" + ALCVL + "','" + partnameVL + "', '" + partnumVL + "','" + partcolorVL + "')"; //자동 증가열 없는 경우 사용 구문 
                         SqlCommand cmd = new SqlCommand(InsertQry, mssqlconn);
-                        DataRow newRow = ((DataTable)Partch_Table.DataSource).NewRow(); //그리드의 data행에 datatable값이 있는 db의 테이블 전체를 가져와서 신규 행에 넣도록 인스턴스
+                    
+                    
+                    //아래는 프로시저 부분 이다.
+                  /*     SqlCommand cmd = new SqlCommand("insert_partch",mssqlconn);
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@ALCVL",ALCVL);
+                        cmd.Parameters.AddWithValue("@partnameVL", partnameVL);
+                        cmd.Parameters.AddWithValue("@partnumVL", partnumVL);
+                        cmd.Parameters.AddWithValue("@partcolorVL", partcolorVL);*/
+
+                    DataRow newRow = ((DataTable)Partch_Table.DataSource).NewRow(); //그리드의 data행에 datatable값이 있는 db의 테이블 전체를 가져와서 신규 행에 넣도록 인스턴스
                         /*decimal gnALC = Convert.ToDecimal(cmd.ExecuteScalar()); // cope_identity를 사용하기 위해 excutescalar라는 내장함수를 가지고 영향을 받은 1행 1열을 반환시킨다. ALC가 table첫행에 잇음
                         int generatedALC = (int)gnALC;*/
                

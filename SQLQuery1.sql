@@ -1,5 +1,7 @@
-create procedure select_print
+create procedure insert_model
+	@modelValue varchar(500),
+	@modelNameValue varchar(500)
 as
 begin
-	select * from printsystemtable
+	Insert into printsystemtable(model, modelname) values(@modelValue, @modelNameValue);
 end
