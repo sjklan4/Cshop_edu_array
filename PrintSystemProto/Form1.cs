@@ -155,7 +155,7 @@ namespace PrintSystemProto
 
                         SqlCommand cmd = new SqlCommand(InsertQry, mssqlconn);*/
 
-                        SqlCommand cmd = new SqlCommand("Insert_model", mssqlconn);
+                        SqlCommand cmd = new SqlCommand("Insert_model", mssqlconn); //insert 명령문 추가
                         cmd.CommandType = CommandType.StoredProcedure;  // 명령 형식을 지정해주어야 함. 안하면 Pram이 안들어감.
                         cmd.Parameters.AddWithValue("@modelValue",modelValue);
                         cmd.Parameters.AddWithValue("@modelNameValue", modelNameValue);
@@ -163,7 +163,7 @@ namespace PrintSystemProto
                         newRow["model"] = modelValue;
                         newRow["modelname"] = modelNameValue;
                         ((DataTable)dataGridView1.DataSource).Rows.Add(newRow);
-
+                        
                         if (cmd.ExecuteNonQuery() == 1)
                         {
                             Insert_result.Text = "인서트 성공";   
