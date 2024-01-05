@@ -13,6 +13,7 @@ using MySql.Data.MySqlClient;
 using System.Data.SqlClient;
 using Google.Protobuf;
 
+
 namespace PrintSystemProto
 {
     using static MAIN;
@@ -25,7 +26,23 @@ namespace PrintSystemProto
         public string connstr = "SERVER=" + server + ";DATABASE=" + database + ";UID=" + uid + ";PASSWORD=" + pws + ";";
         public SqlConnection mssqlconn;
 
+        public void diction()
+        {
 
+     /*       Dictionary<string, string> parameters = new Dictionary<string, string>
+            {
+                { "@cMode", "" },
+                { "@cTable", "" },
+                { "@model", "" },
+                { "@modelname", "" },
+                { "@ALCVL", "" },
+                { "@partnameVL", "" },
+                { "@partnumVL", "" },
+                { "@partcolorVL", "" }
+            };
+            DataTable result = MainClass.ExecuteStoredProcedure("up_Factoring_Manage", parameters);
+            dataGridView1.DataSource = result;*/
+        }
 
         // private const string ConnectionString = "Server=127.0.0.1;Database=printsystemproto;Uid=root;Pwd=qjabek46;"; //maria db연결
         // private MySqlConnection sqlConn; // maria db 연결 부분
@@ -70,7 +87,9 @@ namespace PrintSystemProto
         public DataTable Instancedatabse() // modelinf로 db데이터 전달을 위한 구문 - 반복구문 수정 필요
         {
             mssqlconn.Open();
-            SqlDataAdapter msdata = new SqlDataAdapter("select_print", mssqlconn);
+
+            SqlDataAdapter msdata = new SqlDataAdapter("up_Factoring_Manage", mssqlconn);
+
             DataTable mstable = new DataTable();
             msdata.Fill(mstable);
             dataGridView1.DataSource = mstable;
