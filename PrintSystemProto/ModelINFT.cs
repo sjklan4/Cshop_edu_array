@@ -49,18 +49,20 @@ namespace PrintSystemProto
 
         }
 
+        public void Excelldata(string filename, DataGridView partch_Table)
+        { 
+        
+        }
+
         public void MSLoadData2() //MSsql 연결 부분  = select를 통한 dbdata불러오기 - 부품 데이터 불러오는 부분
         {
             mssqlconn.Open();
 
 
-            SqlDataAdapter msdata2 = new SqlDataAdapter("SELECT * FROM partchtable", mssqlconn); //where조건 삭제했음 - 확인필요******
-           // SqlDataAdapter msdata2 = new SqlDataAdapter("select_partch", mssqlconn); // 저장 프로시저 사용시 
+            // SqlDataAdapter msdata2 = new SqlDataAdapter("SELECT * FROM partchtable", mssqlconn); //where조건 삭제했음 - 확인필요******
+           SqlDataAdapter msdata2 = new SqlDataAdapter("select_partch", mssqlconn); // 저장 프로시저 사용시 
             DataTable mstable2 = new DataTable(); //data를 table형식으로 불러 오도록 하는 구문 datatable class사용시 table형식으로 불러짐
             msdata2.Fill(mstable2); 
-
-
-
 
             Partch_Table.DataSource = mstable2;
             mssqlconn.Close();
@@ -69,8 +71,8 @@ namespace PrintSystemProto
         public void ProcessData()
         {
             mssqlconn.Open();
-            SqlDataAdapter processdb = new SqlDataAdapter("SELECT * FROM processtable",mssqlconn);
-            //SqlDataAdapter processdb = new SqlDataAdapter("select_processtable",mssqlconn); //저장 프로시저 사용시 - 프로시저 생성필요
+            //SqlDataAdapter processdb = new SqlDataAdapter("SELECT * FROM processtable",mssqlconn);
+            SqlDataAdapter processdb = new SqlDataAdapter("select_processtable",mssqlconn); //저장 프로시저 사용시 - 프로시저 생성필요
             DataTable prtable = new DataTable();
             processdb.Fill(prtable);
             Process_table.DataSource = prtable;
@@ -201,10 +203,20 @@ namespace PrintSystemProto
                             string Partnum = selectedPData.Item3;
                             string Color = selectedPData.Item4;
 
-                            string InsertQry2 = "INSERT INTO processtable(model, modelname, ALC, 부품명, 부품번호, 색상)"
+                          /*  string InsertQry2 = "INSERT INTO processtable(model, modelname, ALC, 부품명, 부품번호, 색상)"
                                                     + "VALUES('" + model + "','" + modelname + "','" + ALCvalue + "','" + Partname + "', '" + Partnum + "','" + Color + "')";
 
-                            SqlCommand processcmd = new SqlCommand(InsertQry2, mssqlconn);
+                            SqlCommand processcmd = new SqlCommand(InsertQry2, mssqlconn);*/
+                            // 프로시저 부분------------------------------------------------
+                            SqlCommand processcmd = new SqlCommand("insert_process", mssqlconn);
+                            processcmd.CommandType = CommandType.StoredProcedure;
+                         /*   processcmd.Parameters.AddWithValue("@");*/
+                            processcmd.Parameters.AddWithValue("@model",model);
+                            processcmd.Parameters.AddWithValue("@modelname", modelname);
+                            processcmd.Parameters.AddWithValue("@ALCvalue", ALCvalue);
+                            processcmd.Parameters.AddWithValue("@Partname", Partname);
+                            processcmd.Parameters.AddWithValue("@Partnum", Partnum);
+                            processcmd.Parameters.AddWithValue("@Color", Color);
 
                             //DataRow newRow = ((DataTable)Process_table.DataSource).NewRow();
 
@@ -312,17 +324,17 @@ namespace PrintSystemProto
                     {
                         mssqlconn.Open();
                       
-                       string InsertQry = "INSERT INTO partchtable(ALC,부품명,부품번호,색상) VALUES('" + ALCVL + "','" + partnameVL + "', '" + partnumVL + "','" + partcolorVL + "')"; //자동 증가열 없는 경우 사용 구문 
-                        SqlCommand cmd = new SqlCommand(InsertQry, mssqlconn);
-                    
-                    
+                      /* string InsertQry = "INSERT INTO partchtable(ALC,부품명,부품번호,색상) VALUES('" + ALCVL + "','" + partnameVL + "', '" + partnumVL + "','" + partcolorVL + "')"; //자동 증가열 없는 경우 사용 구문 
+                        SqlCommand cmd = new SqlCommand(InsertQry, mssqlconn);*/
+
+
                     //아래는 프로시저 부분 이다.
-                  /*     SqlCommand cmd = new SqlCommand("insert_partch",mssqlconn);
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("@ALCVL",ALCVL);
-                        cmd.Parameters.AddWithValue("@partnameVL", partnameVL);
-                        cmd.Parameters.AddWithValue("@partnumVL", partnumVL);
-                        cmd.Parameters.AddWithValue("@partcolorVL", partcolorVL);*/
+                    SqlCommand cmd = new SqlCommand("insert_partch", mssqlconn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@ALCVL", ALCVL);
+                    cmd.Parameters.AddWithValue("@partnameVL", partnameVL);
+                    cmd.Parameters.AddWithValue("@partnumVL", partnumVL);
+                    cmd.Parameters.AddWithValue("@partcolorVL", partcolorVL);
 
                     DataRow newRow = ((DataTable)Partch_Table.DataSource).NewRow(); //그리드의 data행에 datatable값이 있는 db의 테이블 전체를 가져와서 신규 행에 넣도록 인스턴스
                         /*decimal gnALC = Convert.ToDecimal(cmd.ExecuteScalar()); // cope_identity를 사용하기 위해 excutescalar라는 내장함수를 가지고 영향을 받은 1행 1열을 반환시킨다. ALC가 table첫행에 잇음
@@ -392,6 +404,7 @@ namespace PrintSystemProto
             int selectRowdata = Process_table.SelectedRows.Count;  // 선택된 행의 숫자를 가져옴 
             int delProcess = Process_table.CurrentCell.RowIndex;   // 활성화된 행의 번호를 가져옴 - 몇번째 행 지울지 결정하기 위함
             string ALCvalue = Process_table.Rows[delProcess].Cells["ALC"].Value.ToString(); 
+            string model = Process_table.Rows[delProcess].Cells["model"].Value.ToString();
             /*string modelname = Process_table.SelectedRows[selectRowdata].Cells["modelname"].ToString();
             string ALC = Process_table.SelectedRows[selectRowdata].Cells["ALC"].ToString();
             string Partname = Process_table.SelectedRows[selectRowdata].Cells["부품명"].ToString();
@@ -403,9 +416,15 @@ namespace PrintSystemProto
                 try
                 {
                     mssqlconn.Open();
-                    string Process_DelQry = "DELETE FROM processtable WHERE ALC = '" + ALCvalue + "'";
+                    /* string Process_DelQry = "DELETE FROM processtable WHERE model = '" + model + "' AND ALC = '" + ALCvalue + "'";
+                     SqlCommand Process_delcmd = new SqlCommand(Process_DelQry, mssqlconn);*/
 
-                    SqlCommand Process_delcmd = new SqlCommand(Process_DelQry, mssqlconn);
+                    //프로시저 부분 ---------------------------------------------------------------
+                    SqlCommand Process_delcmd = new SqlCommand("delete_process", mssqlconn);
+                    Process_delcmd.CommandType = CommandType.StoredProcedure;
+                    Process_delcmd.Parameters.AddWithValue("@model", model);
+                    Process_delcmd.Parameters.AddWithValue("@ALCvalue", ALCvalue);
+
                     int resultrow = Process_delcmd.ExecuteNonQuery(); //여러 행이 묶여서 삭제 될 수도 있어서 영향 받는 행을 별도로 추출
 
                     if (resultrow > 0)
@@ -413,7 +432,7 @@ namespace PrintSystemProto
                         mssqlconn.Close();
                         ProcessData();
                         //Process_table.Rows.Remove(Process_table.Rows[delProcess]);
-                        Process_result.Text = "(해당 모델의)부품이 삭제 되었습니다.";
+                        Process_result.Text = "(해당 모델의)공정이 삭제 되었습니다.";
                         Process_result.ForeColor = Color.Green;
                     }
                     else
@@ -457,8 +476,13 @@ namespace PrintSystemProto
                         
                         string ALCvalue = DelselectRow.Item1;                       //선택한 ALC가 들어 있는 행의 ALC값을 받아옴
 
-                        string DelQry = "DELETE FROM partchtable where ALC = '" + ALCvalue + "'";
-                        SqlCommand Partch_Del = new SqlCommand(DelQry, mssqlconn);
+                    /*    string DelQry = "DELETE FROM partchtable where ALC = '" + ALCvalue + "'";
+                        SqlCommand Partch_Del = new SqlCommand(DelQry, mssqlconn);*/
+             //프로시저 부분--------------------------------------------------------------------------------------------
+                        SqlCommand Partch_Del = new SqlCommand("delete_partch",mssqlconn);
+                        Partch_Del.CommandType = CommandType.StoredProcedure;
+                        Partch_Del.Parameters.AddWithValue("@ALCvalue", ALCvalue);
+                        
                         int resultList = Partch_Del.ExecuteNonQuery();
 
                         if (resultList > 0)

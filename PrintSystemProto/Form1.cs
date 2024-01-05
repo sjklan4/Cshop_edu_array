@@ -263,7 +263,7 @@ namespace PrintSystemProto
 
                     //string DelQry = "DELETE FROM printsystemtable WHERE model = '" + modelValue + "' OR modelname = '" + modelNameValue + "'";
 
-                    SqlCommand cmd = new SqlCommand("delete_model", mssqlconn);
+                    SqlCommand cmd = new SqlCommand("delete_model", mssqlconn); //프시저 구문
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@modelValue", modelValue);
                     cmd.Parameters.AddWithValue("@modelNameValue", modelNameValue);

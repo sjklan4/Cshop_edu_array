@@ -12,7 +12,7 @@
         }
         public Car()
         {
-           _fuelGauge = 25;
+           _fuelGauge = 25; // 기본값 25%라고 가정
         }
         public void Go()
         {
