@@ -86,15 +86,29 @@ namespace PrintSystemProto
         // data 받아오는 것 아래 구문으로 통일 : void는 반환 해주는 것이 없어서 그대로 사용해야나 dataTable형식으로 함수 선언시 반환 받아 사용가능 - 여러 곳에서 사용이 가능
         public DataTable Instancedatabse() // modelinf로 db데이터 전달을 위한 구문 - 반복구문 수정 필요
         {
-            mssqlconn.Open();
-
-            SqlDataAdapter msdata = new SqlDataAdapter("up_Factoring_Manage", mssqlconn);
-
-            DataTable mstable = new DataTable();
-            msdata.Fill(mstable);
-            dataGridView1.DataSource = mstable;
-            mssqlconn.Close();
-            return mstable;
+            
+            try
+            {
+                mssqlconn.Open();
+                string cMode = "select_print";
+                SqlCommand SelData = new SqlCommand("up_Factoring_Manage", mssqlconn); // 스토어드 프로시저 구분 분리한 부분 사용 중 ... 
+                SelData.CommandType = CommandType.StoredProcedure;  // 명령 형식을 지정해주어야 함. 안하면 Pram이 안들어감.
+                SelData.Parameters.AddWithValue("@cMode", cMode);
+               // SqlDataReader msdata = SelData.ExecuteReader();
+                SqlDataAdapter msdata = new SqlDataAdapter(SelData);
+                DataTable mstable = new DataTable();
+                msdata.Fill(mstable);
+                dataGridView1.DataSource = mstable;
+             
+                return mstable;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                throw;
+            }
+            finally { mssqlconn.Close(); }
+           
 
         }
 
@@ -143,7 +157,8 @@ namespace PrintSystemProto
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
+            string cMode = "INSERT1";
+            string cTable = "printsystemtable";
             string modelValue = modelbox.Text.Trim();
             string modelNameValue = modelNamebox.Text.Trim();
             if (modelValue == "")
@@ -175,10 +190,12 @@ namespace PrintSystemProto
 
                         SqlCommand cmd = new SqlCommand(InsertQry, mssqlconn);*/
 
-                        SqlCommand cmd = new SqlCommand("Insert_model", mssqlconn); //insert 명령문 추가
+                        SqlCommand cmd = new SqlCommand("up_Factoring_Manage", mssqlconn); //insert 명령문 추가
                         cmd.CommandType = CommandType.StoredProcedure;  // 명령 형식을 지정해주어야 함. 안하면 Pram이 안들어감.
-                        cmd.Parameters.AddWithValue("@modelValue",modelValue);
-                        cmd.Parameters.AddWithValue("@modelNameValue", modelNameValue);
+                        cmd.Parameters.AddWithValue("@cMode", cMode);
+                        cmd.Parameters.AddWithValue("@cTable", cTable);
+                        cmd.Parameters.AddWithValue("@model", modelValue);
+                        cmd.Parameters.AddWithValue("@modelname", modelNameValue);
                         DataRow newRow = ((DataTable)dataGridView1.DataSource).NewRow();
                         newRow["model"] = modelValue;
                         newRow["modelname"] = modelNameValue;
