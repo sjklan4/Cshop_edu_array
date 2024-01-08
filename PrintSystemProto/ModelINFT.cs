@@ -57,10 +57,11 @@ namespace PrintSystemProto
         public void MSLoadData2() //MSsql 연결 부분  = select를 통한 dbdata불러오기 - 부품 데이터 불러오는 부분
         {
             mssqlconn.Open();
-
-
+            string cMode = "select_partch";
             // SqlDataAdapter msdata2 = new SqlDataAdapter("SELECT * FROM partchtable", mssqlconn); //where조건 삭제했음 - 확인필요******
-           SqlDataAdapter msdata2 = new SqlDataAdapter("select_partch", mssqlconn); // 저장 프로시저 사용시 
+            SqlCommand SelData_Partch = new SqlCommand("up_Factoring_Manage", mssqlconn);
+
+            SqlDataAdapter msdata2 = new SqlDataAdapter("select_partch", mssqlconn); // 저장 프로시저 사용시 
             DataTable mstable2 = new DataTable(); //data를 table형식으로 불러 오도록 하는 구문 datatable class사용시 table형식으로 불러짐
             msdata2.Fill(mstable2); 
 
