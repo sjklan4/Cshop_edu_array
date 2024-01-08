@@ -189,7 +189,8 @@ namespace PrintSystemProto
                    /*     string InsertQry = "INSERT INTO printsystemtable(model,modelname) VALUES('" + modelValue + "', '" + modelNameValue + "')";
 
                         SqlCommand cmd = new SqlCommand(InsertQry, mssqlconn);*/
-
+                  
+                        // 프로시저 부분 --------------------------
                         SqlCommand cmd = new SqlCommand("up_Factoring_Manage", mssqlconn); //insert 명령문 추가
                         cmd.CommandType = CommandType.StoredProcedure;  // 명령 형식을 지정해주어야 함. 안하면 Pram이 안들어감.
                         cmd.Parameters.AddWithValue("@cMode", cMode);

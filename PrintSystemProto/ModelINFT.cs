@@ -60,8 +60,9 @@ namespace PrintSystemProto
             string cMode = "select_partch";
             // SqlDataAdapter msdata2 = new SqlDataAdapter("SELECT * FROM partchtable", mssqlconn); //where조건 삭제했음 - 확인필요******
             SqlCommand SelData_Partch = new SqlCommand("up_Factoring_Manage", mssqlconn);
-
-            SqlDataAdapter msdata2 = new SqlDataAdapter("select_partch", mssqlconn); // 저장 프로시저 사용시 
+            SelData_Partch.CommandType = CommandType.StoredProcedure;  // 명령 형식을 지정해주어야 함. 안하면 Pram이 안들어감.
+            SelData_Partch.Parameters.AddWithValue("@cMode", cMode);
+            SqlDataAdapter msdata2 = new SqlDataAdapter(SelData_Partch); // 저장 프로시저 사용시 
             DataTable mstable2 = new DataTable(); //data를 table형식으로 불러 오도록 하는 구문 datatable class사용시 table형식으로 불러짐
             msdata2.Fill(mstable2); 
 
@@ -72,8 +73,12 @@ namespace PrintSystemProto
         public void ProcessData()
         {
             mssqlconn.Open();
+            string cMode = "select_processtable";
             //SqlDataAdapter processdb = new SqlDataAdapter("SELECT * FROM processtable",mssqlconn);
-            SqlDataAdapter processdb = new SqlDataAdapter("select_processtable",mssqlconn); //저장 프로시저 사용시 - 프로시저 생성필요
+            SqlCommand SelData_Process = new SqlCommand("up_Factoring_Manage", mssqlconn);
+            SelData_Process.CommandType = CommandType.StoredProcedure;
+            SelData_Process.Parameters.AddWithValue("@cMode",cMode);
+            SqlDataAdapter processdb = new SqlDataAdapter(SelData_Process);
             DataTable prtable = new DataTable();
             processdb.Fill(prtable);
             Process_table.DataSource = prtable;
@@ -196,7 +201,8 @@ namespace PrintSystemProto
                         foreach (var selectedPData in selectedPDataList)
                         {
                             string[] comboPartdata = selectcombo.Split('-'); //지금 콤보 박스 내용에 2개 컬럼 데이터가 오기 때문에 '-'를 기점으로 나누어 줌
-
+                            string cMode = "INSERT3";
+                            string cTable = "processtable";
                             string model = comboPartdata[0].Trim(); //model 컬럼 내용
                             string modelname = comboPartdata[1].Trim(); // modelname 컬럼 내용
                             string ALCvalue = selectedPData.Item1;
@@ -209,9 +215,11 @@ namespace PrintSystemProto
 
                             SqlCommand processcmd = new SqlCommand(InsertQry2, mssqlconn);*/
                             // 프로시저 부분------------------------------------------------
-                            SqlCommand processcmd = new SqlCommand("insert_process", mssqlconn);
+                            SqlCommand processcmd = new SqlCommand("up_Factoring_Manage", mssqlconn);
                             processcmd.CommandType = CommandType.StoredProcedure;
-                         /*   processcmd.Parameters.AddWithValue("@");*/
+                            /*   processcmd.Parameters.AddWithValue("@");*/
+                            processcmd.Parameters.AddWithValue("@cMode", cMode);
+                            processcmd.Parameters.AddWithValue("@cTable", cTable);
                             processcmd.Parameters.AddWithValue("@model",model);
                             processcmd.Parameters.AddWithValue("@modelname", modelname);
                             processcmd.Parameters.AddWithValue("@ALCvalue", ALCvalue);
@@ -248,7 +256,7 @@ namespace PrintSystemProto
                     }
                     catch (SqlException)
                     {
-                        Partch_result.Text = "공정추가 실패 - 중복값 또는 공정을 확인해주세요";
+                        Partch_result.Text = "공정추가 실패 - 예외 오류발생";
                         Process_result.ForeColor = System.Drawing.Color.Red;
                     }
                     catch (Exception ex)
