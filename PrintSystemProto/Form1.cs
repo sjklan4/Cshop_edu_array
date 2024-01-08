@@ -196,16 +196,19 @@ namespace PrintSystemProto
                         cmd.Parameters.AddWithValue("@cTable", cTable);
                         cmd.Parameters.AddWithValue("@model", modelValue);
                         cmd.Parameters.AddWithValue("@modelname", modelNameValue);
-                        DataRow newRow = ((DataTable)dataGridView1.DataSource).NewRow();
+             /*           DataRow newRow = ((DataTable)dataGridView1.DataSource).NewRow();
                         newRow["model"] = modelValue;
                         newRow["modelname"] = modelNameValue;
-                        ((DataTable)dataGridView1.DataSource).Rows.Add(newRow);
-                        
+                        ((DataTable)dataGridView1.DataSource).Rows.Add(newRow);*/
+                           
+
                         if (cmd.ExecuteNonQuery() == 1)
                         {
+                            mssqlconn.Close();
                             Insert_result.Text = "인서트 성공";   
                             Insert_result.ForeColor = Color.Blue;
-                            mssqlconn.Close();
+                            Instancedatabse();
+                         
                         }
                         else
                         {
@@ -217,6 +220,7 @@ namespace PrintSystemProto
                     catch (Exception ex)
                     {
                         MessageBox.Show(ex.ToString());
+                        mssqlconn.Close();
                         throw;
                     }
                 }
@@ -289,6 +293,8 @@ namespace PrintSystemProto
         {
             int datrow = dataGridView1.SelectedRows.Count;
             int delrow = dataGridView1.CurrentCell.RowIndex; // 활성화된 셀의 위치를 가져옴 - 번호로
+            string cMode = "DELETE1";
+            string cTable = "printsystemtable";
             string modelValue = modelbox.Text.Trim();
             string modelNameValue = modelNamebox.Text.Trim();
             if (datrow > 0)
@@ -299,21 +305,24 @@ namespace PrintSystemProto
 
                     //string DelQry = "DELETE FROM printsystemtable WHERE model = '" + modelValue + "' OR modelname = '" + modelNameValue + "'";
 
-                    SqlCommand cmd = new SqlCommand("delete_model", mssqlconn); //프시저 구문
+                    SqlCommand cmd = new SqlCommand("up_Factoring_Manage", mssqlconn); //프시저 구문
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@modelValue", modelValue);
-                    cmd.Parameters.AddWithValue("@modelNameValue", modelNameValue);
-                
+                    cmd.Parameters.AddWithValue("@cMode",cMode);
+                    cmd.Parameters.AddWithValue("@cTable", cTable);
+                    cmd.Parameters.AddWithValue("@model", modelValue);
+                    //cmd.Parameters.AddWithValue("@modelNameValue", modelNameValue);
+                    
                     if (cmd.ExecuteNonQuery() == 1)
                     {
                         Insert_result.Text = "삭제 성공";
-                        dataGridView1.Rows.Remove(dataGridView1.Rows[delrow]); // 가져온 번호에 해당하는 열을 지움 지금 data는 전체 행 선택으로 설정 되어있음
                         mssqlconn.Close();
+                        //dataGridView1.Rows.Remove(dataGridView1.Rows[delrow]); // 가져온 번호에 해당하는 열을 지움 지금 data는 전체 행 선택으로 설정 되어있음
+                        Instancedatabse();
                     }
                     else
                     {
                         Insert_result.Text = "삭제 실패";
-                        mssqlconn.Close();
+                        
                     }
                 }
                 catch (SqlException)

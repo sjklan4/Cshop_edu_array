@@ -157,7 +157,7 @@
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1066, 707);
+            this.ClientSize = new System.Drawing.Size(1100, 718);
             this.ControlBox = false;
             this.Controls.Add(this.Insert_result);
             this.Controls.Add(this.DelBTN);
