@@ -73,7 +73,7 @@ namespace PrintSystemProto
         public void ProcessData()
         {
             mssqlconn.Open();
-            string cMode = "select_processtable";
+            string cMode = "processtable";
             //SqlDataAdapter processdb = new SqlDataAdapter("SELECT * FROM processtable",mssqlconn);
             SqlCommand SelData_Process = new SqlCommand("up_Factoring_Manage", mssqlconn);
             SelData_Process.CommandType = CommandType.StoredProcedure;
@@ -307,6 +307,8 @@ namespace PrintSystemProto
         {
 
             //var model = comboBox1.SelectedItem.ToString().Trim();
+            string cMode = "INSERT2";
+            string cTable = "partchtable";
             string ALCVL = textBox1.Text.Trim(); // autoincrement없을 경우 사용 
             string partnameVL = Part_Name.Text.Trim();
             string partnumVL = Part_Num.Text.Trim();
@@ -338,12 +340,14 @@ namespace PrintSystemProto
 
 
                     //아래는 프로시저 부분 이다.
-                    SqlCommand cmd = new SqlCommand("insert_partch", mssqlconn);
+                    SqlCommand cmd = new SqlCommand("up_Factoring_Manage", mssqlconn);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@ALCVL", ALCVL);
-                    cmd.Parameters.AddWithValue("@partnameVL", partnameVL);
-                    cmd.Parameters.AddWithValue("@partnumVL", partnumVL);
-                    cmd.Parameters.AddWithValue("@partcolorVL", partcolorVL);
+                    cmd.Parameters.AddWithValue("@cMode", cMode);
+                    cmd.Parameters.AddWithValue("@cTable", cTable);
+                    cmd.Parameters.AddWithValue("@ALCvalue", ALCVL);
+                    cmd.Parameters.AddWithValue("@Partname", partnameVL);
+                    cmd.Parameters.AddWithValue("@Partnum", partnumVL);
+                    cmd.Parameters.AddWithValue("@Color", partcolorVL);
 
                     DataRow newRow = ((DataTable)Partch_Table.DataSource).NewRow(); //그리드의 data행에 datatable값이 있는 db의 테이블 전체를 가져와서 신규 행에 넣도록 인스턴스
                         /*decimal gnALC = Convert.ToDecimal(cmd.ExecuteScalar()); // cope_identity를 사용하기 위해 excutescalar라는 내장함수를 가지고 영향을 받은 1행 1열을 반환시킨다. ALC가 table첫행에 잇음
@@ -414,6 +418,8 @@ namespace PrintSystemProto
             int delProcess = Process_table.CurrentCell.RowIndex;   // 활성화된 행의 번호를 가져옴 - 몇번째 행 지울지 결정하기 위함
             string ALCvalue = Process_table.Rows[delProcess].Cells["ALC"].Value.ToString(); 
             string model = Process_table.Rows[delProcess].Cells["model"].Value.ToString();
+            string cMode = "DELETE3";
+            string cTable = "processtable";
             /*string modelname = Process_table.SelectedRows[selectRowdata].Cells["modelname"].ToString();
             string ALC = Process_table.SelectedRows[selectRowdata].Cells["ALC"].ToString();
             string Partname = Process_table.SelectedRows[selectRowdata].Cells["부품명"].ToString();
@@ -429,8 +435,10 @@ namespace PrintSystemProto
                      SqlCommand Process_delcmd = new SqlCommand(Process_DelQry, mssqlconn);*/
 
                     //프로시저 부분 ---------------------------------------------------------------
-                    SqlCommand Process_delcmd = new SqlCommand("delete_process", mssqlconn);
+                    SqlCommand Process_delcmd = new SqlCommand("up_Factoring_Manage", mssqlconn);
                     Process_delcmd.CommandType = CommandType.StoredProcedure;
+                    Process_delcmd.Parameters.AddWithValue("@cMode", cMode);
+                    Process_delcmd.Parameters.AddWithValue("@cTable", cTable);
                     Process_delcmd.Parameters.AddWithValue("@model", model);
                     Process_delcmd.Parameters.AddWithValue("@ALCvalue", ALCvalue);
 
@@ -469,7 +477,8 @@ namespace PrintSystemProto
         // 부품 삭제 버튼  - 수정사항 : 예외 처리가 반복됨 
         private void Partch_Delbtn_Click(object sender, EventArgs e)
         {
-
+            string cMode = "DELETE2";
+            string cTable = "partchtable";
             if (Partch_Table.SelectedRows.Count > 0)
             {
                 try
@@ -488,8 +497,10 @@ namespace PrintSystemProto
                     /*    string DelQry = "DELETE FROM partchtable where ALC = '" + ALCvalue + "'";
                         SqlCommand Partch_Del = new SqlCommand(DelQry, mssqlconn);*/
              //프로시저 부분--------------------------------------------------------------------------------------------
-                        SqlCommand Partch_Del = new SqlCommand("delete_partch",mssqlconn);
+                        SqlCommand Partch_Del = new SqlCommand("up_Factoring_Manage", mssqlconn);
                         Partch_Del.CommandType = CommandType.StoredProcedure;
+                        Partch_Del.Parameters.AddWithValue("@cMode", cMode);
+                        Partch_Del.Parameters.AddWithValue("@cTable", cTable);
                         Partch_Del.Parameters.AddWithValue("@ALCvalue", ALCvalue);
                         
                         int resultList = Partch_Del.ExecuteNonQuery();
@@ -513,7 +524,7 @@ namespace PrintSystemProto
                 }
                 catch (Exception)
                 {
-                    Partch_result.Text = "실패! : 공정을 확인해주세요";
+                    Partch_result.Text = "실패! : 오류발생";
                     Process_result.ForeColor = Color.Red;
                  
                 }
