@@ -99,7 +99,7 @@ namespace PrintSystemProto
                 DataTable mstable = new DataTable();
                 msdata.Fill(mstable);
                 dataGridView1.DataSource = mstable;
-             
+                            
                 return mstable;
             }
             catch (Exception ex)
