@@ -16,10 +16,11 @@ namespace EventAdnDelegateDemo
                 Console.BackgroundColor = ConsoleColor.White;
                 Console.WriteLine("연료부족");
                 Console.ResetColor();
-            
+ 
             };
             car.Go();
-            car.OnFuelemty();
+            car.Go();
+            //car.OnFuelemty();
         }
 
         // 이벤트 처리기(핸들러)

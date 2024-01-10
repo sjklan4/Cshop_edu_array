@@ -136,9 +136,9 @@ namespace PrintSystemProto
                     gbColor = selectrowdata["색상"].ToString();*/
 
                     string ALC = selectrowdata["ALC"].ToString();
-                    string partName = selectrowdata["부품명"].ToString();
-                    string partNum = selectrowdata["부품번호"].ToString();
-                    string color = selectrowdata["색상"].ToString();
+                    string partName = selectrowdata["PartName"].ToString();
+                    string partNum = selectrowdata["PartNum"].ToString();
+                    string color = selectrowdata["PartColor"].ToString();
 
                    selectedPDataList.Add(new Tuple<string, string, string, string>(ALC, partName, partNum, color));
                    
@@ -152,9 +152,9 @@ namespace PrintSystemProto
                     DataRow selectrowdata = selectRow.Row;
 
                     string ALC = selectrowdata["ALC"].ToString();
-                    string partName = selectrowdata["부품명"].ToString();
-                    string partNum = selectrowdata["부품번호"].ToString();
-                    string color = selectrowdata["색상"].ToString();
+                    string partName = selectrowdata["PartName"].ToString();
+                    string partNum = selectrowdata["PartNum"].ToString();
+                    string color = selectrowdata["PartColor"].ToString();
 
                     selectedPDataList.RemoveAll(item => item.Item1 == ALC &&
                                                       item.Item2 == partName &&

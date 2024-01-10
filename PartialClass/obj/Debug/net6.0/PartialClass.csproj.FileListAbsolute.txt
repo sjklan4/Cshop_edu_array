@@ -1,0 +1,14 @@
+C:\c#\Cshopedu\PartialClass\bin\Debug\net6.0\PartialClass.exe
+C:\c#\Cshopedu\PartialClass\bin\Debug\net6.0\PartialClass.deps.json
+C:\c#\Cshopedu\PartialClass\bin\Debug\net6.0\PartialClass.runtimeconfig.json
+C:\c#\Cshopedu\PartialClass\bin\Debug\net6.0\PartialClass.dll
+C:\c#\Cshopedu\PartialClass\bin\Debug\net6.0\PartialClass.pdb
+C:\c#\Cshopedu\PartialClass\obj\Debug\net6.0\PartialClass.GeneratedMSBuildEditorConfig.editorconfig
+C:\c#\Cshopedu\PartialClass\obj\Debug\net6.0\PartialClass.AssemblyInfoInputs.cache
+C:\c#\Cshopedu\PartialClass\obj\Debug\net6.0\PartialClass.AssemblyInfo.cs
+C:\c#\Cshopedu\PartialClass\obj\Debug\net6.0\PartialClass.csproj.CoreCompileInputs.cache
+C:\c#\Cshopedu\PartialClass\obj\Debug\net6.0\PartialClass.dll
+C:\c#\Cshopedu\PartialClass\obj\Debug\net6.0\refint\PartialClass.dll
+C:\c#\Cshopedu\PartialClass\obj\Debug\net6.0\PartialClass.pdb
+C:\c#\Cshopedu\PartialClass\obj\Debug\net6.0\PartialClass.genruntimeconfig.cache
+C:\c#\Cshopedu\PartialClass\obj\Debug\net6.0\ref\PartialClass.dll
