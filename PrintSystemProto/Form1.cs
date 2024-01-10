@@ -90,7 +90,7 @@ namespace PrintSystemProto
             try
             {
                 mssqlconn.Open();
-                string cMode = "select_print";
+                string cMode = "mModeltable";
                 SqlCommand SelData = new SqlCommand("up_Factoring_Manage", mssqlconn); // 스토어드 프로시저 구분 분리한 부분 사용 중 ... 
                 SelData.CommandType = CommandType.StoredProcedure;  // 명령 형식을 지정해주어야 함. 안하면 Pram이 안들어감.
                 SelData.Parameters.AddWithValue("@cMode", cMode);
@@ -158,7 +158,7 @@ namespace PrintSystemProto
         private void button1_Click(object sender, EventArgs e)
         {
             string cMode = "INSERT1";
-            string cTable = "printsystemtable";
+            string cTable = "mModeltable";
             string modelValue = modelbox.Text.Trim();
             string modelNameValue = modelNamebox.Text.Trim();
             if (modelValue == "")
@@ -295,7 +295,7 @@ namespace PrintSystemProto
             int datrow = dataGridView1.SelectedRows.Count;
             int delrow = dataGridView1.CurrentCell.RowIndex; // 활성화된 셀의 위치를 가져옴 - 번호로
             string cMode = "DELETE1";
-            string cTable = "printsystemtable";
+            string cTable = "mModeltable";
             string modelValue = modelbox.Text.Trim();
             string modelNameValue = modelNamebox.Text.Trim();
             if (datrow > 0)

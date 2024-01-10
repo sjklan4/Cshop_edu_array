@@ -105,3 +105,4 @@ C:\Cshop\C#study\PrintSystemProto\bin\Debug\ExcelDataReader.xml
 C:\Cshop\C#study\PrintSystemProto\bin\Debug\ExcelDataReader.DataSet.pdb
 C:\Cshop\C#study\PrintSystemProto\bin\Debug\ExcelDataReader.DataSet.xml
 C:\c#\Cshopedu\PrintSystemProto\obj\Debug\PrintSystemProto.Checkprocess.resources
+C:\Cshop\C#study\PrintSystemProto\obj\Debug\PrintSystemProto.Checkprocess.resources
