@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "K8XACv9152PphWCt3t34GZ+REGqVo42QfGCMDLYyO7fW9mczqf3e9vxvrL623H2kPLozS0cQQeSLrPrr0J7+gw==",
+  "dgSpecHash": "ViKIncJSBnLzH1DlMloTk59H3qTuh5gd+YtNbY5RlWfLpuMXlVbUqiDZRceJDmfF8TVwY5E7yKcvoMAgWYzqIQ==",
   "success": true,
-  "projectFilePath": "C:\\c#\\Cshopedu\\EventClass\\EventClass.csproj",
+  "projectFilePath": "C:\\Cshop\\C#study\\EventClass\\EventClass.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
