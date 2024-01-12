@@ -90,8 +90,8 @@ namespace PrintSystemProto
             try
             {
                 mssqlconn.Open();
-                string cMode = "mModeltable";
-                SqlCommand SelData = new SqlCommand("up_Factoring_Manage", mssqlconn); // 스토어드 프로시저 구분 분리한 부분 사용 중 ... 
+                string cMode = "SL";
+                SqlCommand SelData = new SqlCommand("up_mModeltable_Pr", mssqlconn); // 스토어드 프로시저 구분 분리한 부분 사용 중 ... 
                 SelData.CommandType = CommandType.StoredProcedure;  // 명령 형식을 지정해주어야 함. 안하면 Pram이 안들어감.
                 SelData.Parameters.AddWithValue("@cMode", cMode);
                // SqlDataReader msdata = SelData.ExecuteReader();
@@ -157,8 +157,8 @@ namespace PrintSystemProto
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string cMode = "INSERT1";
-            string cTable = "mModeltable";
+            string cMode = "IN";
+            //string cTable = "mModeltable";
             string modelValue = modelbox.Text.Trim();
             string modelNameValue = modelNamebox.Text.Trim();
             if (modelValue == "")
@@ -191,10 +191,10 @@ namespace PrintSystemProto
                         SqlCommand cmd = new SqlCommand(InsertQry, mssqlconn);*/
                   
                         // 프로시저 부분 --------------------------
-                        SqlCommand cmd = new SqlCommand("up_Factoring_Manage", mssqlconn); //insert 명령문 추가
+                        SqlCommand cmd = new SqlCommand("up_mModeltable_Pr", mssqlconn); //insert 명령문 추가
                         cmd.CommandType = CommandType.StoredProcedure;  // 명령 형식을 지정해주어야 함. 안하면 Pram이 안들어감.
                         cmd.Parameters.AddWithValue("@cMode", cMode);
-                        cmd.Parameters.AddWithValue("@cTable", cTable);
+                    /*    cmd.Parameters.AddWithValue("@cTable", cTable);*/
                         cmd.Parameters.AddWithValue("@model", modelValue);
                         cmd.Parameters.AddWithValue("@modelname", modelNameValue);
              /*           DataRow newRow = ((DataTable)dataGridView1.DataSource).NewRow();
@@ -294,8 +294,8 @@ namespace PrintSystemProto
         {
             int datrow = dataGridView1.SelectedRows.Count;
             int delrow = dataGridView1.CurrentCell.RowIndex; // 활성화된 셀의 위치를 가져옴 - 번호로
-            string cMode = "DELETE1";
-            string cTable = "mModeltable";
+            string cMode = "DEL";
+         /*   string cTable = "mModeltable";*/
             string modelValue = modelbox.Text.Trim();
             string modelNameValue = modelNamebox.Text.Trim();
             if (datrow > 0)
@@ -306,10 +306,10 @@ namespace PrintSystemProto
 
                     //string DelQry = "DELETE FROM printsystemtable WHERE model = '" + modelValue + "' OR modelname = '" + modelNameValue + "'";
 
-                    SqlCommand cmd = new SqlCommand("up_Factoring_Manage", mssqlconn); //프시저 구문
+                    SqlCommand cmd = new SqlCommand("up_mModeltable_Pr", mssqlconn); //프시저 구문
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@cMode",cMode);
-                    cmd.Parameters.AddWithValue("@cTable", cTable);
+                  /*  cmd.Parameters.AddWithValue("@cTable", cTable);*/
                     cmd.Parameters.AddWithValue("@model", modelValue);
                     //cmd.Parameters.AddWithValue("@modelNameValue", modelNameValue);
                     

@@ -1,23 +1,21 @@
 -- =====modeltable  procedure ==============================
 CREATE PROCEDURE up_mModeltable_Pr
 	@cMode				VARCHAR(16) = NULL,
-	@cTable				VARCHAR(50) = NULL,
 	@model				varchar(500) = NULL,
 	@modelname			varchar(500) = NULL
 	
 AS
-	IF @cMode = 'mModeltable'
+	IF @cMode = 'SL'
 		BEGIN
 			SELECT * FROM mModeltable;
 		END
-    ELSE IF @cMode = 'INSERT1' AND @cTable = 'mModeltable' 
+    ELSE IF @cMode = 'IN'
 		BEGIN
 			INSERT INTO mModeltable(model,modelname) 
 			values(	@model,
 					@modelname);
-			
 		END
-	ELSE IF @cMode = 'DELETE1' AND @cTable = 'mModeltable'
+	ELSE IF @cMode = 'DEL'
 		BEGIN
 			DELETE FROM mModeltable
 				WHERE model = @model
@@ -26,7 +24,6 @@ AS
 
 CREATE PROCEDURE up_Partchtable_Pr
 	@cMode				VARCHAR(16) = NULL,
-	@cTable				VARCHAR(50) = NULL,
 	@ALCvalue			varchar(500) = NULL,
 	@Partname			varchar(500) = NULL,
 	@Partnum			varchar(500) = NULL,
