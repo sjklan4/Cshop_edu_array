@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.SuspendLayout();
             // 
             // PrintSending
@@ -43,5 +45,7 @@
         }
 
         #endregion
+
+        private System.IO.Ports.SerialPort serialPort1;
     }
 }
