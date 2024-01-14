@@ -53,7 +53,7 @@ namespace PrintSystemProto
             byte[] buffer = new byte[bytesRead];
             serialPort1.Read(buffer, 0, bytesRead);
 
-            string receivedData = Encoding.Default.GetString(buffer);
+            string receivedData = Encoding.UTF8.GetString(buffer);
             receivebox.Text += receivedData;
 
 
