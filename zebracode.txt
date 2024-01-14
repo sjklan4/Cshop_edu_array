@@ -1,0 +1,9 @@
+^XA
+^FO9,5^GB300,150,3^FS
+
+^FO15,10^A0,a,20,5^FDCop.Name : FDS^FS
+^FO15,34^A0,a,15,5^FDADRESS : Room608 212,1gongdan-ro,^FS
+^FO15,54^A0,a,14,5^FDGumi-si,Gyeongsangbuk-do,Republic of Korea^FS
+^FO15,74^A0,a,20,5^FDNAME : Sang Joon Park^FS
+^FO15,94^A0,a,20,5^FDTEL. : 010-2956-2593^FS
+^XZ

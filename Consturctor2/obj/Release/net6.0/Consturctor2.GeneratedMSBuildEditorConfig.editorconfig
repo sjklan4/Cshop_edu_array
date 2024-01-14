@@ -8,4 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Consturctor2
-build_property.ProjectDir = C:\c#\Cshopedu\Consturctor2\
+build_property.ProjectDir = C:\Cshop\C#study\Consturctor2\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

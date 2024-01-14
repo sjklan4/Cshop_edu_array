@@ -47,8 +47,16 @@ namespace PrintSystemProto
         }
         private void MySerialReceived(object s, EventArgs e)  //여기에서 수신 데이타를 사용자의 용도에 따라 처리한다.
         {
-            int ReceiveData = serialPort1.ReadByte();  //시리얼 버터에 수신된 데이타를 ReceiveData 읽어오기
-            receivebox.Text = receivebox.Text + string.Format("{0:X2}", ReceiveData);  //int 형식을 string형식으로 변환하여 출력
+            /* int ReceiveData = serialPort1.ReadByte();  //시리얼 버퍼에 수신된 데이타를 ReceiveData 읽어오기
+             receivebox.Text = receivebox.Text + string.Format("{0:X2}", ReceiveData);  //int 형식을 string형식으로 변환하여 출력*/
+            int bytesRead = serialPort1.BytesToRead;
+            byte[] buffer = new byte[bytesRead];
+            serialPort1.Read(buffer, 0, bytesRead);
+
+            string receivedData = Encoding.Default.GetString(buffer);
+            receivebox.Text += receivedData;
+
+
         }
         private void button1_Click(object sender, EventArgs e)
         {
