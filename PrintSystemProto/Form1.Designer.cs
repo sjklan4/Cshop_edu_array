@@ -38,6 +38,7 @@
             this.modelinf = new System.Windows.Forms.Button();
             this.DelBTN = new System.Windows.Forms.Button();
             this.Insert_result = new System.Windows.Forms.Label();
+            this.printbtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -152,6 +153,16 @@
             this.Insert_result.Text = "결과";
             this.Insert_result.Click += new System.EventHandler(this.Insert_result_Click);
             // 
+            // printbtn
+            // 
+            this.printbtn.Location = new System.Drawing.Point(979, 609);
+            this.printbtn.Name = "printbtn";
+            this.printbtn.Size = new System.Drawing.Size(75, 23);
+            this.printbtn.TabIndex = 13;
+            this.printbtn.Text = "Print";
+            this.printbtn.UseVisualStyleBackColor = true;
+            this.printbtn.Click += new System.EventHandler(this.printbtn_Click);
+            // 
             // Form1
             // 
             this.AllowDrop = true;
@@ -159,6 +170,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1100, 718);
             this.ControlBox = false;
+            this.Controls.Add(this.printbtn);
             this.Controls.Add(this.Insert_result);
             this.Controls.Add(this.DelBTN);
             this.Controls.Add(this.modelinf);
@@ -190,6 +202,7 @@
         public System.Windows.Forms.Button modelinf;
         private System.Windows.Forms.Button DelBTN;
         private System.Windows.Forms.Label Insert_result;
+        private System.Windows.Forms.Button printbtn;
     }
 }
 

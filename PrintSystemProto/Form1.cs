@@ -358,5 +358,11 @@ namespace PrintSystemProto
         {
 
         }
+
+        private void printbtn_Click(object sender, EventArgs e)
+        {
+            prpage.Show();
+
+        }
     }
 }
