@@ -1,9 +1,58 @@
 ^XA
-^FO9,5^GB300,150,3^FS
 
-^FO15,10^A0,a,20,5^FDCop.Name : FDS^FS
-^FO15,34^A0,a,15,5^FDADRESS : Room608 212,1gongdan-ro,^FS
-^FO15,54^A0,a,14,5^FDGumi-si,Gyeongsangbuk-do,Republic of Korea^FS
-^FO15,74^A0,a,20,5^FDNAME : Sang Joon Park^FS
-^FO15,94^A0,a,20,5^FDTEL. : 010-2956-2593^FS
+^FO9,7^GB370,270,3^FS
+^CI28
+^CFJ,22
+^FO20,17^FDCop. : FDS^FS
+^FO20,40^FDAdress : 608 room,^FS
+^FO25,66^FD212, 1gongdan-ro,Gumi-si,^FS
+^FO15,96^FDGyeongsangbuk-do, Republic of Korea^FS
+^FO15,136^FDNAME : SANG JOON PARK^FS
+^FO15,166^FDTEL. : 010-2956-2593^FS
+^FO270,160^BQN,,2^FDCop. : FDS,Adress : 608 room,212, 1gongdan-ro,Gumi-si,Gyeongsangbuk-do, Republic of KoreaNAME : SANG JOON PARK, TEL. : 010-2956-2593^FS
+
+^XZ
+
+212, 1gongdan-ro, Gumi-si, Gyeongsangbuk-do, Republic of Korea
+경북 구미시 공단로1 한라시그마밸리지식산업센터 608호
+^XA
+
+^FO9,7^GB470,370,3^FS
+^CI28
+^CFJ,25
+^FO20,35^FDCop. : FDS^FS
+^FO20,85^FDAdress : 608 room,^FS
+^FO25,136^FD212, 1gongdan-ro,Gumi-si,^FS
+^FO15,180^FDGyeongsangbuk-do, Republic of Korea^FS
+^FO15,266^FDNAME : SANG JOON PARK^FS
+^FO15,326^FDTEL. : 010-2956-2593^FS
+^FO320,210^BQ^FDCop. : FDS,Adress : 608 room,212, 1gongdan-ro,Gumi-si,Gyeongsangbuk-do, Republic of KoreaNAME : SANG JOON PARK, TEL. : 010-2956-2593^FS
+^XZ
+
+
+^XA
+
+^FO9,7^GB370,270,3^FS
+^CI28
+^CFJ,22
+^FO20,17^FDCop. : FDS^FS
+^FO20,40^FDAdress : 608 room,^FS
+^FO25,66^FD212, 1gongdan-ro,Gumi-si,^FS
+^FO15,96^FDGyeongsangbuk-do, ROKorea^FS
+^FO15,136^FDNAME : SANG JOON PARK^FS
+^FO15,166^FDTEL. : 010-2956-2593^FS
+^FO270,160^BQN,,2^FDCop. : FDS,Adress : 608 room,212, 1gongdan-ro,Gumi-si,Gyeongsangbuk-do, Republic of KoreaNAME : SANG JOON PARK, TEL. : 010-2956-2593^FS
+^FO25,210^BY1,2^BCN,50,N,N,N^FDTEL01029562593^FS
+^XZ
+
+
+
+
+
+
+
+^XA
+^CI28
+^CFJ,50
+^FO100,100^FD작은 고추가 맵다^FS
 ^XZ

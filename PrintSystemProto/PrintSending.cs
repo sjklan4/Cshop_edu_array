@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO.Ports;
+using MesSystem;
 
 namespace PrintSystemProto
 {
@@ -63,6 +65,7 @@ namespace PrintSystemProto
         {
             serialPort1.Write(sendtxbox.Text);
         }
+
         private void nonconnet_Click(object sender, EventArgs e)
         {
             if (serialPort1.IsOpen)
@@ -77,10 +80,53 @@ namespace PrintSystemProto
                 serialchk.Text = "포트가 이미 닫혀 있습니다.";
             }
         }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            /*  PrintDialog pd = new PrintDialog();
+              pd.PrinterSettings = new PrinterSettings();*/
+
+            serialPort1.Write(getPrintcode());
+           // string PrintCode = getPrintcode();
+
+           /* if (!(RawPrinterHelper.SendStringToPrinter(pd.PrinterSettings.PrinterName, PrintCode)))
+            {
+                msglable.Text = "출력 오류";
+            }
+            else
+            {
+
+            }*/
+        }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
+        }
+        public string getPrintcode()
+        {
+            string PrintCode = string.Empty;
+
+            PrintCode = "^XA";
+            PrintCode += "^FO9,7^GB370,270,3^FS";
+            PrintCode += "^CI28";
+            PrintCode += "^CFJ,22";
+
+            /*  PrintCode += "^CI28";
+              PrintCode += "^CFJ,40";*/
+            PrintCode += "^FO20,17^FDCop. : " + Copnm.Text + "^FS";
+            PrintCode += "^FO20,40^FDAdress : 608 room,^FS";
+            PrintCode += "^FO25,66^FD212, 1gongdan-ro,Gumi-si,^FS";
+            PrintCode += "^FO15,96^FDGyeongsangbuk-do, ROKorea^FS";
+            PrintCode += "^FO15,136^FDNAME : SANG JOON PARK^FS";
+            PrintCode += "^FO15,166^FDTEL. : 010-2956-2593^FS";
+            PrintCode += "^FO270,160^BQN,,2^FDCop. : FDS,Adress : 608 room,212, 1gongdan-ro,Gumi-si,Gyeongsangbuk-do, Republic of KoreaNAME : SANG JOON PARK, TEL. : 010-2956-2593^FS";
+            PrintCode += "^FO25,210 ^ BY1,2 ^ BCN,50,N,N,N ^ FDTEL01029562593 ^ FS";
+            PrintCode += "\r\n^XZ";
+            return PrintCode;
         }
 
+        private void sendtx_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
