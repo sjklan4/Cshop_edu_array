@@ -108,3 +108,4 @@ C:\c#\Cshopedu\PrintSystemProto\obj\Debug\PrintSystemProto.Checkprocess.resource
 C:\Cshop\C#study\PrintSystemProto\obj\Debug\PrintSystemProto.Checkprocess.resources
 C:\Cshop\C#study\PrintSystemProto\obj\Debug\PrintSystemProto.PrintSending.resources
 C:\c#\Cshopedu\PrintSystemProto\obj\Debug\PrintSystemProto.PrintSending.resources
+C:\Cshop\C#study\PrintSystemProto\obj\Debug\PrintSystemProto.processprint.resources

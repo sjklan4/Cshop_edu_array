@@ -53,6 +53,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.Partch_result = new System.Windows.Forms.Label();
             this.Process_result = new System.Windows.Forms.Label();
+            this.chk_print = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Partch_Table)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Process_table)).BeginInit();
             this.SuspendLayout();
@@ -336,11 +337,25 @@
             this.Process_result.Text = "결과 ";
             this.Process_result.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // chk_print
+            // 
+            this.chk_print.BackColor = System.Drawing.Color.Blue;
+            this.chk_print.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.chk_print.ForeColor = System.Drawing.Color.Transparent;
+            this.chk_print.Location = new System.Drawing.Point(737, 384);
+            this.chk_print.Name = "chk_print";
+            this.chk_print.Size = new System.Drawing.Size(112, 36);
+            this.chk_print.TabIndex = 25;
+            this.chk_print.Text = "검사내용출력";
+            this.chk_print.UseVisualStyleBackColor = false;
+            this.chk_print.Click += new System.EventHandler(this.chk_print_Click);
+            // 
             // ModelINFT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(906, 660);
+            this.Controls.Add(this.chk_print);
             this.Controls.Add(this.Process_result);
             this.Controls.Add(this.Partch_result);
             this.Controls.Add(this.label7);
@@ -402,5 +417,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label Partch_result;
         private System.Windows.Forms.Label Process_result;
+        private System.Windows.Forms.Button chk_print;
     }
 }

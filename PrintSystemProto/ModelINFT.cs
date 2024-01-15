@@ -548,5 +548,11 @@ namespace PrintSystemProto
         {
 
         }
+
+        private void chk_print_Click(object sender, EventArgs e)
+        {
+            processprint prcprint = new processprint();
+            prcprint.ShowDialog();
+        }
     }
 }

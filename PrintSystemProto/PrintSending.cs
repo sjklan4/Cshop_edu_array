@@ -47,6 +47,8 @@ namespace PrintSystemProto
         {
             this.Invoke(new EventHandler(MySerialReceived)); //메인 쓰레드와 수신 쓰레드의 충돌방지 별도 작업으로 분리 시킴
         }
+
+        // 데이터 수신 관련 함수 부분 수신한 데이터 처리 문
         private void MySerialReceived(object s, EventArgs e)  //여기에서 수신 데이타를 사용자의 용도에 따라 처리한다.
         {
             /* int ReceiveData = serialPort1.ReadByte();  //시리얼 버퍼에 수신된 데이타를 ReceiveData 읽어오기
@@ -61,6 +63,7 @@ namespace PrintSystemProto
 
         }
 
+        // 프린터 기로 데이터를 읽도로 만드는 구문 - 사용 안함.
         private void button1_Click(object sender, EventArgs e)
         {
             serialPort1.Write(sendtxbox.Text);
@@ -80,6 +83,8 @@ namespace PrintSystemProto
                 serialchk.Text = "포트가 이미 닫혀 있습니다.";
             }
         }
+
+        // 라벨 데이터를 출력하도록 만드는 구문
         private void button2_Click(object sender, EventArgs e)
         {
             /*  PrintDialog pd = new PrintDialog();
@@ -119,7 +124,7 @@ namespace PrintSystemProto
             PrintCode += "^FO15,136^FDNAME : SANG JOON PARK^FS";
             PrintCode += "^FO15,166^FDTEL. : 010-2956-2593^FS";
             PrintCode += "^FO270,160^BQN,,2^FDCop. : FDS,Adress : 608 room,212, 1gongdan-ro,Gumi-si,Gyeongsangbuk-do, Republic of KoreaNAME : SANG JOON PARK, TEL. : 010-2956-2593^FS";
-            PrintCode += "^FO25,210 ^ BY1,2 ^ BCN,50,N,N,N ^ FDTEL01029562593 ^ FS";
+            PrintCode += "^FO25,210^BY1,2^BCN,50,N,N,N^FDTEL01029562593^FS";
             PrintCode += "\r\n^XZ";
             return PrintCode;
         }

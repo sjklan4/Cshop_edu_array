@@ -21,6 +21,7 @@ namespace PrintSystemProto
 
         public static ModelINFT fmModel; //modelinf 클래스를 사용하는 선언문
         public static PrintSending prpage;
+        public static processprint processprintpage;
         /// <summary>
         /// 해당 애플리케이션의 주 진입점입니다.
         /// </summary>
@@ -31,7 +32,7 @@ namespace PrintSystemProto
             Application.SetCompatibleTextRenderingDefault(false);
             fmModel = new ModelINFT();
             prpage = new PrintSending();
-            
+            processprintpage = new processprint();
 
 
             try
