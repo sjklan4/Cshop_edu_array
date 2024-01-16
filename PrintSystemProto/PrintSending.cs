@@ -43,6 +43,7 @@ namespace PrintSystemProto
                 comboBox1.Enabled = false; //com포트설정 콤보박스 비활성시킴 : 
             }
         }
+        //충돌 방지용
         private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
             this.Invoke(new EventHandler(MySerialReceived)); //메인 쓰레드와 수신 쓰레드의 충돌방지 별도 작업으로 분리 시킴
@@ -60,10 +61,9 @@ namespace PrintSystemProto
             string receivedData = Encoding.UTF8.GetString(buffer);
             receivebox.Text += receivedData;
 
-
         }
 
-        // 프린터 기로 데이터를 읽도로 만드는 구문 - 사용 안함.
+        // 프린터 기로 데이터를 읽도로 만드는 구문 - 사용 안함. - 단순 전송용으로만 사용 중 - send버튼
         private void button1_Click(object sender, EventArgs e)
         {
             serialPort1.Write(sendtxbox.Text);
@@ -110,22 +110,33 @@ namespace PrintSystemProto
         {
             string PrintCode = string.Empty;
 
-            PrintCode = "^XA";
-            PrintCode += "^FO9,7^GB370,270,3^FS";
-            PrintCode += "^CI28";
-            PrintCode += "^CFJ,22";
+            /*    PrintCode = "^XA^CW1,K";
+                PrintCode += "^XA";
+                PrintCode += "^CW1,E:KFONT3.FNT^FS";
+                PrintCode += "^CI26";
+                PrintCode += "^FO9,10GB350,260,3,,3^FS";
+                //PrintCode += "^SEE:UHANGUL.DAT^FS";
 
-            /*  PrintCode += "^CI28";
-              PrintCode += "^CFJ,40";*/
-            PrintCode += "^FO20,17^FDCop. : " + Copnm.Text + "^FS";
-            PrintCode += "^FO20,40^FDAdress : 608 room,^FS";
-            PrintCode += "^FO25,66^FD212, 1gongdan-ro,Gumi-si,^FS";
-            PrintCode += "^FO15,96^FDGyeongsangbuk-do, ROKorea^FS";
-            PrintCode += "^FO15,136^FDNAME : SANG JOON PARK^FS";
-            PrintCode += "^FO15,166^FDTEL. : 010-2956-2593^FS";
-            PrintCode += "^FO270,160^BQN,,2^FDCop. : FDS,Adress : 608 room,212, 1gongdan-ro,Gumi-si,Gyeongsangbuk-do, Republic of KoreaNAME : SANG JOON PARK, TEL. : 010-2956-2593^FS";
-            PrintCode += "^FO25,210^BY1,2^BCN,50,N,N,N^FDTEL01029562593^FS";
-            PrintCode += "\r\n^XZ";
+
+               *//* PrintCode += "^CI28";*//*
+                //PrintCode += "^CFJ,22";
+                PrintCode += "^FO20,20^A1N,15,15^FD회사명 : " + Copnm.Text + "^FS";
+                PrintCode += "^FO20,44^A1N,15,15^FD주소 : 608 room,^FS";
+                PrintCode += "^FO25,70^FD212, 1gongdan-ro,Gumi-si,^FS";
+                PrintCode += "^FO15,100^FDGyeongsangbuk-do, ROKorea^FS";
+                PrintCode += "^FO15,140^FD이름 : Park Sang Joon^FS";
+                PrintCode += "^FO15,170^FDTEL. : 010-2956-2593^FS";
+                PrintCode += "^FO270,185^BQN,,2^FDCop. : FDS,Adress : 608 room,212, 1gongdan-ro,Gumi-si,Gyeongsangbuk-do, Republic of KoreaNAME : SANG JOON PARK, TEL. : 010-2956-2593^FS";
+                PrintCode += "^FO25,225^BY1,2^BCN,50,N,N,N^FDTEL01029562593^FS";
+                PrintCode += "^CI0";
+                PrintCode += "\r\n^XZ";*/
+            PrintCode = "^XA^CW1,K";
+            PrintCode += "^XA";
+            PrintCode += "^CW1,KFONT3.FNT^FS";
+            PrintCode += "^CI26";
+            PrintCode += "^FO50,100^A1N,50,50^FD한글발행TEST^FS";
+            PrintCode += "^CI0";
+            PrintCode += "^XZ";
             return PrintCode;
         }
 
