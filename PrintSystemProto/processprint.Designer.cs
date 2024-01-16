@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.closebtn = new System.Windows.Forms.Button();
             this.printbtn = new System.Windows.Forms.Button();
             this.combtn = new System.Windows.Forms.Button();
@@ -35,14 +36,18 @@
             this.ALCLB = new System.Windows.Forms.Label();
             this.ModelLB = new System.Windows.Forms.Label();
             this.DateLB = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.modeltx = new System.Windows.Forms.TextBox();
+            this.ALCtx = new System.Windows.Forms.TextBox();
+            this.datetext = new System.Windows.Forms.TextBox();
             this.xposition = new System.Windows.Forms.Label();
             this.yposition = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.xposibx = new System.Windows.Forms.TextBox();
+            this.yposibx = new System.Windows.Forms.TextBox();
             this.barcodeposi = new System.Windows.Forms.GroupBox();
+            this.portselect = new System.Windows.Forms.Button();
+            this.serialcombo = new System.Windows.Forms.ComboBox();
+            this.serialport = new System.Windows.Forms.Label();
+            this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.barcodeposi.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,19 +67,20 @@
             // 
             this.printbtn.BackColor = System.Drawing.Color.Blue;
             this.printbtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.printbtn.Location = new System.Drawing.Point(340, 12);
+            this.printbtn.Location = new System.Drawing.Point(340, 15);
             this.printbtn.Name = "printbtn";
             this.printbtn.Size = new System.Drawing.Size(112, 30);
             this.printbtn.TabIndex = 1;
             this.printbtn.Text = "출력";
             this.printbtn.UseVisualStyleBackColor = false;
+            this.printbtn.Click += new System.EventHandler(this.printbtn_Click);
             // 
             // combtn
             // 
             this.combtn.BackColor = System.Drawing.Color.Lime;
             this.combtn.Font = new System.Drawing.Font("새굴림", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.combtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.combtn.Location = new System.Drawing.Point(356, 89);
+            this.combtn.Location = new System.Drawing.Point(356, 77);
             this.combtn.Name = "combtn";
             this.combtn.Size = new System.Drawing.Size(96, 30);
             this.combtn.TabIndex = 1;
@@ -94,7 +100,7 @@
             // 
             this.ALCLB.AutoSize = true;
             this.ALCLB.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.ALCLB.Location = new System.Drawing.Point(43, 62);
+            this.ALCLB.Location = new System.Drawing.Point(46, 55);
             this.ALCLB.Name = "ALCLB";
             this.ALCLB.Size = new System.Drawing.Size(52, 20);
             this.ALCLB.TabIndex = 2;
@@ -104,7 +110,7 @@
             // 
             this.ModelLB.AutoSize = true;
             this.ModelLB.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.ModelLB.Location = new System.Drawing.Point(43, 30);
+            this.ModelLB.Location = new System.Drawing.Point(38, 22);
             this.ModelLB.Name = "ModelLB";
             this.ModelLB.Size = new System.Drawing.Size(67, 20);
             this.ModelLB.TabIndex = 3;
@@ -114,38 +120,39 @@
             // 
             this.DateLB.AutoSize = true;
             this.DateLB.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.DateLB.Location = new System.Drawing.Point(43, 93);
+            this.DateLB.Location = new System.Drawing.Point(43, 87);
             this.DateLB.Name = "DateLB";
             this.DateLB.Size = new System.Drawing.Size(56, 20);
             this.DateLB.TabIndex = 2;
             this.DateLB.Text = "Date : ";
             // 
-            // textBox1
+            // modeltx
             // 
-            this.textBox1.Location = new System.Drawing.Point(116, 29);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(166, 21);
-            this.textBox1.TabIndex = 4;
+            this.modeltx.Location = new System.Drawing.Point(116, 23);
+            this.modeltx.Name = "modeltx";
+            this.modeltx.Size = new System.Drawing.Size(166, 21);
+            this.modeltx.TabIndex = 4;
+            this.modeltx.TextChanged += new System.EventHandler(this.modeltx_TextChanged);
             // 
-            // textBox2
+            // ALCtx
             // 
-            this.textBox2.Location = new System.Drawing.Point(116, 62);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(166, 21);
-            this.textBox2.TabIndex = 4;
+            this.ALCtx.Location = new System.Drawing.Point(116, 55);
+            this.ALCtx.Name = "ALCtx";
+            this.ALCtx.Size = new System.Drawing.Size(166, 21);
+            this.ALCtx.TabIndex = 4;
             // 
-            // textBox3
+            // datetext
             // 
-            this.textBox3.Location = new System.Drawing.Point(116, 93);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(166, 21);
-            this.textBox3.TabIndex = 4;
+            this.datetext.Location = new System.Drawing.Point(116, 87);
+            this.datetext.Name = "datetext";
+            this.datetext.Size = new System.Drawing.Size(166, 21);
+            this.datetext.TabIndex = 4;
             // 
             // xposition
             // 
             this.xposition.AutoSize = true;
             this.xposition.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.xposition.Location = new System.Drawing.Point(11, 36);
+            this.xposition.Location = new System.Drawing.Point(13, 35);
             this.xposition.Name = "xposition";
             this.xposition.Size = new System.Drawing.Size(28, 20);
             this.xposition.TabIndex = 2;
@@ -155,51 +162,84 @@
             // 
             this.yposition.AutoSize = true;
             this.yposition.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.yposition.Location = new System.Drawing.Point(153, 36);
+            this.yposition.Location = new System.Drawing.Point(159, 35);
             this.yposition.Name = "yposition";
             this.yposition.Size = new System.Drawing.Size(27, 20);
             this.yposition.TabIndex = 2;
             this.yposition.Text = "Y :";
             // 
-            // textBox4
+            // xposibx
             // 
-            this.textBox4.Location = new System.Drawing.Point(45, 36);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(102, 21);
-            this.textBox4.TabIndex = 5;
+            this.xposibx.Location = new System.Drawing.Point(45, 36);
+            this.xposibx.Name = "xposibx";
+            this.xposibx.Size = new System.Drawing.Size(102, 21);
+            this.xposibx.TabIndex = 5;
             // 
-            // textBox5
+            // yposibx
             // 
-            this.textBox5.Location = new System.Drawing.Point(186, 35);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(102, 21);
-            this.textBox5.TabIndex = 6;
+            this.yposibx.Location = new System.Drawing.Point(191, 35);
+            this.yposibx.Name = "yposibx";
+            this.yposibx.Size = new System.Drawing.Size(102, 21);
+            this.yposibx.TabIndex = 6;
             // 
             // barcodeposi
             // 
             this.barcodeposi.BackColor = System.Drawing.Color.White;
-            this.barcodeposi.Controls.Add(this.textBox5);
-            this.barcodeposi.Controls.Add(this.textBox4);
+            this.barcodeposi.Controls.Add(this.yposibx);
+            this.barcodeposi.Controls.Add(this.xposibx);
             this.barcodeposi.Controls.Add(this.yposition);
             this.barcodeposi.Controls.Add(this.xposition);
             this.barcodeposi.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.barcodeposi.Location = new System.Drawing.Point(20, 140);
+            this.barcodeposi.Location = new System.Drawing.Point(20, 125);
             this.barcodeposi.Name = "barcodeposi";
-            this.barcodeposi.Size = new System.Drawing.Size(307, 62);
+            this.barcodeposi.Size = new System.Drawing.Size(318, 77);
             this.barcodeposi.TabIndex = 7;
             this.barcodeposi.TabStop = false;
             this.barcodeposi.Text = "바코드위치";
+            // 
+            // portselect
+            // 
+            this.portselect.BackColor = System.Drawing.Color.Gray;
+            this.portselect.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.portselect.Location = new System.Drawing.Point(379, 173);
+            this.portselect.Name = "portselect";
+            this.portselect.Size = new System.Drawing.Size(73, 42);
+            this.portselect.TabIndex = 8;
+            this.portselect.Text = "ProtSel나중수정";
+            this.portselect.UseVisualStyleBackColor = false;
+            this.portselect.Click += new System.EventHandler(this.portselect_Click);
+            // 
+            // serialcombo
+            // 
+            this.serialcombo.FormattingEnabled = true;
+            this.serialcombo.Location = new System.Drawing.Point(127, 217);
+            this.serialcombo.Name = "serialcombo";
+            this.serialcombo.Size = new System.Drawing.Size(60, 20);
+            this.serialcombo.TabIndex = 9;
+            // 
+            // serialport
+            // 
+            this.serialport.AutoSize = true;
+            this.serialport.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.serialport.Location = new System.Drawing.Point(31, 217);
+            this.serialport.Name = "serialport";
+            this.serialport.Size = new System.Drawing.Size(90, 20);
+            this.serialport.TabIndex = 10;
+            this.serialport.Text = "serialport : ";
             // 
             // processprint
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(480, 215);
+            this.ClientSize = new System.Drawing.Size(476, 299);
             this.ControlBox = false;
+            this.Controls.Add(this.serialport);
+            this.Controls.Add(this.serialcombo);
+            this.Controls.Add(this.portselect);
             this.Controls.Add(this.barcodeposi);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.datetext);
+            this.Controls.Add(this.ALCtx);
+            this.Controls.Add(this.modeltx);
             this.Controls.Add(this.ModelLB);
             this.Controls.Add(this.DateLB);
             this.Controls.Add(this.ALCLB);
@@ -226,13 +266,17 @@
         private System.Windows.Forms.Label ALCLB;
         private System.Windows.Forms.Label ModelLB;
         private System.Windows.Forms.Label DateLB;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox modeltx;
+        private System.Windows.Forms.TextBox ALCtx;
+        private System.Windows.Forms.TextBox datetext;
         private System.Windows.Forms.Label xposition;
         private System.Windows.Forms.Label yposition;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox xposibx;
+        private System.Windows.Forms.TextBox yposibx;
         private System.Windows.Forms.GroupBox barcodeposi;
+        private System.Windows.Forms.Button portselect;
+        private System.Windows.Forms.ComboBox serialcombo;
+        private System.Windows.Forms.Label serialport;
+        private System.IO.Ports.SerialPort serialPort1;
     }
 }

@@ -271,13 +271,13 @@ namespace PrintSystemProto
            
         }
 
-        private void modelinf_Click(object sender, EventArgs e) // modelinfo안에 콤보박스 연동시켜주는 구문
+        private void modelinf_Click(object sender, EventArgs e) // 1번 폼의 modelinfo 버튼 클릭시 - modelinfo안에 콤보박스 연동시켜주는 구문
         {
             if (!fmModel.IsDisposed)
             {
                 fmModel.Show();
                 fmModel.comboBox1.Items.Clear();
-
+                
               
                 var indata = Instancedatabse();
                 for (int i = 0; i < indata.Rows.Count; i++)

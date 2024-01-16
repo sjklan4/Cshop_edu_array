@@ -15,7 +15,7 @@ using System.Collections.Generic;
 
 namespace PrintSystemProto
 {
-
+    using static MAIN;
     public partial class ModelINFT : Form
     {
         public static string uid = "sa";  //mssql 접속에 필요한 정보구문 
@@ -30,9 +30,7 @@ namespace PrintSystemProto
         private List<Tuple<string, string, string, string>> selectedPDataList = new List<Tuple<string, string, string, string>>(); //선택한 여러 부품데이터를 한번에 넣기 위해서 tuple 한번에 받아온다.
         private bool cellValueChangedHandled = false; // 2번 반복되는 것을 막기위해서 메서드가 여러번 호출되는 것을 막기 위해 bool린 함수를 선언 false로 설정 
        
-        
-        
-        
+       
         /*private string gbALCvalue;
         private string gbPartname;
         private string gbPartnum;
@@ -70,19 +68,29 @@ namespace PrintSystemProto
             mssqlconn.Close();
         }
 
-        public void ProcessData()
+        public DataTable ProcessData()
         {
-            mssqlconn.Open();
-            string cMode = "processtable";
-            //SqlDataAdapter processdb = new SqlDataAdapter("SELECT * FROM processtable",mssqlconn);
-            SqlCommand SelData_Process = new SqlCommand("up_Factoring_Manage", mssqlconn);
-            SelData_Process.CommandType = CommandType.StoredProcedure;
-            SelData_Process.Parameters.AddWithValue("@cMode",cMode);
-            SqlDataAdapter processdb = new SqlDataAdapter(SelData_Process);
-            DataTable prtable = new DataTable();
-            processdb.Fill(prtable);
-            Process_table.DataSource = prtable;
-            mssqlconn.Close();    
+            try
+            {
+                mssqlconn.Open();
+                string cMode = "processtable";
+                //SqlDataAdapter processdb = new SqlDataAdapter("SELECT * FROM processtable",mssqlconn);
+                SqlCommand SelData_Process = new SqlCommand("up_Factoring_Manage", mssqlconn);
+                SelData_Process.CommandType = CommandType.StoredProcedure;
+                SelData_Process.Parameters.AddWithValue("@cMode", cMode);
+                SqlDataAdapter processdb = new SqlDataAdapter(SelData_Process);
+                DataTable prtable = new DataTable();
+                processdb.Fill(prtable);
+                Process_table.DataSource = prtable;
+                return prtable;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                throw;
+            }
+
+            finally { mssqlconn.Close(); }
         }
 
         //이 부분은 현재 있는 그리드 들이 어떻게 보여 주는지를 입력해주는 부분
@@ -405,10 +413,10 @@ namespace PrintSystemProto
 
         // - ---- - - - - - - - - -- - - - - - - - -- 
 
-
+     
         private void Process_Chk_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+      
         }
 
         // 공정 삭제 버튼 
@@ -548,11 +556,51 @@ namespace PrintSystemProto
         {
 
         }
+        //get set 을 이용한 전달 구문 테스트
+        public class processchkdata
+        {
+            public string Pr_model { get; set; }
+            public string Pr_alc { get; set; }
+        }
 
         private void chk_print_Click(object sender, EventArgs e)
         {
-            processprint prcprint = new processprint();
-            prcprint.ShowDialog();
+         /*   processprint prcprint = new processprint();
+            prcprint.ShowDialog();*/
+
+            processprintpage.ShowDialog();
+            if (Process_table.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectprocess = Process_table.SelectedRows[0];
+
+                processchkdata prcchkdata = new processchkdata
+                {
+                    Pr_model = selectprocess.Cells["model"].Value.ToString(),
+                    Pr_alc = selectprocess.Cells["ALC"].Value.ToString(),
+                };
+                if (processprintpage == null || processprintpage.IsDisposed)
+                {
+                    processprintpage = new processprint();
+                }
+
+                processprintpage.SetData(prcchkdata);
+
+                if (!processprintpage.Visible)
+                {
+                    processprintpage.ShowDialog();
+                }
+                else
+                {
+                    processprintpage.BringToFront();
+                }
+            }
+
+
+
+
+
         }
+
+
     }
 }
