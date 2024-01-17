@@ -48,7 +48,14 @@
             this.serialcombo = new System.Windows.Forms.ComboBox();
             this.serialport = new System.Windows.Forms.Label();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.barcordps = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.barX = new System.Windows.Forms.TextBox();
+            this.barY = new System.Windows.Forms.TextBox();
             this.barcodeposi.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // closebtn
@@ -184,7 +191,7 @@
             // 
             // barcodeposi
             // 
-            this.barcodeposi.BackColor = System.Drawing.Color.White;
+            this.barcodeposi.BackColor = System.Drawing.Color.PaleTurquoise;
             this.barcodeposi.Controls.Add(this.yposibx);
             this.barcodeposi.Controls.Add(this.xposibx);
             this.barcodeposi.Controls.Add(this.yposition);
@@ -195,7 +202,7 @@
             this.barcodeposi.Size = new System.Drawing.Size(318, 77);
             this.barcodeposi.TabIndex = 7;
             this.barcodeposi.TabStop = false;
-            this.barcodeposi.Text = "바코드위치";
+            this.barcodeposi.Text = "QR위치";
             // 
             // portselect
             // 
@@ -212,7 +219,7 @@
             // serialcombo
             // 
             this.serialcombo.FormattingEnabled = true;
-            this.serialcombo.Location = new System.Drawing.Point(127, 217);
+            this.serialcombo.Location = new System.Drawing.Point(125, 267);
             this.serialcombo.Name = "serialcombo";
             this.serialcombo.Size = new System.Drawing.Size(60, 20);
             this.serialcombo.TabIndex = 9;
@@ -221,11 +228,77 @@
             // 
             this.serialport.AutoSize = true;
             this.serialport.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.serialport.Location = new System.Drawing.Point(31, 217);
+            this.serialport.Location = new System.Drawing.Point(29, 267);
             this.serialport.Name = "serialport";
             this.serialport.Size = new System.Drawing.Size(90, 20);
             this.serialport.TabIndex = 10;
             this.serialport.Text = "serialport : ";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Bisque;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.barY);
+            this.panel1.Controls.Add(this.barX);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.barcordps);
+            this.panel1.Location = new System.Drawing.Point(22, 204);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(316, 57);
+            this.panel1.TabIndex = 11;
+            // 
+            // barcordps
+            // 
+            this.barcordps.AutoSize = true;
+            this.barcordps.BackColor = System.Drawing.Color.SeaShell;
+            this.barcordps.Font = new System.Drawing.Font("굴림", 10F);
+            this.barcordps.Location = new System.Drawing.Point(3, 1);
+            this.barcordps.Name = "barcordps";
+            this.barcordps.Size = new System.Drawing.Size(77, 14);
+            this.barcordps.TabIndex = 0;
+            this.barcordps.Text = "바코드위치";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Chartreuse;
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label2.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Location = new System.Drawing.Point(42, 21);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(21, 22);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "X";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Chartreuse;
+            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label3.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label3.Location = new System.Drawing.Point(170, 21);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(20, 22);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Y";
+            // 
+            // barX
+            // 
+            this.barX.Location = new System.Drawing.Point(62, 21);
+            this.barX.Multiline = true;
+            this.barX.Name = "barX";
+            this.barX.Size = new System.Drawing.Size(66, 22);
+            this.barX.TabIndex = 7;
+            // 
+            // barY
+            // 
+            this.barY.Location = new System.Drawing.Point(188, 21);
+            this.barY.Multiline = true;
+            this.barY.Name = "barY";
+            this.barY.Size = new System.Drawing.Size(66, 22);
+            this.barY.TabIndex = 8;
             // 
             // processprint
             // 
@@ -233,6 +306,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(476, 299);
             this.ControlBox = false;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.serialport);
             this.Controls.Add(this.serialcombo);
             this.Controls.Add(this.portselect);
@@ -252,6 +326,8 @@
             this.Load += new System.EventHandler(this.processprint_Load);
             this.barcodeposi.ResumeLayout(false);
             this.barcodeposi.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -278,5 +354,11 @@
         private System.Windows.Forms.ComboBox serialcombo;
         private System.Windows.Forms.Label serialport;
         private System.IO.Ports.SerialPort serialPort1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label barcordps;
+        private System.Windows.Forms.TextBox barY;
+        private System.Windows.Forms.TextBox barX;
     }
 }

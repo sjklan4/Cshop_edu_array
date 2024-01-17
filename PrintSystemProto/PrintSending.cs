@@ -112,13 +112,13 @@ namespace PrintSystemProto
 
             PrintCode = "^XA^CW1,K";
             PrintCode += "^XA";
-            PrintCode += "^CW1,E:KFONT3.FNT^FS";
+            PrintCode += "^CW1,KFONT3.FNT^FS";
             PrintCode += "^CI26";
             PrintCode += "^FO9,10^GB350,260,3,,3^FS";
             //PrintCode += "^SEE:UHANGUL.DAT^FS";
 
 
-            PrintCode += "^CI28";
+            //PrintCode += "^CI28";
             //PrintCode += "^CFJ,22";
             PrintCode += "^FO20,20^A1N,15,15^FD회사명 : " + Copnm.Text + "^FS";
             PrintCode += "^FO20,44^A1N,15,15^FD주소 : 608 room,^FS";
