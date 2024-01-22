@@ -87,6 +87,7 @@ namespace HOD_Inspect
 #if (ENGLISH)
             btnModel.Text = "MODEL";
             btnHistory.Text = "SEARCH";
+            // lbtitle 오류로 이름 바꿈
             lbTitle.Text = "HOD INSFECTOR";
             label10.Text = "MODEL NO";
             label13.Text = "MODEL CODE";
@@ -101,7 +102,7 @@ namespace HOD_Inspect
 #else
             btnModel.Text = "모델선택";
             btnHistory.Text = "조회";
-            label1.Text = "HOD 검사기";
+            lbTitle.Text = "HOD 검사기";
             label10.Text = "품번";
             label13.Text = "사양";
             btnModelSet.Text = "모델설정";
