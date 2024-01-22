@@ -556,6 +556,7 @@ namespace PrintSystemProto
         {
 
         }
+
         //get set 을 이용한 전달 구문 테스트 - modelinft에 있는 데이터를 processprint로 보내기 위한 공개 속성 설정
         public class processchkdata
         {
