@@ -556,10 +556,12 @@ namespace PrintSystemProto
         {
 
         }
-        //get set 을 이용한 전달 구문 테스트
+
+        //get set 을 이용한 전달 구문 테스트 - modelinft에 있는 데이터를 processprint로 보내기 위한 공개 속성 설정
         public class processchkdata
         {
-            public string Pr_model { get; set; }
+            public string Pr_model { get; set; } // 반환형식과 이름 지정 - 이름은 Pr_model로 지정 
+
             public string Pr_alc { get; set; }
         }
 
@@ -568,7 +570,7 @@ namespace PrintSystemProto
          /*   processprint prcprint = new processprint();
             prcprint.ShowDialog();*/
 
-            processprintpage.ShowDialog();
+            
             if (Process_table.SelectedRows.Count > 0)
             {
                 DataGridViewRow selectprocess = Process_table.SelectedRows[0];
@@ -578,6 +580,8 @@ namespace PrintSystemProto
                     Pr_model = selectprocess.Cells["model"].Value.ToString(),
                     Pr_alc = selectprocess.Cells["ALC"].Value.ToString(),
                 };
+
+                //아래 구문은 출력 순서 제어를 위해서 테스트한 구문 
                 if (processprintpage == null || processprintpage.IsDisposed)
                 {
                     processprintpage = new processprint();
@@ -585,16 +589,16 @@ namespace PrintSystemProto
 
                 processprintpage.SetData(prcchkdata);
 
-                if (!processprintpage.Visible)
+            /*    if (!processprintpage.Visible)
                 {
                     processprintpage.ShowDialog();
                 }
                 else
                 {
                     processprintpage.BringToFront();
-                }
+                }*/
             }
-
+            processprintpage.ShowDialog();
 
 
 

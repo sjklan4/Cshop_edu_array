@@ -1,0 +1,19 @@
+수정이력
+
+1. 2023.10.  박순우 과장 프로그램 접수후, 3개 버전을 1개로 통합
+               -> fmMain.cs 의 주석 참고
+
+2.             Zone1, Zone2 검사를 분리하도록 함
+               -> DB 변경
+
+3.             LS PLC 사용하는 다원 1호기를 QBlock 으로 교체 -> 하드웨어는 모두 QBlock
+
+4.             2,3 번 자료는 '관련DB파일' 폴더에 있음.
+
+5. 2023.11.  OK, NG 사운드 Play 적용
+6. 2024.1.17  SV LOT 연동기능 추가 (ZONE1, ZONE2  구분 측정, MV1에 적용해야함.)
+                                                     -> DB.cs의 헤더부분에 서버 이름 적절히 수정해야 함  
+                                                     -> 서버 IP 동 고정해야함.
+                                                    
+                                                         public static string MAIN_IP = "172.168.100.1";
+                                                         public static string SERVER_NAME = "KOMOS_SV_LOTDB";

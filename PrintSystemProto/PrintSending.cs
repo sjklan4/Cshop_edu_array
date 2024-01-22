@@ -110,33 +110,36 @@ namespace PrintSystemProto
         {
             string PrintCode = string.Empty;
 
-            PrintCode = "^XA^CW1,K";
+            /*      PrintCode = "^XA^CW1,K";
+                  PrintCode += "^XA";
+                  PrintCode += "^CW1,KFONT3.FNT^FS";
+                  PrintCode += "^CI26";
+                  PrintCode += "^FO9,10^GB350,260,3,,3^FS";
+                  //PrintCode += "^SEE:UHANGUL.DAT^FS";
+
+
+                  //PrintCode += "^CI28";
+                  //PrintCode += "^CFJ,22";
+                  PrintCode += "^FO20,20^A1N,15,15^FD회사명 : " + Copnm.Text + "^FS";
+                  PrintCode += "^FO20,44^A1N,15,15^FD주소 : 608 room,^FS";
+                  PrintCode += "^FO25,70^FD212, 1gongdan-ro,Gumi-si,^FS";
+                  PrintCode += "^FO15,100^FDGyeongsangbuk-do, ROKorea^FS";
+                  PrintCode += "^FO15,140^FD이름 : Park Sang Joon^FS";
+                  PrintCode += "^FO15,170^FDTEL. : 010-2956-2593^FS";
+                  PrintCode += "^FO270,185^BQN,,2^FDCop. : FDS,Adress : 608 room,212, 1gongdan-ro,Gumi-si,Gyeongsangbuk-do, Republic of KoreaNAME : SANG JOON PARK, TEL. : 010-2956-2593^FS";
+                  PrintCode += "^FO25,225^BY1,2^BCN,50,N,N,N^FDTEL01029562593^FS";
+                  PrintCode += "^CI0";
+                  PrintCode += "\r\n^XZ";*/
+            //PrintCode = "^XA^CW1,K";
             PrintCode += "^XA";
-            PrintCode += "^CW1,E:KFONT3.FNT^FS";
-            PrintCode += "^CI26";
-            PrintCode += "^FO9,10^GB350,260,3,,3^FS";
             //PrintCode += "^SEE:UHANGUL.DAT^FS";
+            PrintCode += "^CWK,E:KFONT3.FNT^FS";
+ //           PrintCode += "^CI26";
+            PrintCode += "^FO50,100^AKN,30,30,E:KFONT3^FD한글발행TEST^FS";
+            //PrintCode += "^CI0";
+            PrintCode += "^XZ";
 
 
-            PrintCode += "^CI28";
-            //PrintCode += "^CFJ,22";
-            PrintCode += "^FO20,20^A1N,15,15^FD회사명 : " + Copnm.Text + "^FS";
-            PrintCode += "^FO20,44^A1N,15,15^FD주소 : 608 room,^FS";
-            PrintCode += "^FO25,70^FD212, 1gongdan-ro,Gumi-si,^FS";
-            PrintCode += "^FO15,100^FDGyeongsangbuk-do, ROKorea^FS";
-            PrintCode += "^FO15,140^FD이름 : Park Sang Joon^FS";
-            PrintCode += "^FO15,170^FDTEL. : 010-2956-2593^FS";
-            PrintCode += "^FO270,185^BQN,,2^FDCop. : FDS,Adress : 608 room,212, 1gongdan-ro,Gumi-si,Gyeongsangbuk-do, Republic of KoreaNAME : SANG JOON PARK, TEL. : 010-2956-2593^FS";
-            PrintCode += "^FO25,225^BY1,2^BCN,50,N,N,N^FDTEL01029562593^FS";
-            PrintCode += "^CI0";
-            PrintCode += "\r\n^XZ";
-            /*  PrintCode = "^XA^CW1,K";
-              PrintCode += "^XA";
-              PrintCode += "^CW1,KFONT3.FNT^FS";
-              PrintCode += "^CI26";
-              PrintCode += "^FO50,100^A1N,50,50^FD한글발행TEST^FS";
-              PrintCode += "^CI0";
-              PrintCode += "^XZ";*/
             return PrintCode;
         }
 

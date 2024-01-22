@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<cProgramSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Work_Time>30</Work_Time>
+  <MIN>0</MIN>
+  <MAX>500</MAX>
+  <D_MIN>0</D_MIN>
+  <D_MAX>500</D_MAX>
+  <MIN2>0</MIN2>
+  <MAX2>500</MAX2>
+  <D_MIN2>0</D_MIN2>
+  <D_MAX2>500</D_MAX2>
+  <R_MIN>3</R_MIN>
+  <R_MAX>8</R_MAX>
+  <PrintUSE>false</PrintUSE>
+  <LCRUSE>false</LCRUSE>
+  <isIEE>false</isIEE>
+  <PLCCOM>COM5</PLCCOM>
+  <LCRCOM>COM6</LCRCOM>
+  <PrintCOM>COM3</PrintCOM>
+  <ScanCOM>COM4</ScanCOM>
+  <LCRIP>192.168.1.101</LCRIP>
+  <MAINIP>192.168.68.103</MAINIP>
+  <X>0</X>
+  <Y>0</Y>
+  <MIN_V>5</MIN_V>
+  <DbCheck>false</DbCheck>
+  <Word_Loc>false</Word_Loc>
+  <Word>K</Word>
+</cProgramSet>

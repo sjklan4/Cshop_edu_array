@@ -1,0 +1,77 @@
+'코모스 HOD 마사지 검사기
+'2023.9.18 Zone 2 검사기능 추가로 수정
+'2024.1.6  JOYSON 과 IEE 구분 검사 적용 => 출력회로변경 (릴레이2개추가)
+
+#include "MSB6XX"
+Opencom 1, 19200,3,30,30
+Dim ReadText As String * 2
+Dim Rx As Integer
+Dim Start As Integer
+Ramclear   '초기 메모리 정리  (중요함)
+Start = 0
+Do
+
+   If (In(8) = 1) And (Start = 0) Then'시작버턴이 눌리면   
+	   Bclr 1,0  '수신버퍼정리
+		High 64  'STATUS LED
+		Low 32   '출력릴레이명
+		Low 33	
+		Wait 500			
+		Putstr 1,"START" ,Cr   '통신으로 검사시작
+		Start = 1		
+   Endif	
+      If (In(9) = 1) And (Start = 1) Then
+	   Bclr 1,0  '수신버퍼정리
+	   Wait 100
+	   Low 32   '출력릴레이명
+	   Low 33
+	   Putstr 1,"RESET", Cr '검사 정지 
+	   ReadText = ""
+	   Start = 0
+   Endif
+	
+	If (Blen(1,0) > 0 And Start = 1) Then   ' 수신 버퍼에 뭐가 있고, START  버턴이 눌려졌으면
+	   ReadText = Getstr(1,2)    '수신버퍼 READ	
+		If ReadText = "OK" Then   ' OK 이면              
+			Low 32	
+			Low 33
+			Wait 100
+							
+			Putstr 1,"OK", Cr
+			ReadText = ""
+			Start = 0
+
+		Elseif ReadText = "NG" Then  'NG 이면
+			Low 32	
+			Low 33
+			Wait 100
+			
+			Putstr 1,"NG", Cr
+			ReadText = ""
+		   Start = 0
+	
+		Elseif ReadText = "Z2" Then
+		   High 32
+			Low 33
+			Low 64		
+			Wait 500
+			Putstr 1,"Z2", Cr
+			ReadText = ""
+			Start = 0
+			Bclr 1,0  '수신버퍼정리
+			Wait 100
+		Elseif ReadText = "I2" Then
+		   High 32
+			High 33
+			Low 64	
+			Wait 500
+			Putstr 1,"I2", Cr
+			ReadText = ""
+			Start = 0
+			Bclr 1,0  '수신버퍼정리
+			Wait 100
+		Endif				
+	Endif
+		
+Loop 
+	
