@@ -369,3 +369,26 @@ E:\1.프로젝트\2023\코모스\마사지 검사기\코모스 HOD_Inspect_re_de
 E:\1.프로젝트\2023\코모스\마사지 검사기\코모스 HOD_Inspect_re_design_클록북 (20231225)_스피커 추가_SVLOT\HOD_Inspect\obj\Release\HOD_Inspect.csproj.CopyComplete
 E:\1.프로젝트\2023\코모스\마사지 검사기\코모스 HOD_Inspect_re_design_클록북 (20231225)_스피커 추가_SVLOT\HOD_Inspect\obj\Release\HOD_Inspect.exe
 E:\1.프로젝트\2023\코모스\마사지 검사기\코모스 HOD_Inspect_re_design_클록북 (20231225)_스피커 추가_SVLOT\HOD_Inspect\obj\Release\HOD_Inspect.pdb
+C:\c#\Cshopedu\코모스 HOD_Inspect_re_design_클록북 (20231225)_스피커 추가_SVLOT\HOD_Inspect\bin\Release\HOD_Inspect.exe.config
+C:\c#\Cshopedu\코모스 HOD_Inspect_re_design_클록북 (20231225)_스피커 추가_SVLOT\HOD_Inspect\bin\Release\HOD_Inspect.exe
+C:\c#\Cshopedu\코모스 HOD_Inspect_re_design_클록북 (20231225)_스피커 추가_SVLOT\HOD_Inspect\bin\Release\HOD_Inspect.pdb
+C:\c#\Cshopedu\코모스 HOD_Inspect_re_design_클록북 (20231225)_스피커 추가_SVLOT\HOD_Inspect\bin\Release\FarPoint.CalcEngine.xml
+C:\c#\Cshopedu\코모스 HOD_Inspect_re_design_클록북 (20231225)_스피커 추가_SVLOT\HOD_Inspect\bin\Release\FarPoint.Excel.xml
+C:\c#\Cshopedu\코모스 HOD_Inspect_re_design_클록북 (20231225)_스피커 추가_SVLOT\HOD_Inspect\bin\Release\FarPoint.PDF.xml
+C:\c#\Cshopedu\코모스 HOD_Inspect_re_design_클록북 (20231225)_스피커 추가_SVLOT\HOD_Inspect\bin\Release\FarPoint.PluginCalendar.WinForms.xml
+C:\c#\Cshopedu\코모스 HOD_Inspect_re_design_클록북 (20231225)_스피커 추가_SVLOT\HOD_Inspect\bin\Release\FarPoint.Win.xml
+C:\c#\Cshopedu\코모스 HOD_Inspect_re_design_클록북 (20231225)_스피커 추가_SVLOT\HOD_Inspect\bin\Release\FarPoint.Win.Chart.xml
+C:\c#\Cshopedu\코모스 HOD_Inspect_re_design_클록북 (20231225)_스피커 추가_SVLOT\HOD_Inspect\bin\Release\FarPoint.Win.Spread.xml
+C:\c#\Cshopedu\코모스 HOD_Inspect_re_design_클록북 (20231225)_스피커 추가_SVLOT\HOD_Inspect\obj\Release\HOD_Inspect.csproj.AssemblyReference.cache
+C:\c#\Cshopedu\코모스 HOD_Inspect_re_design_클록북 (20231225)_스피커 추가_SVLOT\HOD_Inspect\obj\Release\HOD_Inspect.fmHistory.resources
+C:\c#\Cshopedu\코모스 HOD_Inspect_re_design_클록북 (20231225)_스피커 추가_SVLOT\HOD_Inspect\obj\Release\HOD_Inspect.fmMain.resources
+C:\c#\Cshopedu\코모스 HOD_Inspect_re_design_클록북 (20231225)_스피커 추가_SVLOT\HOD_Inspect\obj\Release\HOD_Inspect.fmModelSel.resources
+C:\c#\Cshopedu\코모스 HOD_Inspect_re_design_클록북 (20231225)_스피커 추가_SVLOT\HOD_Inspect\obj\Release\HOD_Inspect.fmModelSetcs.resources
+C:\c#\Cshopedu\코모스 HOD_Inspect_re_design_클록북 (20231225)_스피커 추가_SVLOT\HOD_Inspect\obj\Release\HOD_Inspect.fmSpec.resources
+C:\c#\Cshopedu\코모스 HOD_Inspect_re_design_클록북 (20231225)_스피커 추가_SVLOT\HOD_Inspect\obj\Release\HOD_Inspect.Properties.Resources.resources
+C:\c#\Cshopedu\코모스 HOD_Inspect_re_design_클록북 (20231225)_스피커 추가_SVLOT\HOD_Inspect\obj\Release\HOD_Inspect.csproj.GenerateResource.cache
+C:\c#\Cshopedu\코모스 HOD_Inspect_re_design_클록북 (20231225)_스피커 추가_SVLOT\HOD_Inspect\obj\Release\HOD_Inspect.exe.licenses
+C:\c#\Cshopedu\코모스 HOD_Inspect_re_design_클록북 (20231225)_스피커 추가_SVLOT\HOD_Inspect\obj\Release\HOD_Inspect.csproj.CoreCompileInputs.cache
+C:\c#\Cshopedu\코모스 HOD_Inspect_re_design_클록북 (20231225)_스피커 추가_SVLOT\HOD_Inspect\obj\Release\HOD_Inspect.csproj.CopyComplete
+C:\c#\Cshopedu\코모스 HOD_Inspect_re_design_클록북 (20231225)_스피커 추가_SVLOT\HOD_Inspect\obj\Release\HOD_Inspect.exe
+C:\c#\Cshopedu\코모스 HOD_Inspect_re_design_클록북 (20231225)_스피커 추가_SVLOT\HOD_Inspect\obj\Release\HOD_Inspect.pdb
