@@ -222,7 +222,7 @@ namespace HOD_Inspect
                                     // 20230917 JHLEE
                                     lbVal2.Text = "-";
                                     lbD_Val2.Text = "-";
-
+                                    
                                     lbR_Val.Text = "-";
                                     ssT.Value = cSetting.Set.Work_Time.ToString();
                                 });
