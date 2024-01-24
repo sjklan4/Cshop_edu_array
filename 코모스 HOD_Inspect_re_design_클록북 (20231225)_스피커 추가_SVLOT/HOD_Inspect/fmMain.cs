@@ -222,7 +222,7 @@ namespace HOD_Inspect
                                     // 20230917 JHLEE
                                     lbVal2.Text = "-";
                                     lbD_Val2.Text = "-";
-
+                                    
                                     lbR_Val.Text = "-";
                                     ssT.Value = cSetting.Set.Work_Time.ToString();
                                 });
@@ -661,7 +661,7 @@ namespace HOD_Inspect
                         lb_R_MIN.Text = SP["R_MIN"].ToString();
                         lb_R_MAX.Text = SP["R_MAX"].ToString();
 
-                        Maker.Text = SP["Maker"].ToString();       // 240116 JHLEE IEE, JOYSON
+                        Maker.Text = SP["Maker"].ToString();       // 240116 JHLEE IEE, JOYSON dddw
                     });
                 }
             }
