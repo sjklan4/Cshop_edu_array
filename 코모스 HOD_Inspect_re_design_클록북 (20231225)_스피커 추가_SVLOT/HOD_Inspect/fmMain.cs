@@ -661,7 +661,7 @@ namespace HOD_Inspect
                         lb_R_MIN.Text = SP["R_MIN"].ToString();
                         lb_R_MAX.Text = SP["R_MAX"].ToString();
 
-                        Maker.Text = SP["Maker"].ToString();       // 240116 JHLEE IEE, JOYSON
+                        Maker.Text = SP["Maker"].ToString();       // 240116 JHLEE IEE, JOYSON dddw
                     });
                 }
             }
