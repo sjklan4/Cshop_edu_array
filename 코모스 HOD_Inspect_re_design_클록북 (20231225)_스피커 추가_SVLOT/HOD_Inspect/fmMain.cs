@@ -43,8 +43,8 @@ namespace HOD_Inspect
     public partial class fmMain : Form
     {
         
-        private bool END = false;
-        private bool Stop_Judge = false;
+        private bool END = false; // 전역 변수 설정 private 부분 전역변수로
+        private bool Stop_Judge = false; 
         private bool Flag = false;
         private bool Start = false;
         private Stopwatch Work_T;
@@ -71,6 +71,7 @@ namespace HOD_Inspect
         public SoundPlayer OK_SP;
         public SoundPlayer NG_SP;
 
+        // 여기 위로 전역 변수 선언 문들
         public fmMain()
         {
             InitializeComponent();
@@ -87,6 +88,7 @@ namespace HOD_Inspect
 #if (ENGLISH)
             btnModel.Text = "MODEL";
             btnHistory.Text = "SEARCH";
+
             // lbtitle 오류로 이름 바꿈
             lbTitle.Text = "HOD INSFECTOR";
             label10.Text = "MODEL NO";
