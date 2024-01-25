@@ -1,4 +1,5 @@
-﻿//#define SCAN_PRINT  // 울산공장 MX5  수입검사실의경우 , 키보드웨지타입 스케너 사용한다. 다원에서 조립 테스트후 발행한 라벨을 읽어서 검사한다. 
+﻿//****** 아래 # define부분은 전처리기 구문을 동작시키위 해서 설정을 만들어 주는 구문
+//#define SCAN_PRINT  // 울산공장 MX5  수입검사실의경우 , 키보드웨지타입 스케너 사용한다. 다원에서 조립 테스트후 발행한 라벨을 읽어서 검사한다. 
 //#define ENGLISH     // 영어 화면 사용
 //#define KOMOS_MX5_SIJAK  // 울산공장 시작실의 경우 키보드 웨지타입 건스케너를 사용한다.  시작버턴 누르고 스케너를 읽으면 작업시작, 이후부터 스케너만 읽어도 작업됨. (부저 안울리는 현상이 있으나, 해결?)
 //                            --> 큰차이점은 코모스 시작실의 경우, 다원의 검사발행 라벨을 읽어서 검사 완료후 선두문자('K')를 추가한 바코드를 출력한다.
@@ -50,7 +51,7 @@ namespace HOD_Inspect
         private Stopwatch Work_T;
         private string Lot = string.Empty;
 
-        private List<double> CP_List = new List<double>();
+        private List<double> CP_List = new List<double>(); //Generic형식으로 CP_List가 list형식중 double로 만들어줌 generic을 사용해서 형식을 자유롭게 사용할 수 있도록 함
         private List<double> D_List = new List<double>();
 
         
@@ -83,8 +84,14 @@ namespace HOD_Inspect
 
         private void Application_Idle(object sender, EventArgs e)
         {
-            Application.Idle -= Application_Idle;
+            Application.Idle -= Application_Idle; //Applicaton은 .net자체에서 재공하는 클레스 
+                                                    // winform에서 일반적으로 사용 됨
+            // 위 형식은 -= 을 사용 하여 이벤트 핸들러를 한번만 실행하게 하고 애플리 케이션이 유휴 상태에서 특정 작업을 수행한 다음 
+            // 동작을 멈추기 위함으로 사용
 
+// 전처리기 지시문 사용 #을 앞에 붙여줌으로써 2가지 버전을 동시에 만들 수 있도록 해줌
+// 가장위에 define으로 정의를 통해 설정된 전처리기를 활성화 시킴으로써 아래 모든 설정 구문들을 
+// 설정 값에 따라서 움직이도록 해준다. 
 #if (ENGLISH)
             btnModel.Text = "MODEL";
             btnHistory.Text = "SEARCH";
