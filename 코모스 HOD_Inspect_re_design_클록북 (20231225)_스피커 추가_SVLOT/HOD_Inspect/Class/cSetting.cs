@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace HOD_Inspect // namespace를 이용 해서 클래스 구분 - 각 클래스들의 소속을 지정
+namespace HOD_Inspect
 {
     public static class cSetting
     {

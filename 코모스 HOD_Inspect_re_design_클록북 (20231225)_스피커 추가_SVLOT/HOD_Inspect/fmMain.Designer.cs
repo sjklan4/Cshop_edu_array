@@ -895,6 +895,7 @@ namespace HOD_Inspect
             this.Maker.Size = new System.Drawing.Size(24, 12);
             this.Maker.TabIndex = 181;
             this.Maker.Text = "IEE";
+            this.Maker.Click += new System.EventHandler(this.Maker_Click);
             // 
             // fmMain
             // 

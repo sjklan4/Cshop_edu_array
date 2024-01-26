@@ -1,4 +1,5 @@
-﻿//****** 아래 # define부분은 전처리기 구문을 동작시키위 해서 설정을 만들어 주는 구문
+﻿//아래의 define부분은 #if구문을 사용하기 위한 전처리기 지시문 이다 아래는 사용방법은 프로젝트의 가장 윗부분에 #define 전처리 명령어 를 사용후 #if (전처리 명령)을 입력하면 if문에 해당하는 전처리가
+// 실행되도록 한다. 아래는 영문 그리고 scanprint사용시에 대한 전처리기 지시문이 적용된 상태 
 //#define SCAN_PRINT  // 울산공장 MX5  수입검사실의경우 , 키보드웨지타입 스케너 사용한다. 다원에서 조립 테스트후 발행한 라벨을 읽어서 검사한다. 
 //#define ENGLISH     // 영어 화면 사용
 //#define KOMOS_MX5_SIJAK  // 울산공장 시작실의 경우 키보드 웨지타입 건스케너를 사용한다.  시작버턴 누르고 스케너를 읽으면 작업시작, 이후부터 스케너만 읽어도 작업됨. (부저 안울리는 현상이 있으나, 해결?)
@@ -44,14 +45,14 @@ namespace HOD_Inspect
     public partial class fmMain : Form
     {
         
-        private bool END = false; // 전역 변수 설정 private 부분 전역변수로
-        private bool Stop_Judge = false; 
+        private bool END = false;
+        private bool Stop_Judge = false;
         private bool Flag = false;
         private bool Start = false;
         private Stopwatch Work_T;
         private string Lot = string.Empty;
 
-        private List<double> CP_List = new List<double>(); //Generic형식으로 CP_List가 list형식중 double로 만들어줌 generic을 사용해서 형식을 자유롭게 사용할 수 있도록 함
+        private List<double> CP_List = new List<double>();
         private List<double> D_List = new List<double>();
 
         
@@ -72,7 +73,6 @@ namespace HOD_Inspect
         public SoundPlayer OK_SP;
         public SoundPlayer NG_SP;
 
-        // 여기 위로 전역 변수 선언 문들
         public fmMain()
         {
             InitializeComponent();
@@ -84,18 +84,11 @@ namespace HOD_Inspect
 
         private void Application_Idle(object sender, EventArgs e)
         {
-            Application.Idle -= Application_Idle; //Applicaton은 .net자체에서 재공하는 클레스 
-                                                    // winform에서 일반적으로 사용 됨
-            // 위 형식은 -= 을 사용 하여 이벤트 핸들러를 한번만 실행하게 하고 애플리 케이션이 유휴 상태에서 특정 작업을 수행한 다음 
-            // 동작을 멈추기 위함으로 사용
+            Application.Idle -= Application_Idle; // 현 프로그램이 실행되고 대기 상태일때 아래의 전처리기 와 프로그램의 동작들이 실행되도록 하였다.
 
-// 전처리기 지시문 사용 #을 앞에 붙여줌으로써 2가지 버전을 동시에 만들 수 있도록 해줌
-// 가장위에 define으로 정의를 통해 설정된 전처리기를 활성화 시킴으로써 아래 모든 설정 구문들을 
-// 설정 값에 따라서 움직이도록 해준다. 
 #if (ENGLISH)
             btnModel.Text = "MODEL";
             btnHistory.Text = "SEARCH";
-
             // lbtitle 오류로 이름 바꿈
             lbTitle.Text = "HOD INSFECTOR";
             label10.Text = "MODEL NO";
@@ -125,7 +118,7 @@ namespace HOD_Inspect
 
 
             // JHLEE cSetting.Set 이 무엇인지?
-            lbMIN.Text = cSetting.Set.MIN.ToString();
+            lbMIN.Text = cSetting.Set.MIN.ToString(); // 각 클래스 해석 필요.
             lbMAX.Text = cSetting.Set.MAX.ToString();
 
             lb_D_MIN.Text = cSetting.Set.D_MIN.ToString();
@@ -153,14 +146,15 @@ namespace HOD_Inspect
 
                 SCAN.vReceive += SCAN_vReceive;
 
+// 아래 구문은 람다형식으로 Thread를 별도 실행시키기 위한구문 - 하나의 프로그램이 실행되는 동안 다른 프로그램들이 같이 실행되도록 하는 형식의 구문?
             new Thread(() =>
             {
                 Stopwatch ReadDb = Stopwatch.StartNew();
                 while(Running)
                 {
-                    Thread.Sleep(1);
+                    Thread.Sleep(1); // 과도한 cpu사용을 막기 위한 장치적 제어적 측면의 구문
                     //if (M.Count == 0) continue;
-                    if (!cCublock.ISOPEN) return;
+                    if (!cCublock.ISOPEN) return; // cublock이 열리지 않으면 리턴 cublock실행이 되어 있어야만 프로그램 동작
 
                     // CUBLUCK 과 연결된 시작 버턴을 누르면 Status == "START" 상태이다.
 
@@ -856,6 +850,11 @@ namespace HOD_Inspect
                 cCublock.Write("OK");
             }
             
+        }
+
+        private void Maker_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
