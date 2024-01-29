@@ -185,24 +185,25 @@ namespace HOD_Inspect
 
                         if (Status == "GO" || Status == "Z2" && !END && ModelSelection)
 #else
+                        // start이거나 수동모드 이거나 시작이 Z2이거나 I2이면서 END가 아니고 모델이 선택된 상태일때///.....
                         if (Status == "START" || Insp_Manual == true || Status == "Z2" || Status == "I2" && !END && ModelSelection)
 #endif
                         {
                             //cMKPLC.SetWriteAdd("M0005", 0);
                             //cMKPLC.SetWriteAdd("M0006", 0);
 
-                            if (!Flag)
+                            if (!Flag) //시작을 알리기 위한 flag>?>??????>?>?>?>
                             {
                                 Flag = true;
 
                                 // 20231010 JHLEE
-                                if (Insp_Manual == false)
+                                if (Insp_Manual == false) //수동모드가 아니면
                                 {
-                                    Work_T = Stopwatch.StartNew();
+                                    Work_T = Stopwatch.StartNew(); // 시간이 가도록 만들고
                                 }
 
-                                DataTable DT_LOT = SQL.GetLotNo();
-                                DataRow R = DT_LOT.Rows[0];
+                                DataTable DT_LOT = SQL.GetLotNo(); //db에 lot번호를 업로드 시킴
+                                DataRow R = DT_LOT.Rows[0]; //db의 data의 0번째 행 데이터를 R에 반환 
                                 Lot = R["LOT"].ToString().PadLeft(5, '0');
 
                                 CP_List.Clear();
@@ -227,7 +228,7 @@ namespace HOD_Inspect
                                     lbD_Val2.Text = "-";
                                     
                                     lbR_Val.Text = "-";
-                                    ssT.Value = cSetting.Set.Work_Time.ToString();
+                                    ssT.Value = cSetting.Set.Work_Time.ToString(); //작업 시간 표기를 위한거
                                 });
 
                                 if (cSetting.Set.LCRUSE)
