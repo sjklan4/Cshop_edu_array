@@ -577,7 +577,7 @@ namespace PrintSystemProto
 
                 processchkdata prcchkdata = new processchkdata
                 {
-                    Pr_model = selectprocess.Cells["model"].Value.ToString(),
+                    Pr_model = selectprocess.Cells["model"].Value.ToString(), // get,set으로 풀이시 get{return model} set{model = value}형식 get에는 반환 받는 model과 같은 컬럼명을, set은 Value인 value 값을 설정 한 형식
                     Pr_alc = selectprocess.Cells["ALC"].Value.ToString(),
                 };
 
