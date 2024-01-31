@@ -1,0 +1,14 @@
+C:\c#\Cshopedu\MultipleinheritanceClass\bin\Debug\net6.0\MultipleinheritanceClass.exe
+C:\c#\Cshopedu\MultipleinheritanceClass\bin\Debug\net6.0\MultipleinheritanceClass.deps.json
+C:\c#\Cshopedu\MultipleinheritanceClass\bin\Debug\net6.0\MultipleinheritanceClass.runtimeconfig.json
+C:\c#\Cshopedu\MultipleinheritanceClass\bin\Debug\net6.0\MultipleinheritanceClass.dll
+C:\c#\Cshopedu\MultipleinheritanceClass\bin\Debug\net6.0\MultipleinheritanceClass.pdb
+C:\c#\Cshopedu\MultipleinheritanceClass\obj\Debug\net6.0\MultipleinheritanceClass.GeneratedMSBuildEditorConfig.editorconfig
+C:\c#\Cshopedu\MultipleinheritanceClass\obj\Debug\net6.0\MultipleinheritanceClass.AssemblyInfoInputs.cache
+C:\c#\Cshopedu\MultipleinheritanceClass\obj\Debug\net6.0\MultipleinheritanceClass.AssemblyInfo.cs
+C:\c#\Cshopedu\MultipleinheritanceClass\obj\Debug\net6.0\MultipleinheritanceClass.csproj.CoreCompileInputs.cache
+C:\c#\Cshopedu\MultipleinheritanceClass\obj\Debug\net6.0\MultipleinheritanceClass.dll
+C:\c#\Cshopedu\MultipleinheritanceClass\obj\Debug\net6.0\refint\MultipleinheritanceClass.dll
+C:\c#\Cshopedu\MultipleinheritanceClass\obj\Debug\net6.0\MultipleinheritanceClass.pdb
+C:\c#\Cshopedu\MultipleinheritanceClass\obj\Debug\net6.0\MultipleinheritanceClass.genruntimeconfig.cache
+C:\c#\Cshopedu\MultipleinheritanceClass\obj\Debug\net6.0\ref\MultipleinheritanceClass.dll
