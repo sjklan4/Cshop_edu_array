@@ -119,6 +119,7 @@ namespace PrintSystemProto
             Partch_Table.CellValueChanged += Partch_Table_CellContentClick;
         }
 
+        //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         // 입력된 부품 내용들에 대한 조합을 위한 선택을 하는 구문 - 부품 선택 테이블 
         public void Partch_Table_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -175,7 +176,7 @@ namespace PrintSystemProto
                 cellValueChangedHandled = false; // 다시 다음 작업을 위해 false상태로 바꿔준다.
             }
         }
-
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         // 공정 추가 버튼
         private void Partch_RegistBtn_Click(object sender, EventArgs e)
         {
