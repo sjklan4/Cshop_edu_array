@@ -45,14 +45,14 @@ namespace HOD_Inspect
     public partial class fmMain : Form
     {
         
-        private bool END = false;
+        private bool END = false; //아래는 전역 변수들 모음
         private bool Stop_Judge = false;
         private bool Flag = false;
         private bool Start = false;
         private Stopwatch Work_T;
         private string Lot = string.Empty;
 
-        private List<double> CP_List = new List<double>();
+        private List<double> CP_List = new List<double>(); //list형식으로 사용 하기 위한 준비 
         private List<double> D_List = new List<double>();
 
         
