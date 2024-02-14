@@ -1,0 +1,14 @@
+C:\c#\Cshopedu\MethodOV\bin\Debug\net6.0\MethodOV.exe
+C:\c#\Cshopedu\MethodOV\bin\Debug\net6.0\MethodOV.deps.json
+C:\c#\Cshopedu\MethodOV\bin\Debug\net6.0\MethodOV.runtimeconfig.json
+C:\c#\Cshopedu\MethodOV\bin\Debug\net6.0\MethodOV.dll
+C:\c#\Cshopedu\MethodOV\bin\Debug\net6.0\MethodOV.pdb
+C:\c#\Cshopedu\MethodOV\obj\Debug\net6.0\MethodOV.GeneratedMSBuildEditorConfig.editorconfig
+C:\c#\Cshopedu\MethodOV\obj\Debug\net6.0\MethodOV.AssemblyInfoInputs.cache
+C:\c#\Cshopedu\MethodOV\obj\Debug\net6.0\MethodOV.AssemblyInfo.cs
+C:\c#\Cshopedu\MethodOV\obj\Debug\net6.0\MethodOV.csproj.CoreCompileInputs.cache
+C:\c#\Cshopedu\MethodOV\obj\Debug\net6.0\MethodOV.dll
+C:\c#\Cshopedu\MethodOV\obj\Debug\net6.0\refint\MethodOV.dll
+C:\c#\Cshopedu\MethodOV\obj\Debug\net6.0\MethodOV.pdb
+C:\c#\Cshopedu\MethodOV\obj\Debug\net6.0\MethodOV.genruntimeconfig.cache
+C:\c#\Cshopedu\MethodOV\obj\Debug\net6.0\ref\MethodOV.dll
