@@ -1,4 +1,6 @@
-﻿using System;
+﻿//오버로드 : 같은 이름의 매서드를 여러번 호출 시켜서 매개변수에 따라서 사용하는 방법 - 오버해서 로딩 시켰다.
+//오버라이드 : 부모클래스(상위 클래스)에서 정의된 것을 다시 자시클래스(하위 클래스)에서 정의해서 사용한다. - 하위가 상위한테 올라 탔다
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
