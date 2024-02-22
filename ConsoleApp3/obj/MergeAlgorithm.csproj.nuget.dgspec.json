@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Cshop\\C#study\\ConsoleApp3\\MergeAlgorithm.csproj": {}
+    "C:\\c#\\Cshopedu\\ConsoleApp3\\MergeAlgorithm.csproj": {}
   },
   "projects": {
-    "C:\\Cshop\\C#study\\ConsoleApp3\\MergeAlgorithm.csproj": {
+    "C:\\c#\\Cshopedu\\ConsoleApp3\\MergeAlgorithm.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Cshop\\C#study\\ConsoleApp3\\MergeAlgorithm.csproj",
+        "projectUniqueName": "C:\\c#\\Cshopedu\\ConsoleApp3\\MergeAlgorithm.csproj",
         "projectName": "MergeAlgorithm",
-        "projectPath": "C:\\Cshop\\C#study\\ConsoleApp3\\MergeAlgorithm.csproj",
-        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "C:\\Cshop\\C#study\\ConsoleApp3\\obj\\",
+        "projectPath": "C:\\c#\\Cshopedu\\ConsoleApp3\\MergeAlgorithm.csproj",
+        "packagesPath": "C:\\Users\\박상준\\.nuget\\packages\\",
+        "outputPath": "C:\\c#\\Cshopedu\\ConsoleApp3\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\박상준\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -59,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

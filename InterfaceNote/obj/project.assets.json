@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\c#\\Cshopedu\\InterFace\\InterFace.csproj",
-      "projectName": "InterFace",
-      "projectPath": "C:\\c#\\Cshopedu\\InterFace\\InterFace.csproj",
+      "projectUniqueName": "C:\\c#\\Cshopedu\\InterfaceNote\\InterfaceNote.csproj",
+      "projectName": "InterfaceNote",
+      "projectPath": "C:\\c#\\Cshopedu\\InterfaceNote\\InterfaceNote.csproj",
       "packagesPath": "C:\\Users\\박상준\\.nuget\\packages\\",
-      "outputPath": "C:\\c#\\Cshopedu\\InterFace\\obj\\",
+      "outputPath": "C:\\c#\\Cshopedu\\InterfaceNote\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\박상준\\AppData\\Roaming\\NuGet\\NuGet.Config",
