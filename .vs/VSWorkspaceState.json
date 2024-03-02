@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\PrintSystemProto"
   ],
-  "SelectedNode": "\\BubleShort.sln",
+  "SelectedNode": "\\PrintSystemProto\\PrintSending.cs",
   "PreviewInSolutionExplorer": false
 }

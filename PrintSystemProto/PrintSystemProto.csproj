@@ -126,6 +126,12 @@
     <Compile Include="Checkprocess.Designer.cs">
       <DependentUpon>Checkprocess.cs</DependentUpon>
     </Compile>
+    <Compile Include="InspecterCNT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InspecterCNT.Designer.cs">
+      <DependentUpon>InspecterCNT.cs</DependentUpon>
+    </Compile>
     <Compile Include="PrintSending.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InspecterCNT.resx">
+      <DependentUpon>InspecterCNT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModelINFT.resx">
       <DependentUpon>ModelINFT.cs</DependentUpon>
