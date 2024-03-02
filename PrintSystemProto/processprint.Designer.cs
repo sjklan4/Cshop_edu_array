@@ -49,11 +49,11 @@
             this.serialport = new System.Windows.Forms.Label();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.barcordps = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.barX = new System.Windows.Forms.TextBox();
             this.barY = new System.Windows.Forms.TextBox();
+            this.barX = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.barcordps = new System.Windows.Forms.Label();
             this.barcodeposi.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -248,16 +248,33 @@
             this.panel1.Size = new System.Drawing.Size(316, 57);
             this.panel1.TabIndex = 11;
             // 
-            // barcordps
+            // barY
             // 
-            this.barcordps.AutoSize = true;
-            this.barcordps.BackColor = System.Drawing.Color.SeaShell;
-            this.barcordps.Font = new System.Drawing.Font("굴림", 10F);
-            this.barcordps.Location = new System.Drawing.Point(3, 1);
-            this.barcordps.Name = "barcordps";
-            this.barcordps.Size = new System.Drawing.Size(77, 14);
-            this.barcordps.TabIndex = 0;
-            this.barcordps.Text = "바코드위치";
+            this.barY.Location = new System.Drawing.Point(188, 21);
+            this.barY.Multiline = true;
+            this.barY.Name = "barY";
+            this.barY.Size = new System.Drawing.Size(66, 22);
+            this.barY.TabIndex = 8;
+            // 
+            // barX
+            // 
+            this.barX.Location = new System.Drawing.Point(62, 21);
+            this.barX.Multiline = true;
+            this.barX.Name = "barX";
+            this.barX.Size = new System.Drawing.Size(66, 22);
+            this.barX.TabIndex = 7;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Chartreuse;
+            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label3.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label3.Location = new System.Drawing.Point(170, 21);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(20, 22);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Y";
             // 
             // label2
             // 
@@ -272,33 +289,16 @@
             this.label2.Text = "X";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // label3
+            // barcordps
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Chartreuse;
-            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label3.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(170, 21);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(20, 22);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Y";
-            // 
-            // barX
-            // 
-            this.barX.Location = new System.Drawing.Point(62, 21);
-            this.barX.Multiline = true;
-            this.barX.Name = "barX";
-            this.barX.Size = new System.Drawing.Size(66, 22);
-            this.barX.TabIndex = 7;
-            // 
-            // barY
-            // 
-            this.barY.Location = new System.Drawing.Point(188, 21);
-            this.barY.Multiline = true;
-            this.barY.Name = "barY";
-            this.barY.Size = new System.Drawing.Size(66, 22);
-            this.barY.TabIndex = 8;
+            this.barcordps.AutoSize = true;
+            this.barcordps.BackColor = System.Drawing.Color.SeaShell;
+            this.barcordps.Font = new System.Drawing.Font("굴림", 10F);
+            this.barcordps.Location = new System.Drawing.Point(3, 1);
+            this.barcordps.Name = "barcordps";
+            this.barcordps.Size = new System.Drawing.Size(77, 14);
+            this.barcordps.TabIndex = 0;
+            this.barcordps.Text = "바코드위치";
             // 
             // processprint
             // 
@@ -322,7 +322,7 @@
             this.Controls.Add(this.printbtn);
             this.Controls.Add(this.closebtn);
             this.Name = "processprint";
-            this.Text = "processprint";
+            this.Text = "-";
             this.Load += new System.EventHandler(this.processprint_Load);
             this.barcodeposi.ResumeLayout(false);
             this.barcodeposi.PerformLayout();

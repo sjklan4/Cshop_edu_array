@@ -45,14 +45,14 @@ namespace HOD_Inspect
     public partial class fmMain : Form
     {
         
-        private bool END = false;
+        private bool END = false; //아래는 전역 변수들 모음
         private bool Stop_Judge = false;
         private bool Flag = false;
         private bool Start = false;
         private Stopwatch Work_T;
         private string Lot = string.Empty;
 
-        private List<double> CP_List = new List<double>();
+        private List<double> CP_List = new List<double>(); //list형식으로 사용 하기 위한 준비 
         private List<double> D_List = new List<double>();
 
         
@@ -231,7 +231,7 @@ namespace HOD_Inspect
                                     ssT.Value = cSetting.Set.Work_Time.ToString(); //작업 시간 표기를 위한거
                                 });
 
-                                if (cSetting.Set.LCRUSE)
+                                if (cSetting.Set.LCRUSE) //LCRUSE? cSetting 부분에 있는 전역 변수 기능 부분확인 필요
                                     cLCR.Read();
                             }
 
@@ -243,9 +243,9 @@ namespace HOD_Inspect
                                 lbsts.Text = "측정중...";
 #endif
 
-                                if (Insp_Manual == true)
+                                if (Insp_Manual == true) // 수동 변경시 작동 구문
                                 {
-                                    ssT.Value = $"{Work_T.Elapsed.Seconds}";
+                                    ssT.Value = $"{Work_T.Elapsed.Seconds}"; 
                                 }
                                 else
                                 {
@@ -255,7 +255,7 @@ namespace HOD_Inspect
                             });
 
                             LCR_SET.Reset();
-                            LCR.SendData();
+                            LCR.SendData(); // cLCR클래스의 기능 부분 
 
                             if (LCR_SET.WaitOne(1000))
                             {
@@ -297,7 +297,7 @@ namespace HOD_Inspect
                                         {
                                             // 20230918 JHLEE
                                             //if (Math.Abs(CP_List.Min() - CP_List.Max()) > 2)   // cSetting.Set.MIN_V
-                                            if (Math.Abs(CP_List.Min() - CP_List.Max()) > cSetting.Set.MIN_V)
+                                            if (Math.Abs(CP_List.Min() - CP_List.Max()) > cSetting.Set.MIN_V) 
                                             {
 
                                                 Hands_ON = true;

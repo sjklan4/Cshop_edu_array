@@ -1,13 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\\uCF54\uBAA8\uC2A4 HOD_Inspect_re_design_\uD074\uB85D\uBD81 (20231225)_\uC2A4\uD53C\uCEE4 \uCD94\uAC00_SVLOT",
-    "\\\uCF54\uBAA8\uC2A4 HOD_Inspect_re_design_\uD074\uB85D\uBD81 (20231225)_\uC2A4\uD53C\uCEE4 \uCD94\uAC00_SVLOT\\HOD_Inspect"
+    "\\PrintSystemProto"
   ],
-<<<<<<< HEAD
-  "SelectedNode": "\\\uCF54\uBAA8\uC2A4 HOD_Inspect_re_design_\uD074\uB85D\uBD81 (20231225)_\uC2A4\uD53C\uCEE4 \uCD94\uAC00_SVLOT\\HOD_Inspect.sln",
-=======
-  "SelectedNode": "\\ClassCode.sln",
->>>>>>> 60b259342667cdfdde229a70e6c4f2700f936d30
+  "SelectedNode": "\\PrintSystemProto\\PrintSending.cs",
   "PreviewInSolutionExplorer": false
 }
