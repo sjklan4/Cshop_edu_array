@@ -1,4 +1,4 @@
-﻿using HOD_EOL;
+﻿//using HOD_EOL;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -11,10 +11,12 @@ using System.Windows.Forms;
 public static class Db
 {
     #region DB 데이터 처리
+    //Initial Catalog : DB이름을 뜻함 - 지정할 DB이름
+    public static readonly string My_ConnStr = $@"Data Source=localhost;Initial Catalog=printsystem;Persist Security Info=True;User ID=sa;Password=x;TimeOut = 5;Asynchronous Processing=true;";
     //public static readonly string ConnStr = $@"Data Source=192.168.100.95;Initial Catalog=VISION;Persist Security Info=True;User ID=sa;Password=x;TimeOut = 5;Asynchronous Processing=true;";
-    //public static readonly string ConnStr = $@"Data Source=localhost;Initial Catalog=FDS_INSPECTOR;Persist Security Info=True;User ID=sa;Password=x;TimeOut = 5;Asynchronous Processing=true;";
-    public static readonly string ConnStr = $@"Data Source=SILEE-ASUS\MSSQLSERVER14;Initial Catalog=FDS_INSPECTOR;Persist Security Info=True;User ID=sa;Password=x;TimeOut = 5;";
-    public static readonly string M_ConnStr = $@"Data Source={MAIN.MAIN_IP};Initial Catalog=S_WheelDB;Persist Security Info=True;User ID=sa;Password=x;TimeOut = 5;Asynchronous Processing=true;";
+    public static readonly string ConnStr = $@"Data Source=localhost;Initial Catalog=FDS_INSPECTOR;Persist Security Info=True;User ID=sa;Password=x;TimeOut = 5;Asynchronous Processing=true;";
+    //public static readonly string ConnStr = $@"Data Source=SILEE-ASUS\MSSQLSERVER14;Initial Catalog=FDS_INSPECTOR;Persist Security Info=True;User ID=sa;Password=x;TimeOut = 5;";
+    //public static readonly string M_ConnStr = $@"Data Source={MAIN.MAIN_IP};Initial Catalog=S_WheelDB;Persist Security Info=True;User ID=sa;Password=x;TimeOut = 5;Asynchronous Processing=true;";
     // public static readonly string ConnStr = $@"Data Source=DESKTOP-UEKQDPN\SQLEXPRESS;Initial Catalog=LeakVision;Persist Security Info=True;User ID=sa;Password=x;TimeOut = 5;Asynchronous Processing=true;";
 
 
