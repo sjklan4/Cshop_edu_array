@@ -12,9 +12,9 @@ public static class Db
 {
     #region DB 데이터 처리
     //Initial Catalog : DB이름을 뜻함 - 지정할 DB이름
-    public static readonly string My_ConnStr = $@"Data Source=localhost;Initial Catalog=printsystem;Persist Security Info=True;User ID=sa;Password=x;TimeOut = 5;Asynchronous Processing=true;";
+    public static readonly string ConnStr = $@"Data Source=localhost;Initial Catalog=printsystem;Persist Security Info=True;User ID=sa;Password=x;TimeOut = 5;Asynchronous Processing=true;";
     //public static readonly string ConnStr = $@"Data Source=192.168.100.95;Initial Catalog=VISION;Persist Security Info=True;User ID=sa;Password=x;TimeOut = 5;Asynchronous Processing=true;";
-    public static readonly string ConnStr = $@"Data Source=localhost;Initial Catalog=FDS_INSPECTOR;Persist Security Info=True;User ID=sa;Password=x;TimeOut = 5;Asynchronous Processing=true;";
+    //public static readonly string ConnStr = $@"Data Source=localhost;Initial Catalog=FDS_INSPECTOR;Persist Security Info=True;User ID=sa;Password=x;TimeOut = 5;Asynchronous Processing=true;";
     //public static readonly string ConnStr = $@"Data Source=SILEE-ASUS\MSSQLSERVER14;Initial Catalog=FDS_INSPECTOR;Persist Security Info=True;User ID=sa;Password=x;TimeOut = 5;";
     //public static readonly string M_ConnStr = $@"Data Source={MAIN.MAIN_IP};Initial Catalog=S_WheelDB;Persist Security Info=True;User ID=sa;Password=x;TimeOut = 5;Asynchronous Processing=true;";
     // public static readonly string ConnStr = $@"Data Source=DESKTOP-UEKQDPN\SQLEXPRESS;Initial Catalog=LeakVision;Persist Security Info=True;User ID=sa;Password=x;TimeOut = 5;Asynchronous Processing=true;";
@@ -117,6 +117,7 @@ public static class Db
         return sqlprm.ToArray();
     }
 
+
     /// <summary> 파라메터 설정 파라메터명과 값을 함께 전달할 경우. (이름, 값, 이름, 값, 이름, 값....) </summary>
     public static SqlParameter[] PARAMS(object[] param)
     {
@@ -127,6 +128,7 @@ public static class Db
         }
         return sqlprm.ToArray();
     }
+
 
     /// <summary> 프로시저를 호출하여 데이터셋을 반환합니다. </summary>
     public static DataSet RETRIEVES(string ProcName, SqlParameter[] Param = null)
