@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\PrintSystemProto"
   ],
-  "SelectedNode": "\\PrintSystemProto.sln",
+  "SelectedNode": "\\PrintSystemProto\\PrintSending.cs",
   "PreviewInSolutionExplorer": false
 }
