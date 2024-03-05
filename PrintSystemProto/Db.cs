@@ -1,4 +1,5 @@
 ﻿//using HOD_EOL;
+using PrintSystemProto;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
