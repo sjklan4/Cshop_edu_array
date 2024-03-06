@@ -56,7 +56,7 @@ public static class Db
 
 
 
-
+    //DB안에 있는 테이블 목록을 불러오는 메소드
     public static string[] GETTABLES()
     {
         List<string> result = new List<string>();
@@ -229,7 +229,7 @@ public static class Db
         }
     }
 
-    public static DataTable M_RETRIEVESQL(string Sql, SqlParameter[] Param = null)
+/*    public static DataTable M_RETRIEVESQL(string Sql, SqlParameter[] Param = null)
     {
         using (SqlConnection sqlConn = new SqlConnection(M_ConnStr))
         {
@@ -254,7 +254,7 @@ public static class Db
                 sqlConn.Close();
             }
         }
-    }
+    }*/
 
     public static object SCALARSQL(string sql, SqlParameter[] Param = null)
     {

@@ -364,5 +364,13 @@ namespace PrintSystemProto
             prpage.Show();
 
         }
+
+        private void inspector_Click(object sender, EventArgs e)
+        {
+           inspectordb.Show();
+           
+
+            
+        }
     }
 }

@@ -39,6 +39,7 @@
             this.DelBTN = new System.Windows.Forms.Button();
             this.Insert_result = new System.Windows.Forms.Label();
             this.printbtn = new System.Windows.Forms.Button();
+            this.inspector = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -163,6 +164,16 @@
             this.printbtn.UseVisualStyleBackColor = true;
             this.printbtn.Click += new System.EventHandler(this.printbtn_Click);
             // 
+            // inspector
+            // 
+            this.inspector.Location = new System.Drawing.Point(841, 318);
+            this.inspector.Name = "inspector";
+            this.inspector.Size = new System.Drawing.Size(138, 39);
+            this.inspector.TabIndex = 14;
+            this.inspector.Text = "INSPECTOR";
+            this.inspector.UseVisualStyleBackColor = true;
+            this.inspector.Click += new System.EventHandler(this.inspector_Click);
+            // 
             // Form1
             // 
             this.AllowDrop = true;
@@ -170,6 +181,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1100, 718);
             this.ControlBox = false;
+            this.Controls.Add(this.inspector);
             this.Controls.Add(this.printbtn);
             this.Controls.Add(this.Insert_result);
             this.Controls.Add(this.DelBTN);
@@ -203,6 +215,7 @@
         private System.Windows.Forms.Button DelBTN;
         private System.Windows.Forms.Label Insert_result;
         private System.Windows.Forms.Button printbtn;
+        private System.Windows.Forms.Button inspector;
     }
 }
 

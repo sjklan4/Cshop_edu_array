@@ -16,8 +16,22 @@ namespace PrintSystemProto
         {
             InitializeComponent();
             Db.DbConnectionCheck();
+            inspectorDB();
+
         }
 
+        public void inspectorDB()
+        {
+            DataTable table = Db.RETRIEVE($"SELECT * FROM mInspector");
+            if (table != null)
+            {
+                inspecterlist.DataSource = table;
+            }
+            else
+            {
+                MessageBox.Show("테이블 블러오기 오류");
+            }
+        }
         
 
 
