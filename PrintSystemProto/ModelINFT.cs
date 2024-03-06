@@ -64,7 +64,7 @@ namespace PrintSystemProto
             DataTable mstable2 = new DataTable(); //data를 table형식으로 불러 오도록 하는 구문 datatable class사용시 table형식으로 불러짐
             msdata2.Fill(mstable2); 
 
-            Partch_Table.DataSource = mstable2;
+            Partch_Table.DataSource = mstable2; //*** 데이터를 뿌릴 데이터그리드를 지정 지금은 Partch_Table라는 이름을 가진 데이터 그리드에 들어가는 데이터가 현재 수행된 DB결과가 들어간다.
             mssqlconn.Close();
         }
 

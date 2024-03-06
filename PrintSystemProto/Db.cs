@@ -1,4 +1,5 @@
 ﻿//using HOD_EOL;
+using PrintSystemProto;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -41,6 +42,20 @@ public static class Db
         }
         return Ret;
     }
+
+    //--------test method------------------------------------------------
+/*    public static DataTable SelectData()
+    {
+        SqlConnection sqlConn = new SqlConnection(ConnStr);
+        DataTable dt = new DataTable();
+
+    
+    }
+*/
+
+
+
+
 
     public static string[] GETTABLES()
     {
@@ -460,6 +475,9 @@ public static class Db
         }
             
     }
+
+
+
     #endregion
 }
 

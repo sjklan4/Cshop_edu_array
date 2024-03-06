@@ -200,6 +200,10 @@ namespace HOD_Inspect
                                 if (Insp_Manual == false) //수동모드가 아니면
                                 {
                                     Work_T = Stopwatch.StartNew(); // 시간이 가도록 만들고
+
+
+
+
                                 }
 
                                 DataTable DT_LOT = SQL.GetLotNo(); //db에 lot번호를 업로드 시킴

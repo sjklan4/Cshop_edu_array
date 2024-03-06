@@ -28,20 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.inspecterlist = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.inspecterlist)).BeginInit();
             this.SuspendLayout();
+            // 
+            // inspecterlist
+            // 
+            this.inspecterlist.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.inspecterlist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.inspecterlist.GridColor = System.Drawing.SystemColors.ButtonFace;
+            this.inspecterlist.Location = new System.Drawing.Point(28, 143);
+            this.inspecterlist.Name = "inspecterlist";
+            this.inspecterlist.RowTemplate.Height = 23;
+            this.inspecterlist.Size = new System.Drawing.Size(693, 754);
+            this.inspecterlist.TabIndex = 0;
             // 
             // Checkprocess
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1171, 853);
+            this.ClientSize = new System.Drawing.Size(1375, 930);
+            this.Controls.Add(this.inspecterlist);
             this.Name = "Checkprocess";
             this.Text = "CHKlist";
             this.Load += new System.EventHandler(this.Checkprocess_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.inspecterlist)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView inspecterlist;
     }
 }

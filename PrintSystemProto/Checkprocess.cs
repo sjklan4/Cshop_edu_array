@@ -15,11 +15,18 @@ namespace PrintSystemProto
         public Checkprocess()
         {
             InitializeComponent();
+            Db.DbConnectionCheck();
         }
+
+        
+
+
+
 
         private void Checkprocess_Load(object sender, EventArgs e)
         {
 
         }
+
     }
 }
