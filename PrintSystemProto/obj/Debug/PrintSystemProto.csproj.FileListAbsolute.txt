@@ -111,3 +111,4 @@ C:\c#\Cshopedu\PrintSystemProto\obj\Debug\PrintSystemProto.PrintSending.resource
 C:\Cshop\C#study\PrintSystemProto\obj\Debug\PrintSystemProto.processprint.resources
 C:\c#\Cshopedu\PrintSystemProto\obj\Debug\PrintSystemProto.processprint.resources
 C:\Cshop\C#study\PrintSystemProto\obj\Debug\PrintSystemProto.InspecterCNT.resources
+C:\c#\Cshopedu\PrintSystemProto\obj\Debug\PrintSystemProto.InspecterCNT.resources
