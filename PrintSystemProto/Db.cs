@@ -134,6 +134,7 @@ public static class Db
 
 
     /// <summary> 파라메터 설정 파라메터명과 값을 함께 전달할 경우. (이름, 값, 이름, 값, 이름, 값....) </summary>
+    /// 아래 프로시저 호출시 들어가야는 파라메터 값들을 성정해주는 메서드 구문 
     public static SqlParameter[] PARAMS(object[] param)
     {
         List<SqlParameter> sqlprm = new List<SqlParameter>();
