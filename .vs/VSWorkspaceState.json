@@ -1,12 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\PrintSystemProto"
+    ""
   ],
-<<<<<<< HEAD
-  "SelectedNode": "\\PrintSystemProto\\PrintSending.cs",
-=======
-  "SelectedNode": "\\HOD_Inspect.sln",
->>>>>>> 3cddfa4ac040c76a34e8302b32be7e5af0a2a099
+  "SelectedNode": "\\PrintSystemProto.sln",
   "PreviewInSolutionExplorer": false
 }
