@@ -102,7 +102,7 @@ namespace HOD_Inspect
             this.lbTitle.ForeColor = System.Drawing.Color.RoyalBlue;
             this.lbTitle.Location = new System.Drawing.Point(0, 0);
             this.lbTitle.Name = "lbTitle";
-            this.lbTitle.Size = new System.Drawing.Size(1280, 56);
+            this.lbTitle.Size = new System.Drawing.Size(1280, 45);
             this.lbTitle.TabIndex = 0;
             this.lbTitle.Text = "HOD 검사기";
             this.lbTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -900,7 +900,7 @@ namespace HOD_Inspect
             // fmMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1280, 1024);
+            this.ClientSize = new System.Drawing.Size(1600, 1280);
             this.Controls.Add(this.Maker);
             this.Controls.Add(this.gPanel3);
             this.Controls.Add(this.gPanel2);
