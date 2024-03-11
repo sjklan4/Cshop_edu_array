@@ -118,8 +118,11 @@ namespace HOD_Inspect
 
 
             // JHLEE cSetting.Set 이 무엇인지?
-            lbMIN.Text = cSetting.Set.MIN.ToString(); // 각 클래스 해석 필요.
+            lbMIN.Text = cSetting.Set.MIN.ToString(); // sSetting 클래스 메서드를 불러와서 값들을 해당 txt박스에 고정 시킴
+
+
             lbMAX.Text = cSetting.Set.MAX.ToString();
+          
 
             lb_D_MIN.Text = cSetting.Set.D_MIN.ToString();
             lb_D_MAX.Text = cSetting.Set.D_MAX.ToString();
