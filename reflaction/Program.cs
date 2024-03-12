@@ -2,6 +2,7 @@
 
 using System;
 using System.Diagnostics;
+using System.Reflection;
 
 namespace AttributeDeom
 {
@@ -16,6 +17,7 @@ namespace AttributeDeom
         public void Manual() => Console.WriteLine("수동");
         public void Auto() => Console.WriteLine("자동 운전");
         [Conditional("DEBUG")]public void Test() => Console.WriteLine("테스트 운전"); //DEBUG로 해당 메서드를 인식하도록 해준다.
+        [Conditional("RELEASE")] public void Test2() => Console.WriteLine("테스트 운전");
     }
     class AttributeDeomo
     {
@@ -26,6 +28,14 @@ namespace AttributeDeom
             car.Auto(); // car.Manual();
             car.Test();
             Attribute.GetCustomAttributes(typeof(Car)); // 
+            typeof(Car).GetCustomAttributes(false);
+            var carType = (new Car()); 
+            Type myCar = carType.GetType();
+            MethodInfo info = myCar.GetMethod("AUTO");
+            info.Invoke(carType, null);
+
+
+
         }
     }
 }
