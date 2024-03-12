@@ -1,0 +1,14 @@
+C:\c#\Cshopedu\reflaction\bin\Debug\net6.0\reflaction.exe
+C:\c#\Cshopedu\reflaction\bin\Debug\net6.0\reflaction.deps.json
+C:\c#\Cshopedu\reflaction\bin\Debug\net6.0\reflaction.runtimeconfig.json
+C:\c#\Cshopedu\reflaction\bin\Debug\net6.0\reflaction.dll
+C:\c#\Cshopedu\reflaction\bin\Debug\net6.0\reflaction.pdb
+C:\c#\Cshopedu\reflaction\obj\Debug\net6.0\reflaction.GeneratedMSBuildEditorConfig.editorconfig
+C:\c#\Cshopedu\reflaction\obj\Debug\net6.0\reflaction.AssemblyInfoInputs.cache
+C:\c#\Cshopedu\reflaction\obj\Debug\net6.0\reflaction.AssemblyInfo.cs
+C:\c#\Cshopedu\reflaction\obj\Debug\net6.0\reflaction.csproj.CoreCompileInputs.cache
+C:\c#\Cshopedu\reflaction\obj\Debug\net6.0\reflaction.dll
+C:\c#\Cshopedu\reflaction\obj\Debug\net6.0\refint\reflaction.dll
+C:\c#\Cshopedu\reflaction\obj\Debug\net6.0\reflaction.pdb
+C:\c#\Cshopedu\reflaction\obj\Debug\net6.0\reflaction.genruntimeconfig.cache
+C:\c#\Cshopedu\reflaction\obj\Debug\net6.0\ref\reflaction.dll
