@@ -1,0 +1,14 @@
+C:\c#\Cshopedu\CarWorldDemo\bin\Debug\net6.0\CarWorldDemo.exe
+C:\c#\Cshopedu\CarWorldDemo\bin\Debug\net6.0\CarWorldDemo.deps.json
+C:\c#\Cshopedu\CarWorldDemo\bin\Debug\net6.0\CarWorldDemo.runtimeconfig.json
+C:\c#\Cshopedu\CarWorldDemo\bin\Debug\net6.0\CarWorldDemo.dll
+C:\c#\Cshopedu\CarWorldDemo\bin\Debug\net6.0\CarWorldDemo.pdb
+C:\c#\Cshopedu\CarWorldDemo\obj\Debug\net6.0\CarWorldDemo.GeneratedMSBuildEditorConfig.editorconfig
+C:\c#\Cshopedu\CarWorldDemo\obj\Debug\net6.0\CarWorldDemo.AssemblyInfoInputs.cache
+C:\c#\Cshopedu\CarWorldDemo\obj\Debug\net6.0\CarWorldDemo.AssemblyInfo.cs
+C:\c#\Cshopedu\CarWorldDemo\obj\Debug\net6.0\CarWorldDemo.csproj.CoreCompileInputs.cache
+C:\c#\Cshopedu\CarWorldDemo\obj\Debug\net6.0\CarWorldDemo.dll
+C:\c#\Cshopedu\CarWorldDemo\obj\Debug\net6.0\refint\CarWorldDemo.dll
+C:\c#\Cshopedu\CarWorldDemo\obj\Debug\net6.0\CarWorldDemo.pdb
+C:\c#\Cshopedu\CarWorldDemo\obj\Debug\net6.0\CarWorldDemo.genruntimeconfig.cache
+C:\c#\Cshopedu\CarWorldDemo\obj\Debug\net6.0\ref\CarWorldDemo.dll
