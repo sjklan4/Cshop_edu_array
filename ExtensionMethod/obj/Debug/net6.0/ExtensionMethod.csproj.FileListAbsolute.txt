@@ -1,0 +1,14 @@
+C:\c#\Cshopedu\ExtensionMethod\bin\Debug\net6.0\ExtensionMethod.exe
+C:\c#\Cshopedu\ExtensionMethod\bin\Debug\net6.0\ExtensionMethod.deps.json
+C:\c#\Cshopedu\ExtensionMethod\bin\Debug\net6.0\ExtensionMethod.runtimeconfig.json
+C:\c#\Cshopedu\ExtensionMethod\bin\Debug\net6.0\ExtensionMethod.dll
+C:\c#\Cshopedu\ExtensionMethod\bin\Debug\net6.0\ExtensionMethod.pdb
+C:\c#\Cshopedu\ExtensionMethod\obj\Debug\net6.0\ExtensionMethod.GeneratedMSBuildEditorConfig.editorconfig
+C:\c#\Cshopedu\ExtensionMethod\obj\Debug\net6.0\ExtensionMethod.AssemblyInfoInputs.cache
+C:\c#\Cshopedu\ExtensionMethod\obj\Debug\net6.0\ExtensionMethod.AssemblyInfo.cs
+C:\c#\Cshopedu\ExtensionMethod\obj\Debug\net6.0\ExtensionMethod.csproj.CoreCompileInputs.cache
+C:\c#\Cshopedu\ExtensionMethod\obj\Debug\net6.0\ExtensionMethod.dll
+C:\c#\Cshopedu\ExtensionMethod\obj\Debug\net6.0\refint\ExtensionMethod.dll
+C:\c#\Cshopedu\ExtensionMethod\obj\Debug\net6.0\ExtensionMethod.pdb
+C:\c#\Cshopedu\ExtensionMethod\obj\Debug\net6.0\ExtensionMethod.genruntimeconfig.cache
+C:\c#\Cshopedu\ExtensionMethod\obj\Debug\net6.0\ref\ExtensionMethod.dll

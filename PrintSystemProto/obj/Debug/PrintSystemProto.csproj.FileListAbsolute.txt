@@ -112,3 +112,13 @@ C:\Cshop\C#study\PrintSystemProto\obj\Debug\PrintSystemProto.processprint.resour
 C:\c#\Cshopedu\PrintSystemProto\obj\Debug\PrintSystemProto.processprint.resources
 C:\Cshop\C#study\PrintSystemProto\obj\Debug\PrintSystemProto.InspecterCNT.resources
 C:\c#\Cshopedu\PrintSystemProto\obj\Debug\PrintSystemProto.InspecterCNT.resources
+C:\c#\Cshopedu\PrintSystemProto\bin\Debug\dll\x86\OpenCvSharpExtern.dll
+C:\c#\Cshopedu\PrintSystemProto\bin\Debug\dll\x86\opencv_videoio_ffmpeg490.dll
+C:\c#\Cshopedu\PrintSystemProto\bin\Debug\dll\x64\OpenCvSharpExtern.dll
+C:\c#\Cshopedu\PrintSystemProto\bin\Debug\dll\x64\opencv_videoio_ffmpeg490_64.dll
+C:\c#\Cshopedu\PrintSystemProto\bin\Debug\OpenCvSharp.dll
+C:\c#\Cshopedu\PrintSystemProto\bin\Debug\OpenCvSharp.Extensions.dll
+C:\c#\Cshopedu\PrintSystemProto\bin\Debug\System.Drawing.Common.dll
+C:\c#\Cshopedu\PrintSystemProto\bin\Debug\OpenCvSharp.xml
+C:\c#\Cshopedu\PrintSystemProto\bin\Debug\OpenCvSharp.Extensions.xml
+C:\c#\Cshopedu\PrintSystemProto\bin\Debug\System.Drawing.Common.xml

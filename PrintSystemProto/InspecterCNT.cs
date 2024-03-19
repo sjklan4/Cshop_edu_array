@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using OpenCvSharp;
+using OpenCvSharp.Extensions;
+using System.Threading;
+
 
 namespace PrintSystemProto
 {
@@ -16,5 +20,23 @@ namespace PrintSystemProto
         {
             InitializeComponent();
         }
+
+        
+
+        private void LOAD_btn_Click(object sender, EventArgs e)
+        {
+            VideoCapture video = new VideoCapture(0);
+            Mat frame = new Mat();
+
+            while (Cv2.WaitKey(33) != 'q')
+            {
+                video.Read(frame);
+                //Cv2.ImShow("frame", frame);
+                pictureBox1.Image = frame.ToBitmap();
+            }
+        
+        }
+
+
     }
 }

@@ -23,6 +23,8 @@ namespace PrintSystemProto
         public static PrintSending prpage;
         public static processprint processprintpage;
         public static Checkprocess inspectordb;
+        public static InspecterCNT opcvtst;
+
         /// <summary>
         /// 해당 애플리케이션의 주 진입점입니다.
         /// </summary>
@@ -35,7 +37,7 @@ namespace PrintSystemProto
             prpage = new PrintSending();
             processprintpage = new processprint();
             inspectordb = new Checkprocess();
-
+            opcvtst = new InspecterCNT();
             try
             {
                 Application.Run(new Form1());
