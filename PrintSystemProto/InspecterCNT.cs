@@ -28,7 +28,7 @@ namespace PrintSystemProto
             VideoCapture video = new VideoCapture(0);
             Mat frame = new Mat();
 
-            while (Cv2.WaitKey(33) != 'q')
+            while (Cv2.WaitKey(1) != 'q')
             {
                 video.Read(frame);
                 //Cv2.ImShow("frame", frame);
